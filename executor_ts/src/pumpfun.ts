@@ -637,19 +637,6 @@ export async function buildTipTx(
   tx.sign(payer);
   return tx;
 }
-export async function createToken(connection: Connection, payer: Keypair, opts: {
-  name: string;
-  symbol: string;
-  description: string;
-  file: string;           // путь к картинке
-}) {
-  const sdk = new OnlinePumpSdk(connection);   // из твоего pumpfun.ts
-  const tx = await sdk.create({
-    ...opts,
-    payer
-  });
-  return tx;   // VersionedTransaction с mint внутри
-}
 export async function createToken(
   connection: Connection,
   payer: Keypair,
@@ -657,20 +644,20 @@ export async function createToken(
     name: string;
     symbol: string;
     description: string;
-    file: string;
+    file: string;           // путь к картинке
   }
 ) {
-  const base = getPumpBase(); // уже есть в твоём файле
+  const base = getPumpBase();
   const OnlinePumpSdk = base.OnlinePumpSdk;
-  const online = new OnlinePumpSdk(connection);
+  const sdk = new OnlinePumpSdk(connection);
 
-  const tx = await online.create({
+  const tx = await sdk.create({
     payer,
     name: opts.name,
     symbol: opts.symbol,
     description: opts.description,
-    file: opts.file,   // SDK сам загрузит картинку на IPFS pump.fun
+    file: opts.file,        // SDK сам загрузит на IPFS pump.fun
   });
 
-  return tx;  // VersionedTransaction
+  return tx; // VersionedTransaction
 }

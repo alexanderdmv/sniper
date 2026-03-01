@@ -22,7 +22,7 @@ import {
   quoteSellTokenAmount,
 } from "./pumpfun.js";
 
-import { createToken } from "./pumpfun";   // если нет — создадим ниже
+import { createToken } from "./pumpfun.js";   // если нет — создадим ниже
 import bs58 from "bs58";
 
 dotenv.config();
@@ -465,48 +465,85 @@ app.listen(PORT, HOST, () => {
   console.log(`[executor] live enabled: ${LIVE_ENABLED}`);
   console.log(`[executor] jito enabled: ${JITO_ENABLED} (${JITO_BLOCK_ENGINE_URL})`);
 });
-// ====================== НОВЫЙ ЭНДПОИНТ ДЛЯ BUNDLE LAUNCH ======================
+// ====================== BUNDLE LAUNCH ENDPOINT (10-20 wallets) ======================
 app.post("/launch_bundle", async (req, res) => {
   try {
     const { name, symbol, description, image_path, buy_sol_per_wallet, wallets, dry_run } = req.body;
 
-    if (dry_run) {
-      logger.info("[DRY-RUN] Симулируем создание токена");
-      return res.json({ ok: true, mint: "DRY_RUN_MINT_" + Date.now(), bundle_sig: "dry-run-sig" });
+    if (dry_run || DEFAULT_DRY_RUN) {
+      console.log("[DRY-RUN] Симулируем bundle launch");
+      return res.json({ 
+        ok: true, 
+        mint: "DRY_RUN_MINT_" + Date.now(), 
+        bundle_sig: "dry-run-ok" 
+      });
     }
 
-    // 1. Создаём токен (через твой pump-sdk)
+    // 1. Создаём токен
     const createTx = await createToken(connection, payer, {
       name,
       symbol,
       description,
-      file: image_path   // pump-sdk сам загрузит на IPFS
+      file: image_path
     });
 
-    const bundleTxs = [createTx];
+    const bundleTxs: Transaction[] = [createTx as Transaction];
 
-    // 2. Buy от каждого кошелька в одном бандле
+    // 2. Buy от каждого кошелька
     for (const w of wallets) {
       const buyerKp = Keypair.fromSecretKey(bs58.decode(w.secret_b58));
-      const buyTx = await buildBuyTx(connection, buyerKp, createTx.mint /* или из create */, 
-                                     Math.floor(buy_sol_per_wallet * 1e9), 1500); // slippage 15%
+      const buyTx = await buildBuyTx(
+        connection,
+        buyerKp,
+        createTx.mint || new PublicKey("11111111111111111111111111111111"),
+        BigInt(Math.floor(buy_sol_per_wallet * 1e9)),
+        1500 // slippage 15%
+      );
       bundleTxs.push(buyTx);
     }
 
     // 3. Tip
-    bundleTxs.push(buildTipTx(0.0005 + wallets.length * 0.0001)); // динамический tip
+    const tipAccountsStr = await getTipAccounts({
+      blockEngineUrl: JITO_BLOCK_ENGINE_URL,
+      uuid: JITO_UUID
+    });
+    const tipAccounts = tipAccountsStr.map(a => new PublicKey(a));
+    
+    const tipTx = await buildTipTx(
+      connection, 
+      payer, 
+      tipAccounts, 
+      50000 + wallets.length * 5000
+    );
+    bundleTxs.push(tipTx);
 
-    // 4. Отправка атомарного бандла
-    const bundleSig = await sendBundle(bundleTxs);
+    // 4. Подписываем и отправляем бандл
+    const signedBase64: string[] = bundleTxs.map(tx => 
+      Buffer.from(tx.serialize()).toString("base64")
+    );
+
+    const bundleSig = await sendBundle({
+      blockEngineUrl: JITO_BLOCK_ENGINE_URL,
+      uuid: JITO_UUID
+    }, signedBase64);
 
     res.json({
       ok: true,
-      mint: createTx.mint.toBase58(),
+      mint: (createTx as any).mint?.toBase58() || "mint-in-logs",
       bundle_sig: bundleSig
     });
 
   } catch (e: any) {
-    logger.error("Launch bundle error: " + e.message);
+    console.error("Launch bundle error:", e);
     res.status(500).json({ ok: false, error: e.message });
   }
+});
+
+// ====================== START SERVER ======================
+app.listen(PORT, HOST, () => {
+  console.log(`[executor] listening on http://${HOST}:${PORT}`);
+  console.log(`[executor] pubkey: ${payer.publicKey.toBase58()}`);
+  console.log(`[executor] dry-run default: ${DEFAULT_DRY_RUN}`);
+  console.log(`[executor] live enabled: ${LIVE_ENABLED}`);
+  console.log(`[executor] jito enabled: ${JITO_ENABLED} (${JITO_BLOCK_ENGINE_URL})`);
 });

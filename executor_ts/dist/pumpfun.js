@@ -518,3 +518,16 @@ export async function buildTipTx(connection, payer, tipAccounts, tipLamports) {
     tx.sign(payer);
     return tx;
 }
+export async function createToken(connection, payer, opts) {
+    const base = getPumpBase();
+    const OnlinePumpSdk = base.OnlinePumpSdk;
+    const sdk = new OnlinePumpSdk(connection);
+    const tx = await sdk.create({
+        payer,
+        name: opts.name,
+        symbol: opts.symbol,
+        description: opts.description,
+        file: opts.file, // SDK сам загрузит на IPFS pump.fun
+    });
+    return tx; // VersionedTransaction
+}
