@@ -22,7 +22,7 @@ import {
   quoteSellTokenAmount,
 } from "./pumpfun.js";
 
-import { createToken } from "./pumpfun.ts";   // если нет — создадим ниже
+import { createToken } from "./pumpfun";   // если нет — создадим ниже
 import bs58 from "bs58";
 
 dotenv.config();

@@ -650,3 +650,27 @@ export async function createToken(connection: Connection, payer: Keypair, opts: 
   });
   return tx;   // VersionedTransaction с mint внутри
 }
+export async function createToken(
+  connection: Connection,
+  payer: Keypair,
+  opts: {
+    name: string;
+    symbol: string;
+    description: string;
+    file: string;
+  }
+) {
+  const base = getPumpBase(); // уже есть в твоём файле
+  const OnlinePumpSdk = base.OnlinePumpSdk;
+  const online = new OnlinePumpSdk(connection);
+
+  const tx = await online.create({
+    payer,
+    name: opts.name,
+    symbol: opts.symbol,
+    description: opts.description,
+    file: opts.file,   // SDK сам загрузит картинку на IPFS pump.fun
+  });
+
+  return tx;  // VersionedTransaction
+}
