@@ -4,7 +4,7 @@ from pathlib import Path
 from pipeline.launch_manager import LaunchManager
 from utils.logger import setup_logger
 
-logger = setup_logger("LAUNCH_BOT")
+logger = setup_logger("LAUNCH")
 
 def main():
     parser = argparse.ArgumentParser(description="Solana Pump.fun Bundle Launch + Volume Bot")
