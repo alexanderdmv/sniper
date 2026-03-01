@@ -189,7 +189,7 @@ trading:
   venue: pumpfun
   mode: filter
   buy_on_decision: WATCH
-  executor_url: http://127.0.0.1:8787
+  executor_url: http://127.0.0.1:8788
   buy_amount_sol: 0.02
   take_profit_pct: 35
   stop_loss_pct: 10
