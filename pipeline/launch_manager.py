@@ -31,18 +31,23 @@ class LaunchManager:
 
     def generate_wallets(self, num: int = 15):
         if self.wallets:
-            logger.warning(f"Уже есть {len(self.wallets)} кошельков. Генерирую только если нужно.")
+            logger.warning(f"Уже есть {len(self.wallets)} кошельков.")
             return
+
         logger.info(f"Генерирую {num} свежих кошельков...")
         for i in range(num):
-            kp = Keypair.from_bytes(base58.b58decode(w["secret_b58"]))
+            kp = Keypair()
+            
+            # Правильный способ для solders
             secret_bytes = bytes(kp.secret())
             secret_b58 = base58.b58encode(secret_bytes).decode("utf-8")
+
             self.wallets.append({
                 "index": i,
                 "pubkey": str(kp.pubkey()),
                 "secret_b58": secret_b58
             })
+
         self._save_wallets()
         logger.success(f"✅ {num} кошельков сохранены → {WALLETS_PATH}")
 
