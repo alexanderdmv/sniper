@@ -163,7 +163,7 @@ function resolveRpcUrl() {
     throw new Error("Missing SOL_RPC_URL (or HELIUS_API_KEY_EXECUTOR / secrets.yaml helius.api_key_executor).");
 }
 const HOST = process.env.EXECUTOR_HOST ?? "127.0.0.1";
-const PORT = Number(process.env.EXECUTOR_PORT ?? "8787");
+const PORT = Number(process.env.EXECUTOR_PORT ?? "8790");
 const controlDryRun = parseControlTradingDryRun();
 const DEFAULT_DRY_RUN = process.env.EXECUTOR_DRY_RUN !== undefined
     ? (process.env.EXECUTOR_DRY_RUN ?? "true").toLowerCase() !== "false"

@@ -13,7 +13,7 @@ from pipeline.control import load_control   # твой существующий
 logger = setup_logger("LAUNCH")
 
 WALLETS_PATH = Path("data/wallets.json")
-EXECUTOR_URL = "http://127.0.0.1:8788"   # можно вынести в control.yaml позже
+EXECUTOR_URL = "http://127.0.0.1:8790"   # можно вынести в control.yaml позже
 
 class LaunchManager:
     def __init__(self):

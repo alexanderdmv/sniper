@@ -173,7 +173,7 @@ function resolveRpcUrl(): string {
 
 
 const HOST = process.env.EXECUTOR_HOST ?? "127.0.0.1";
-const PORT = Number(process.env.EXECUTOR_PORT ?? "8787");
+const PORT = Number(process.env.EXECUTOR_PORT ?? "8790");
 const controlDryRun = parseControlTradingDryRun();
 const DEFAULT_DRY_RUN =
   process.env.EXECUTOR_DRY_RUN !== undefined
@@ -537,13 +537,4 @@ app.post("/launch_bundle", async (req, res) => {
     console.error("Launch bundle error:", e);
     res.status(500).json({ ok: false, error: e.message });
   }
-});
-
-// ====================== START SERVER ======================
-app.listen(PORT, HOST, () => {
-  console.log(`[executor] listening on http://${HOST}:${PORT}`);
-  console.log(`[executor] pubkey: ${payer.publicKey.toBase58()}`);
-  console.log(`[executor] dry-run default: ${DEFAULT_DRY_RUN}`);
-  console.log(`[executor] live enabled: ${LIVE_ENABLED}`);
-  console.log(`[executor] jito enabled: ${JITO_ENABLED} (${JITO_BLOCK_ENGINE_URL})`);
 });
