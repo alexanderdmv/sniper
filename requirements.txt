@@ -7,3 +7,5 @@ tabulate
 scikit-learn
 lightgbm
 joblib
+solders
+base58

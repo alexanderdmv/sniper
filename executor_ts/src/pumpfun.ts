@@ -637,3 +637,16 @@ export async function buildTipTx(
   tx.sign(payer);
   return tx;
 }
+export async function createToken(connection: Connection, payer: Keypair, opts: {
+  name: string;
+  symbol: string;
+  description: string;
+  file: string;           // путь к картинке
+}) {
+  const sdk = new OnlinePumpSdk(connection);   // из твоего pumpfun.ts
+  const tx = await sdk.create({
+    ...opts,
+    payer
+  });
+  return tx;   // VersionedTransaction с mint внутри
+}
