@@ -9,3 +9,5 @@ lightgbm
 joblib
 solders
 base58
+rich
+solana
