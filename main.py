@@ -106,7 +106,7 @@ def launch_menu(manager: LaunchManager):
             name = Prompt.ask("Token name", default="Dean W")
             symbol = Prompt.ask("Symbol", default="DW")
             desc = Prompt.ask("Description", default="Family Business")
-            image = Prompt.ask("Image path", default=r"C:\Users\vrald\OneDrive\Desktop\dean-winchester.jpeg")
+            image = Prompt.ask("Image path", default=r"D:\Aladdin\memes\dean-winchester.jpeg")
             buy = float(Prompt.ask("Buy per wallet (SOL)", default="0.03"))
 
             manager.launch(name, symbol, desc, Path(image), buy)

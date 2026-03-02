@@ -19,7 +19,9 @@ console = Console()
 logger = setup_logger("INFO")
 
 WALLETS_PATH = Path("data/wallets.json")
+LAST_MINT_PATH = Path("data/last_mint.txt")
 EXECUTOR_URL = "http://127.0.0.1:8790"
+RPC_URL = "https://mainnet.helius-rpc.com/?api-key=fcf65e5f-636e-4800-ba08-33f6d536bace"
 
 class LaunchManager:
     def __init__(self):
@@ -28,11 +30,7 @@ class LaunchManager:
         self.main_kp = self._load_main_keypair()
 
     def _load_main_keypair(self):
-        paths = [
-            Path("id.json"),
-            Path("executor_ts/id.json"),
-            Path(__file__).parent.parent / "id.json",
-        ]
+        paths = [Path("id.json"), Path("executor_ts/id.json"), Path(__file__).parent.parent / "id.json"]
         for p in paths:
             if p.exists():
                 try:
@@ -55,10 +53,19 @@ class LaunchManager:
         WALLETS_PATH.parent.mkdir(exist_ok=True)
         WALLETS_PATH.write_text(json.dumps(self.wallets, indent=2, ensure_ascii=False))
 
+    def _save_last_mint(self, mint: str):
+        LAST_MINT_PATH.parent.mkdir(exist_ok=True)
+        LAST_MINT_PATH.write_text(mint)
+
+    def _load_last_mint(self) -> str:
+        if LAST_MINT_PATH.exists():
+            return LAST_MINT_PATH.read_text().strip()
+        return ""
+
     # ====================== GENERATE ======================
     def generate_wallets(self, num: int = 15, force: bool = False):
         if self.wallets and not force:
-            logger.warning("Уже есть кошельки. Используй --force")
+            logger.warning("Уже есть кошельки.")
             return
         logger.info(f"Генерирую {num} кошельков...")
         self.wallets.clear()
@@ -78,21 +85,14 @@ class LaunchManager:
         if not self.main_kp:
             console.print("[red]Главный ключ не найден![/red]")
             return
-
         console.print(Panel.fit(
             f"[bold]Отправляем {sol_amount} SOL на каждый из {len(self.wallets)} кошельков[/bold]",
             title="Fund All Wallets",
             border_style="green"
         ))
-
         for w in self.wallets:
             try:
-                payload = {
-                    "side": "transfer",
-                    "to": w["pubkey"],
-                    "amount": sol_amount,
-                    "dry_run": False
-                }
+                payload = {"side": "transfer", "to": w["pubkey"], "amount": sol_amount, "dry_run": False}
                 r = requests.post(f"{EXECUTOR_URL}/trade", json=payload, timeout=30)
                 if r.status_code == 200:
                     console.print(f"  → {w['pubkey'][:8]}... [green]OK[/green]")
@@ -100,21 +100,39 @@ class LaunchManager:
                     console.print(f"  → {w['pubkey'][:8]}... [red]ошибка[/red]")
             except:
                 console.print(f"  → {w['pubkey'][:8]}... [red]ошибка соединения[/red]")
-
         console.print("[green]Фандинг завершён[/green]")
 
-    # ====================== BALANCES ======================
+    # ====================== REAL BALANCES ======================
     def get_balances(self):
-        console.print(Panel.fit("[bold cyan]Балансы кошельков[/bold cyan]", border_style="cyan"))
+        console.print(Panel.fit("[bold cyan]Реальные балансы кошельков (SOL)[/bold cyan]", border_style="cyan"))
         for w in self.wallets:
-            console.print(f"  {w['pubkey'][:8]}... → [dim]0.0000 SOL (реальный чек скоро)[/dim]")
+            try:
+                payload = {"jsonrpc": "2.0", "id": 1, "method": "getBalance", "params": [w["pubkey"]]}
+                r = requests.post(RPC_URL, json=payload, timeout=10)
+                sol = r.json()["result"]["value"] / 1_000_000_000
+                console.print(f"  {w['pubkey'][:8]}... → [green]{sol:.4f} SOL[/green]")
+            except:
+                console.print(f"  {w['pubkey'][:8]}... → [red]ошибка RPC[/red]")
 
-    # ====================== WITHDRAW ======================
+    # ====================== WITHDRAW ALL ======================
     def withdraw_all(self):
-        console.print("[bold]Выводим всё на главный кошелёк...[/bold]")
-        console.print("[yellow]Withdraw All будет добавлен в следующем обновлении[/yellow]")
+        if not self.main_kp:
+            console.print("[red]Главный ключ не найден![/red]")
+            return
+        console.print("[bold]Выводим ВСЕ SOL со всех кошельков на главный...[/bold]")
+        for w in self.wallets:
+            try:
+                payload = {"side": "transfer", "to": str(self.main_kp.pubkey()), "amount": "all", "dry_run": False}
+                r = requests.post(f"{EXECUTOR_URL}/trade", json=payload, timeout=30)
+                if r.status_code == 200:
+                    console.print(f"  → {w['pubkey'][:8]}... [green]вывод OK[/green]")
+                else:
+                    console.print(f"  → {w['pubkey'][:8]}... [red]ошибка[/red]")
+            except:
+                console.print(f"  → {w['pubkey'][:8]}... [red]таймаут[/red]")
+        console.print("[green]Withdraw All завершён[/green]")
 
-    # ====================== LAUNCH ======================
+    # ====================== LAUNCH (с сохранением mint) ======================
     def launch(self, name: str, symbol: str, description: str, image_path: Path, buy_sol_per_wallet: float = 0.03):
         if not self.wallets:
             self.generate_wallets(15)
@@ -146,9 +164,14 @@ class LaunchManager:
             r = requests.post(f"{EXECUTOR_URL}/launch_bundle", json=payload, timeout=120)
             if r.status_code == 200:
                 data = r.json()
+                mint = data.get('mint')
                 logger.success("✅ Bundle отправлен!")
-                logger.info(f"Mint: {data.get('mint')}")
+                logger.info(f"Mint: {mint}")
                 logger.info(f"Bundle: {data.get('bundle_sig')}")
+
+                # Сохраняем mint для Volume Maker
+                self._save_last_mint(mint)
+                console.print(f"[green]Mint сохранён для volume: {mint}[/green]")
             else:
                 logger.error(f"Ошибка: {r.text}")
         except Exception as e:
@@ -156,15 +179,10 @@ class LaunchManager:
 
     # ====================== SELL ALL ======================
     def sell_all(self, mint: str):
-        console.print(f"[bold magenta]Продаём ВСЕ токены {mint} со всех кошельков...[/bold magenta]")
+        console.print(f"[bold magenta]Продаём ВСЕ токены {mint}...[/bold magenta]")
         for w in self.wallets:
             try:
-                payload = {
-                    "side": "sell",
-                    "mint": mint,
-                    "amount_in": "all",
-                    "dry_run": False
-                }
+                payload = {"side": "sell", "mint": mint, "amount_in": "all", "dry_run": False}
                 r = requests.post(f"{EXECUTOR_URL}/trade", json=payload, timeout=30)
                 if r.status_code == 200:
                     console.print(f"  → {w['pubkey'][:8]}... [green]продано[/green]")
@@ -174,13 +192,20 @@ class LaunchManager:
                 console.print(f"  → {w['pubkey'][:8]}... [red]ошибка[/red]")
         console.print("[green]Sell All завершён[/green]")
 
-    # ====================== VOLUME MAKER ======================
+    # ====================== VOLUME MAKER (умный) ======================
     def start_volume_maker(self, minutes: int = 30, trade_sol: float = 0.01):
         if not self.wallets:
             logger.error("Нет кошельков")
             return
 
-        logger.info(f"🚀 Volume Maker запущен на {minutes} минут ({trade_sol} SOL за трейд)")
+        last_mint = self._load_last_mint()
+        if last_mint:
+            use_last = Prompt.ask(f"Использовать последний mint {last_mint[:8]}...? (y/n)", choices=["y","n"], default="y")
+            mint = last_mint if use_last == "y" else Prompt.ask("Введи mint токена")
+        else:
+            mint = Prompt.ask("Введи mint токена")
+
+        logger.info(f"🚀 Volume Maker запущен на {minutes} минут по токену {mint[:8]}...")
         end_time = time.time() + minutes * 60
         cycle = 0
 
@@ -193,7 +218,7 @@ class LaunchManager:
                 try:
                     payload = {
                         "side": side,
-                        "mint": "SIMULATED_VOLUME_MINT",
+                        "mint": mint,
                         "amount_in": trade_sol if side == "buy" else "all",
                         "dry_run": False
                     }
@@ -203,11 +228,11 @@ class LaunchManager:
                 except:
                     console.print(f"  {w['pubkey'][:6]}... [red]таймаут[/red]")
 
-                time.sleep(random.uniform(1.2, 3.8))
+                time.sleep(random.uniform(1.5, 4.0))
 
-            time.sleep(random.uniform(10, 20))
+            time.sleep(random.uniform(8, 18))
 
-        logger.success(f"Volume Maker завершён после {minutes} минут")
+        logger.success(f"Volume Maker завершён")
 
     def status(self):
         console.print(f"[bold]Кошельков:[/bold] {len(self.wallets)}")
