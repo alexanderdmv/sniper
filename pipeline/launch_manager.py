@@ -1,6 +1,7 @@
 import json
 import time
 import random
+import threading
 from datetime import datetime
 from pathlib import Path
 from typing import List, Dict
@@ -295,63 +296,93 @@ class LaunchManager:
         console.print("[green]Sell All завершён[/green]")
 
     # ====================== AUTO SELL WITH TRAILING ======================
-    def auto_sell_tp(self, mint: str, tp_percent: float = 100, trailing_percent: float = 30):
+    def auto_sell_tp(self, mint: str, tp_percent: float = 100.0, trailing_percent: float = 30.0):
         if self.auto_sell_running:
-            console.print("[red]Auto Sell уже запущен![/red]")
+            console.print("[red]⚠️ Auto Sell уже запущен! Сначала останови предыдущий.[/red]")
             return
 
         self.auto_sell_running = True
+        self.tp_percent = tp_percent
+        self.trailing_percent = trailing_percent
+
         console.print(Panel.fit(
-            f"[bold]Auto Sell + Trailing запущен\n"
-            f"Токен: {mint[:8]}...\n"
-            f"TP: +{tp_percent}% | Trailing: -{trailing_percent}% от максимума[/bold]",
-            title="Auto Sell TP + Trailing",
-            border_style="magenta"
+            f"[bold green]Auto Sell + Trailing запущен[/bold green]\n"
+            f"Токен: [cyan]{mint[:8]}...[/cyan]\n"
+            f"TP: +{tp_percent:.1f}% от базовой цены\n"
+            f"Trailing Stop: -{trailing_percent:.1f}% от максимума",
+            title="🚀 AUTO SELL TP + TRAILING",
+            border_style="green"
         ))
 
         def monitor_price():
+            base_price = None
             max_price = 0.0
-            try:
-                while self.auto_sell_running:
-                    # Получаем текущую цену через bonding curve (реальный способ)
-                    try:
-                        r = requests.get(f"{EXECUTOR_URL}/state?mint={mint}", timeout=10)
-                        if r.status_code == 200:
-                            price_data = r.json().get("state", {})
-                            current_price = float(price_data.get("virtualSolReservesSol", 0)) / float(price_data.get("virtualTokenReserves", 1))
-                            
-                            if current_price > max_price:
-                                max_price = current_price
+            last_log_time = 0
 
-                            # Проверка TP
-                            if current_price >= (max_price * (1 + tp_percent/100)):
-                                console.print(f"[green]✅ Достигнут TP +{tp_percent}% — продаём![/green]")
-                                self.sell_all(mint)
-                                break
+            while self.auto_sell_running:
+                try:
+                    r = requests.get(f"{EXECUTOR_URL}/state?mint={mint}", timeout=8)
+                    if r.status_code == 200:
+                        data = r.json().get("state", {})
+                        sol_res = float(data.get("virtualSolReservesSol", 0))
+                        token_res = float(data.get("virtualTokenReserves", 1))
+                        current_price = sol_res / token_res if token_res > 0 else 0
 
-                            # Проверка Trailing Stop
-                            trailing_threshold = max_price * (1 - trailing_percent/100)
-                            if current_price <= trailing_threshold and max_price > 0:
-                                console.print(f"[green]✅ Сработал Trailing Stop (-{trailing_percent}%) — продаём![/green]")
-                                self.sell_all(mint)
-                                break
+                        if current_price <= 0:
+                            time.sleep(3)
+                            continue
 
-                            console.print(f"Цена: {current_price:.6f} | Max: {max_price:.6f} | TP: +{tp_percent}% | Trailing: {trailing_percent}%")
-                    except:
-                        pass
+                        if base_price is None:
+                            base_price = current_price
+                            max_price = current_price
+                            logger.success(f"✅ Базовая цена зафиксирована: {base_price:.8f} SOL")
 
-                    time.sleep(4)  # проверка каждые 4 секунды
+                        if current_price > max_price:
+                            max_price = current_price
 
-            except KeyboardInterrupt:
-                pass
-            finally:
-                self.auto_sell_running = False
-                console.print("[yellow]Auto Sell остановлен[/yellow]")
+                        # ==================== TAKE PROFIT ====================
+                        if current_price >= base_price * (1 + self.tp_percent / 100):
+                            logger.success(f"🎯 TAKE PROFIT +{self.tp_percent}% ДОСТИГНУТ! Продаём ВСЁ...")
+                            self.sell_all(mint)
+                            self.auto_sell_running = False
+                            break
 
-        # Запускаем мониторинг в отдельном потоке
+                        # ==================== TRAILING STOP ====================
+                        trailing_trigger = max_price * (1 - self.trailing_percent / 100)
+                        if current_price <= trailing_trigger and max_price >= base_price * 1.08:  # защита от шума
+                            logger.warning(f"⛔ TRAILING STOP (-{self.trailing_percent}%) СРАБОТАЛ! Продаём ВСЁ...")
+                            self.sell_all(mint)
+                            self.auto_sell_running = False
+                            break
+
+                        # Лог цены раз в 8 секунд (не спамит)
+                        if time.time() - last_log_time > 8:
+                            logger.info(f"💰 Цена: {current_price:.8f} SOL | Max: {max_price:.8f} | TP: +{self.tp_percent}%")
+                            last_log_time = time.time()
+
+                except Exception as e:
+                    logger.error(f"Ошибка мониторинга цены: {e}")
+
+                time.sleep(2)  # проверка каждые 3 секунды — почти без задержки
+
+            logger.info("🛑 Мониторинг Auto Sell остановлен")
+
+        # Запуск в фоне
         self.auto_sell_thread = threading.Thread(target=monitor_price, daemon=True)
         self.auto_sell_thread.start()
 
+        console.print("[dim]✅ Мониторинг запущен в фоне. Закрой окно — авто-селл остановится.[/dim]")
+    def stop_auto_sell(self):
+        if self.auto_sell_running:
+            self.auto_sell_running = False
+            console.print("[yellow]🛑 Auto Sell остановлен пользователем[/yellow]")
+            
+            if self.auto_sell_thread and self.auto_sell_thread.is_alive():
+                self.auto_sell_thread.join(timeout=2.0)   # мягко ждём завершения
+            
+            logger.success("✅ Auto Sell полностью остановлен")
+        else:
+            console.print("[dim]Auto Sell не был запущен[/dim]")
     # ====================== VOLUME MAKER ======================
     def start_volume_maker(self, minutes: int = 30, trade_sol: float = 0.01):
         if not self.wallets:

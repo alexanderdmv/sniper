@@ -132,23 +132,33 @@ def sell_menu(manager: LaunchManager):
 
         rprint("1. Dump All")
         rprint("2. Dump %")
-        rprint("3. Delay Sell All")
-        rprint("4. Single Wallet Sell")
-        rprint("5. Auto Sell by TP/SL + Trailing")
-        rprint("6. Back to Main Menu")
+        rprint("3. Single Wallet Sell")
+        rprint("4. Auto Sell by TP/SL + Trailing")
 
-        choice = Prompt.ask("Choose", choices=["1","2","3","4","5","6"])
+        if manager.auto_sell_running:
+            rprint("5. [red bold]🛑 Stop Auto Sell[/red bold]")
+            rprint("6. Back to Main Menu")
+            choices = ["1", "2", "3", "4", "5", "6"]
+        else:
+            rprint("5. Back to Main Menu")
+            choices = ["1", "2", "3", "4", "5"]
+
+        choice = Prompt.ask("Choose", choices=choices)
 
         if choice == "1":
             mint = Prompt.ask("Mint address")
             manager.sell_all(mint)
-        if choice == "5":
+        if choice == "4":
             mint = Prompt.ask("Mint токена")
             tp = float(Prompt.ask("TP % (50, 100, 200...)", default="100"))
             trailing = float(Prompt.ask("Trailing Stop %", default="30"))
             manager.auto_sell_tp(mint, tp, trailing if trailing else 0)    
-        elif choice == "6":
+        elif choice == "5" and manager.auto_sell_running:
+            manager.stop_auto_sell()
+
+        elif (choice == "5" and not manager.auto_sell_running) or choice == "6":
             break
+
         else:
             console.print("[yellow]Эта функция скоро будет добавлена[/yellow]") 
 

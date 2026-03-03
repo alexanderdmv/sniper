@@ -26,3 +26,4 @@ config/secrets.yaml
 # Notebooks
 .ipynb_checkpoints/
 id.json
+wallets.json
