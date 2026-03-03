@@ -13,12 +13,6 @@ venv/
 logs/*
 !logs/.gitkeep
 
-# Data / outputs (keep folders)
-data/processed/*
-!data/processed/.gitkeep
-data/raw/*
-!data/raw/.gitkeep
-
 # Tracker / local state
 *.db
 *.sqlite

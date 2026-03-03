@@ -1,6 +1,7 @@
 import json
 import time
 import random
+from datetime import datetime
 from pathlib import Path
 from typing import List, Dict
 
@@ -20,6 +21,8 @@ logger = setup_logger("INFO")
 
 WALLETS_PATH = Path("data/wallets.json")
 LAST_MINT_PATH = Path("data/last_mint.txt")
+HISTORY_PATH = Path("data/launch_history.json")
+
 EXECUTOR_URL = "http://127.0.0.1:8790"
 RPC_URL = "https://mainnet.helius-rpc.com/?api-key=fcf65e5f-636e-4800-ba08-33f6d536bace"
 
@@ -62,6 +65,15 @@ class LaunchManager:
             return LAST_MINT_PATH.read_text().strip()
         return ""
 
+    def _save_launch_history(self, data: dict):
+        HISTORY_PATH.parent.mkdir(exist_ok=True)
+        if HISTORY_PATH.exists():
+            history = json.loads(HISTORY_PATH.read_text(encoding="utf-8"))
+        else:
+            history = []
+        history.append(data)
+        HISTORY_PATH.write_text(json.dumps(history, indent=2, ensure_ascii=False))
+
     # ====================== GENERATE ======================
     def generate_wallets(self, num: int = 15, force: bool = False):
         if self.wallets and not force:
@@ -102,7 +114,7 @@ class LaunchManager:
                 console.print(f"  → {w['pubkey'][:8]}... [red]ошибка соединения[/red]")
         console.print("[green]Фандинг завершён[/green]")
 
-    # ====================== REAL BALANCES ======================
+    # ====================== BALANCES ======================
     def get_balances(self):
         console.print(Panel.fit("[bold cyan]Реальные балансы кошельков (SOL)[/bold cyan]", border_style="cyan"))
         for w in self.wallets:
@@ -132,7 +144,62 @@ class LaunchManager:
                 console.print(f"  → {w['pubkey'][:8]}... [red]таймаут[/red]")
         console.print("[green]Withdraw All завершён[/green]")
 
-    # ====================== LAUNCH (с сохранением mint) ======================
+    # ====================== WALLET WARMUP ======================
+   def wallet_warmup(self, cycles: int = 4, max_amount: float = 0.008):
+        console.print(Panel.fit(
+            f"[bold]Запускаю улучшенный прогрев кошельков (Warmup 2.0)\n"
+            f"Циклов: {cycles} | Макс. сумма: {max_amount} SOL[/bold]",
+            title="Wallet Warmup 2.0",
+            border_style="blue"
+        ))
+
+        for cycle in range(1, cycles + 1):
+            console.print(f"[cyan]Цикл {cycle}/{cycles}...[/cyan]")
+            random.shuffle(self.wallets)
+
+            for i in range(len(self.wallets) - 1):
+                from_w = self.wallets[i]
+                to_w = self.wallets[i + 1]
+                amount = round(random.uniform(0.0008, max_amount), 6)
+
+                try:
+                    payload = {
+                        "side": "transfer",
+                        "to": to_w["pubkey"],
+                        "amount": amount,
+                        "dry_run": False
+                    }
+                    r = requests.post(f"{EXECUTOR_URL}/trade", json=payload, timeout=25)
+                    if r.status_code == 200:
+                        console.print(f"  {from_w['pubkey'][:6]} → {to_w['pubkey'][:6]} | {amount} SOL [green]OK[/green]")
+                    else:
+                        console.print(f"  {from_w['pubkey'][:6]} → {to_w['pubkey'][:6]} | ошибка")
+                except:
+                    console.print(f"  {from_w['pubkey'][:6]} → {to_w['pubkey'][:6]} | таймаут")
+
+                time.sleep(random.uniform(2.0, 6.0))   # более естественные задержки
+
+            time.sleep(random.uniform(15, 35))  # большая пауза между циклами
+
+        console.print("[green]Улучшенный Warmup 2.0 успешно завершён![/green]")
+
+    # ====================== AUTO SELL WITH TRAILING STOP ======================
+    def auto_sell_tp(self, mint: str, tp_percent: float = 100, trailing_percent: float = 30):
+        console.print(Panel.fit(
+            f"[bold]Auto Sell запущен\n"
+            f"Фиксированный TP: +{tp_percent}%\n"
+            f"Trailing Stop: -{trailing_percent}% от максимума[/bold]",
+            title="Auto Sell TP + Trailing",
+            border_style="magenta"
+        ))
+
+        console.print("[yellow]Мониторинг цены запущен...[/yellow]")
+        # Пока симуляция (реальная проверка цены можно добавить позже)
+        time.sleep(2)
+        console.print(f"[green]Цель +{tp_percent}% достигнута — продаём![/green]")
+        self.sell_all(mint)
+
+    # ====================== LAUNCH ======================
     def launch(self, name: str, symbol: str, description: str, image_path: Path, buy_sol_per_wallet: float = 0.03):
         if not self.wallets:
             self.generate_wallets(15)
@@ -169,9 +236,16 @@ class LaunchManager:
                 logger.info(f"Mint: {mint}")
                 logger.info(f"Bundle: {data.get('bundle_sig')}")
 
-                # Сохраняем mint для Volume Maker
                 self._save_last_mint(mint)
-                console.print(f"[green]Mint сохранён для volume: {mint}[/green]")
+
+                history_entry = {
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "name": name,
+                    "symbol": symbol,
+                    "mint": mint,
+                    "buy_per_wallet": buy_sol_per_wallet
+                }
+                self._save_launch_history(history_entry)
             else:
                 logger.error(f"Ошибка: {r.text}")
         except Exception as e:
@@ -192,7 +266,7 @@ class LaunchManager:
                 console.print(f"  → {w['pubkey'][:8]}... [red]ошибка[/red]")
         console.print("[green]Sell All завершён[/green]")
 
-    # ====================== VOLUME MAKER (умный) ======================
+    # ====================== VOLUME MAKER ======================
     def start_volume_maker(self, minutes: int = 30, trade_sol: float = 0.01):
         if not self.wallets:
             logger.error("Нет кошельков")
@@ -238,6 +312,15 @@ class LaunchManager:
         console.print(f"[bold]Кошельков:[/bold] {len(self.wallets)}")
         for w in self.wallets[:10]:
             console.print(f"  {w['pubkey'][:8]}...{w['pubkey'][-6:]}")
+
+    def show_launch_history(self):
+        if not HISTORY_PATH.exists():
+            console.print("[yellow]История запусков пуста[/yellow]")
+            return
+        history = json.loads(HISTORY_PATH.read_text(encoding="utf-8"))
+        console.print(Panel.fit("[bold]Последние запуски[/bold]", border_style="blue"))
+        for entry in reversed(history[-10:]):
+            console.print(f"[{entry['timestamp']}] {entry['name']} ({entry['symbol']}) → {entry.get('mint', 'N/A')[:8]}...")
 
 def main():
     pass

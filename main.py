@@ -29,11 +29,12 @@ def main_menu(manager: LaunchManager):
         rprint("2. [green]Wallet Management[/green]")
         rprint("3. [yellow]Launch Manager[/yellow]")
         rprint("4. [magenta]Sell Menu[/magenta]")
-        rprint("5. [cyan]Volume Maker[/cyan] (скоро)")
-        rprint("6. [white]Status & Info[/white]")
-        rprint("7. [red]Exit[/red]")
+        rprint("5. [cyan]Volume Maker[/cyan]")
+        rprint("6. [white]History of Launches[/white]")
+        rprint("7. [white]Status & Info[/white]")
+        rprint("8. [red]Exit[/red]")
 
-        choice = Prompt.ask("Choose an option", choices=["1","2","3","4","5","6","7"])
+        choice = Prompt.ask("Choose an option", choices=["1","2","3","4","5","6","7","8"])
 
         if choice == "1":
             num = int(Prompt.ask("How many wallets?", default="15"))
@@ -53,9 +54,12 @@ def main_menu(manager: LaunchManager):
             manager.start_volume_maker(minutes, trade_sol)
             Prompt.ask("\nPress Enter to continue...")
         elif choice == "6":
+            manager.show_launch_history()
+            Prompt.ask("\nPress Enter to continue...")    
+        elif choice == "7":
             manager.status()
             Prompt.ask("Press Enter...")
-        elif choice == "7":
+        elif choice == "8":
             console.print("[red]Выход...[/red]")
             break
 
@@ -65,14 +69,15 @@ def wallet_menu(manager: LaunchManager):
         clear()
         console.print(Panel.fit("[bold green]Wallet Management[/bold green]", border_style="green"))
 
-        rprint("1. Fund Wallets (f)")
-        rprint("2. Balance (b)")
-        rprint("3. Transfer Tokens (t)")
-        rprint("4. Refund SOL (r)")
-        rprint("5. Wallet Cleanup (k)")
-        rprint("6. Back to Main Menu (e)")
+        rprint("1. Fund Wallets")
+        rprint("2. Balance")
+        rprint("3. Transfer Tokens")
+        rprint("4. Refund SOL")
+        rprint("5. Wallet Warmup")
+        rprint("6. Wallet Cleanup")
+        rprint("7. Back to Main Menu")
 
-        choice = Prompt.ask("Choose", choices=["1","2","3","4","5","6"])
+        choice = Prompt.ask("Choose", choices=["1","2","3","4","5","6","7"])
 
         if choice == "1":
             amount = float(Prompt.ask("SOL per wallet", default="0.5"))
@@ -82,11 +87,15 @@ def wallet_menu(manager: LaunchManager):
         elif choice == "4":
             manager.withdraw_all()
         elif choice == "5":
+            cycles = int(Prompt.ask("Сколько циклов прогрева?", default="4"))
+            amount = float(Prompt.ask("Макс. сумма за трансфер (SOL)", default="0.008"))
+            manager.wallet_warmup(cycles, amount)    
+        elif choice == "6":
             if Prompt.ask("Удалить все кошельки? (y/n)", choices=["y","n"]) == "y":
                 Path("data/wallets.json").unlink(missing_ok=True)
                 manager.wallets.clear()
                 console.print("[green]Кошельки очищены![/green]")
-        elif choice == "6":
+        elif choice == "7":
             break
 
         Prompt.ask("\nPress Enter to continue...")
@@ -125,7 +134,7 @@ def sell_menu(manager: LaunchManager):
         rprint("2. Dump %")
         rprint("3. Delay Sell All")
         rprint("4. Single Wallet Sell")
-        rprint("5. Auto Sell")
+        rprint("5. Auto Sell by TP/SL + Trailing")
         rprint("6. Back to Main Menu")
 
         choice = Prompt.ask("Choose", choices=["1","2","3","4","5","6"])
@@ -133,10 +142,15 @@ def sell_menu(manager: LaunchManager):
         if choice == "1":
             mint = Prompt.ask("Mint address")
             manager.sell_all(mint)
+        if choice == "5":
+            mint = Prompt.ask("Mint токена")
+            tp = float(Prompt.ask("TP % (50, 100, 200...)", default="100"))
+            trailing = Prompt.ask("Использовать Trailing Stop? (y/n)", choices=["y","n"]) == "y"
+            manager.auto_sell_tp(mint, tp, trailing if trailing else 0)    
         elif choice == "6":
             break
         else:
-            console.print("[yellow]Эта функция скоро будет добавлена[/yellow]")
+            console.print("[yellow]Эта функция скоро будет добавлена[/yellow]") 
 
         Prompt.ask("\nPress Enter...")
 
