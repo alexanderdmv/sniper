@@ -150,7 +150,7 @@ def launch_menu(manager: LaunchManager):
                 default="medium"
             )
 
-            manager.launch(name, symbol, desc, Path(image), buy)
+            manager.launch(name, symbol, desc, Path(image), buy, anti_level=anti_level)
 
         elif choice == "2":
             break

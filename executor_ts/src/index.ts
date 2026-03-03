@@ -468,16 +468,30 @@ app.listen(PORT, HOST, () => {
 // ====================== BUNDLE LAUNCH ENDPOINT (10-20 wallets) ======================
 app.post("/launch_bundle", async (req, res) => {
   try {
-    const { name, symbol, description, image_path, buy_sol_per_wallet, wallets, dry_run } = req.body;
+    const { 
+      name, 
+      symbol, 
+      description, 
+      image_path, 
+      wallets, 
+      buy_amounts,     
+      jito_tips,       
+      dry_run 
+    } = req.body;
 
-    if (dry_run || DEFAULT_DRY_RUN) {
-      console.log("[DRY-RUN] Симулируем bundle launch");
+    const isDryRun = dry_run || DEFAULT_DRY_RUN;
+
+    if (isDryRun) {
+      console.log(`[DRY-RUN] Симулируем bundle launch | wallets: ${wallets?.length || 0}`);
       return res.json({ 
         ok: true, 
         mint: "DRY_RUN_MINT_" + Date.now(), 
-        bundle_sig: "dry-run-ok" 
+        bundle_sig: "dry-run-ok",
+        anti_detect: true
       });
     }
+
+    console.log(`[LIVE] Запускаем bundle с анти-детектом | wallets: ${wallets.length}`);
 
     // 1. Создаём токен
     const createTx = await createToken(connection, payer, {
@@ -487,38 +501,47 @@ app.post("/launch_bundle", async (req, res) => {
       file: image_path
     });
 
-    const bundleTxs: Transaction[] = [createTx as Transaction];
+    const bundleTxs: any[] = [createTx];
 
-    // 2. Buy от каждого кошелька
-    for (const w of wallets) {
+    // 2. Покупки с индивидуальными суммами + задержки
+    for (let i = 0; i < wallets.length; i++) {
+      const w = wallets[i];
       const buyerKp = Keypair.fromSecretKey(bs58.decode(w.secret_b58));
+      
+      const buyAmountSol = buy_amounts && Array.isArray(buy_amounts) ? buy_amounts[i] : 0.03;
+
       const buyTx = await buildBuyTx(
         connection,
         buyerKp,
         createTx.mint || new PublicKey("11111111111111111111111111111111"),
-        BigInt(Math.floor(buy_sol_per_wallet * 1e9)),
-        1500 // slippage 15%
+        BigInt(Math.floor(buyAmountSol * 1e9)),
+        1500
       );
+
       bundleTxs.push(buyTx);
+
+      // Анти-детект задержка между покупками
+      if (i < wallets.length - 1) {
+        await new Promise(r => setTimeout(r, randomInt(450, 1850)));
+      }
     }
 
-    // 3. Tip
+    // 3. Jito tip (исправлено типизация)
     const tipAccountsStr = await getTipAccounts({
       blockEngineUrl: JITO_BLOCK_ENGINE_URL,
       uuid: JITO_UUID
     });
-    const tipAccounts = tipAccountsStr.map(a => new PublicKey(a));
+    const tipAccounts = tipAccountsStr.map((a: string) => new PublicKey(a));
     
-    const tipTx = await buildTipTx(
-      connection, 
-      payer, 
-      tipAccounts, 
-      50000 + wallets.length * 5000
-    );
+    const finalTip = jito_tips && Array.isArray(jito_tips) 
+      ? Math.floor(jito_tips.reduce((sum: number, tip: number) => sum + tip, 0) * 1e9) 
+      : 50000;
+    
+    const tipTx = await buildTipTx(connection, payer, tipAccounts, finalTip);
     bundleTxs.push(tipTx);
 
-    // 4. Подписываем и отправляем бандл
-    const signedBase64: string[] = bundleTxs.map(tx => 
+    // 4. Отправляем бандл
+    const signedBase64: string[] = bundleTxs.map((tx: any) =>
       Buffer.from(tx.serialize()).toString("base64")
     );
 
@@ -529,8 +552,10 @@ app.post("/launch_bundle", async (req, res) => {
 
     res.json({
       ok: true,
-      mint: (createTx as any).mint?.toBase58() || "mint-in-logs",
-      bundle_sig: bundleSig
+      mint: (createTx as any).mint?.toBase58() || "unknown",
+      bundle_sig: bundleSig,
+      anti_detect: true,
+      wallets_count: wallets.length
     });
 
   } catch (e: any) {
@@ -538,3 +563,8 @@ app.post("/launch_bundle", async (req, res) => {
     res.status(500).json({ ok: false, error: e.message });
   }
 });
+
+// Вспомогательная функция
+function randomInt(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
