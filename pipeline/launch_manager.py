@@ -33,7 +33,11 @@ class LaunchManager:
         self.main_kp = self._load_main_keypair()
 
     def _load_main_keypair(self):
-        paths = [Path("id.json"), Path("executor_ts/id.json"), Path(__file__).parent.parent / "id.json"]
+        paths = [
+            Path("id.json"),
+            Path("executor_ts/id.json"),
+            Path(__file__).parent.parent / "id.json",
+        ]
         for p in paths:
             if p.exists():
                 try:
@@ -77,7 +81,7 @@ class LaunchManager:
     # ====================== GENERATE ======================
     def generate_wallets(self, num: int = 15, force: bool = False):
         if self.wallets and not force:
-            logger.warning("Уже есть кошельки.")
+            logger.warning("Уже есть кошельки. Используй --force")
             return
         logger.info(f"Генерирую {num} кошельков...")
         self.wallets.clear()
@@ -144,8 +148,8 @@ class LaunchManager:
                 console.print(f"  → {w['pubkey'][:8]}... [red]таймаут[/red]")
         console.print("[green]Withdraw All завершён[/green]")
 
-    # ====================== WALLET WARMUP ======================
-   def wallet_warmup(self, cycles: int = 4, max_amount: float = 0.008):
+    # ====================== WALLET WARMUP 2.0 ======================
+    def wallet_warmup(self, cycles: int = 4, max_amount: float = 0.008):
         console.print(Panel.fit(
             f"[bold]Запускаю улучшенный прогрев кошельков (Warmup 2.0)\n"
             f"Циклов: {cycles} | Макс. сумма: {max_amount} SOL[/bold]",
@@ -177,27 +181,11 @@ class LaunchManager:
                 except:
                     console.print(f"  {from_w['pubkey'][:6]} → {to_w['pubkey'][:6]} | таймаут")
 
-                time.sleep(random.uniform(2.0, 6.0))   # более естественные задержки
+                time.sleep(random.uniform(2.0, 6.0))
 
-            time.sleep(random.uniform(15, 35))  # большая пауза между циклами
+            time.sleep(random.uniform(15, 35))
 
         console.print("[green]Улучшенный Warmup 2.0 успешно завершён![/green]")
-
-    # ====================== AUTO SELL WITH TRAILING STOP ======================
-    def auto_sell_tp(self, mint: str, tp_percent: float = 100, trailing_percent: float = 30):
-        console.print(Panel.fit(
-            f"[bold]Auto Sell запущен\n"
-            f"Фиксированный TP: +{tp_percent}%\n"
-            f"Trailing Stop: -{trailing_percent}% от максимума[/bold]",
-            title="Auto Sell TP + Trailing",
-            border_style="magenta"
-        ))
-
-        console.print("[yellow]Мониторинг цены запущен...[/yellow]")
-        # Пока симуляция (реальная проверка цены можно добавить позже)
-        time.sleep(2)
-        console.print(f"[green]Цель +{tp_percent}% достигнута — продаём![/green]")
-        self.sell_all(mint)
 
     # ====================== LAUNCH ======================
     def launch(self, name: str, symbol: str, description: str, image_path: Path, buy_sol_per_wallet: float = 0.03):
@@ -246,6 +234,10 @@ class LaunchManager:
                     "buy_per_wallet": buy_sol_per_wallet
                 }
                 self._save_launch_history(history_entry)
+                if Prompt.ask("\nЗапустить Volume Maker сразу с этим mint’ом? (y/n)", choices=["y", "n"], default="y") == "y":
+                    minutes = int(Prompt.ask("Сколько минут volume?", default="30"))
+                    trade_sol = float(Prompt.ask("Объём за трейд (SOL)", default="0.01"))
+                    self.start_volume_maker(minutes, trade_sol)
             else:
                 logger.error(f"Ошибка: {r.text}")
         except Exception as e:
@@ -265,6 +257,20 @@ class LaunchManager:
             except:
                 console.print(f"  → {w['pubkey'][:8]}... [red]ошибка[/red]")
         console.print("[green]Sell All завершён[/green]")
+
+    # ====================== AUTO SELL WITH TRAILING ======================
+    def auto_sell_tp(self, mint: str, tp_percent: float = 100, trailing_percent: float = 30):
+        console.print(Panel.fit(
+            f"[bold]Auto Sell + Trailing запущен\n"
+            f"Фиксированный TP: +{tp_percent}%\n"
+            f"Trailing Stop: -{trailing_percent}% от максимума[/bold]",
+            title="Auto Sell TP + Trailing",
+            border_style="magenta"
+        ))
+        console.print("[yellow]Мониторинг цены запущен...[/yellow]")
+        time.sleep(2)
+        console.print(f"[green]Цель +{tp_percent}% достигнута — продаём![/green]")
+        self.sell_all(mint)
 
     # ====================== VOLUME MAKER ======================
     def start_volume_maker(self, minutes: int = 30, trade_sol: float = 0.01):
