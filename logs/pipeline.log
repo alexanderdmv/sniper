@@ -1,0 +1,1315 @@
+2026-02-15T16:35:51.842419+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-15T16:36:19.703424+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=FxeVbckaxupVcDGbM7q1K47Skr8Z9JY8NcdGQc6Lpump | next_check_in=44s | ml_score=0.926
+2026-02-15T16:36:19.705421+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=FxeVbckaxupVcDGbM7q1K47Skr8Z9JY8NcdGQc6Lpump (no_pairs)
+2026-02-15T16:36:21.466194+0100 | INFO | Jews -> SKIP (curve_sol_missing) | ml_score=0.020
+2026-02-15T16:36:21.467194+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=CC2MYGtzUnKzzXiqevKr7QiBqh2zJ6yNyETxhdm4pump (curve_sol_missing)
+2026-02-15T16:36:21.775329+0100 | INFO | test -> SKIP (curve_sol_missing) | ml_score=0.913
+2026-02-15T16:36:21.776826+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=FP3xQasj5eLGw3wa3vjuNEqg4ZiarokzNHLrZen4bUqX
+2026-02-15T16:36:51.517421+0100 | INFO | 星の子 -> SKIP (curve_sol_missing) | ml_score=0.008
+2026-02-15T16:36:51.536147+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=8Nw9NsEfJgKuiCXQ9FQyaFPwd4P9MDx1fKdK5Zz4pump
+2026-02-15T16:36:51.536147+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=FxeVbckaxupVcDGbM7q1K47Skr8Z9JY8NcdGQc6Lpump
+2026-02-15T16:36:51.538156+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=CC2MYGtzUnKzzXiqevKr7QiBqh2zJ6yNyETxhdm4pump
+2026-02-15T16:36:53.995904+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-15T16:36:53.995904+0100 | INFO | Helius RPC calls this run: 1
+2026-02-16T10:23:18.889785+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-16T10:23:52.767107+0100 | INFO | Chicken -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-16T10:23:52.768118+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=EJqrDv2ww6oRRqMMTht6HbDyyCoGt9at3rYBd2vUpump (curve_sol_missing)
+2026-02-16T10:23:54.898497+0100 | INFO | PUNCH -> SKIP (curve_sol_missing) | ml_score=0.002
+2026-02-16T10:23:54.898497+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=u7EF4cXDFuPA84iavGLYquNs5vrMNVUD1FbJos7pump (curve_sol_missing)
+2026-02-16T10:24:24.688241+0100 | INFO | Evolution -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-16T10:24:24.688241+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=RfVfDgsGGacPjRxZQprpQ6CeFB5Xcj5MYfonHczpump
+2026-02-16T10:24:24.688241+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=EJqrDv2ww6oRRqMMTht6HbDyyCoGt9at3rYBd2vUpump
+2026-02-16T10:24:24.688241+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=u7EF4cXDFuPA84iavGLYquNs5vrMNVUD1FbJos7pump
+2026-02-16T10:24:26.847250+0100 | INFO | Sophia -> SKIP (curve_sol_missing) | ml_score=0.018
+2026-02-16T10:24:26.848755+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=6ebqPywabVvhoXbJDvqWgYrMXX59R2MSrd1cBen9pump (curve_sol_missing)
+2026-02-16T10:24:54.468266+0100 | INFO | ESCAPE -> SKIP (curve_sol_missing) | ml_score=0.356
+2026-02-16T10:24:54.470001+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=DSBoFH86ck3vKhApYWteeC7GQZzfuwJoCEpM6Yg2pump (curve_sol_missing)
+2026-02-16T10:24:54.471006+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=6ebqPywabVvhoXbJDvqWgYrMXX59R2MSrd1cBen9pump
+2026-02-16T10:25:48.617918+0100 | INFO | HDD -> SKIP (curve_sol_missing) | ml_score=0.905
+2026-02-16T10:25:48.620367+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=3TuRUzKj3U9gmNEmDsqM8UNrdNns3xe3mByShXLjpump (curve_sol_missing)
+2026-02-16T10:25:48.620367+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=DSBoFH86ck3vKhApYWteeC7GQZzfuwJoCEpM6Yg2pump
+2026-02-16T10:25:50.905553+0100 | INFO | Whaleppin -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-16T10:25:50.908537+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=FGxc2sbjwRUuvoii6xAH25yF2xfCbhN5kXFn7PiDpump (curve_sol_missing)
+2026-02-16T10:25:53.221260+0100 | INFO | SNUPPYDOGG -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-16T10:25:53.222209+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=FRoTVoHnTwJqNo5qPj6puWvpF78fzdZ8RkbgoDcsD5EX
+2026-02-16T10:26:51.638637+0100 | INFO | Lithium -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-16T10:26:51.638637+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=4DN2FUGQx7U9ab7DbnN9iZAw8GtE48iqUbjsh7zTpump
+2026-02-16T10:26:51.638637+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=3TuRUzKj3U9gmNEmDsqM8UNrdNns3xe3mByShXLjpump
+2026-02-16T10:26:51.638637+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=FGxc2sbjwRUuvoii6xAH25yF2xfCbhN5kXFn7PiDpump
+2026-02-16T10:26:53.767227+0100 | INFO | Gertie -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-16T10:26:53.768432+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=Acjk3B5wrJ3NUMkASdBzNByjMmVr8R9y2xZumSUcpump (curve_sol_missing)
+2026-02-16T10:26:55.882743+0100 | INFO | TRUMP -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-16T10:26:55.882743+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=4So2aCNUzYTf1v7DiFnAd1YvSJRSEPEK4JVtvEHopump (curve_sol_missing)
+2026-02-16T10:26:57.997482+0100 | INFO | Gertie -> SKIP (curve_sol_missing) | ml_score=0.994
+2026-02-16T10:26:57.998438+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=3gQbwVcox5zrtqA7ZxiUudC5dQtfyurheUhTrAzhpump
+2026-02-16T10:27:00.408647+0100 | INFO | Slumb -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-16T10:27:00.408647+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=4PJC2QQfWmdJerNEScLriLpN5EnU1ZjmLGoNyhtnpump
+2026-02-16T10:27:02.673126+0100 | INFO | rawdata -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-16T10:27:02.678490+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=HqfYLBQXzQBLirL4LnUSAPcSRJoBSkw2XQ7UM37opump
+2026-02-16T10:27:04.969905+0100 | INFO | FACECARD -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-16T10:27:04.973915+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=E5BD37eTbsE1bcVwQ5VBxTWvvLAULxgCAXfiyXwpump
+2026-02-16T10:27:57.190340+0100 | INFO | SOPHIA -> SKIP (curve_sol_missing) | ml_score=0.009
+2026-02-16T10:27:57.190340+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=55aR8PdmN5d4FhcpKY9rstemwf7GEPKKZfRDpUkwpump
+2026-02-16T10:27:57.190340+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=Acjk3B5wrJ3NUMkASdBzNByjMmVr8R9y2xZumSUcpump
+2026-02-16T10:27:57.190340+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=4So2aCNUzYTf1v7DiFnAd1YvSJRSEPEK4JVtvEHopump
+2026-02-16T10:27:59.309756+0100 | INFO | Jungleskog -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-16T10:27:59.311755+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=6QQJrih4me8uE3TrGaJdwjUD11zHYrsChxXuWNYHpump (curve_sol_missing)
+2026-02-16T10:28:01.574045+0100 | INFO | coomer -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-16T10:28:01.576173+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=AQrdgepNVWdQmPe2L8eKT5PGyxgEvWFPGUUuf1capump (curve_sol_missing)
+2026-02-16T10:28:23.838543+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-16T10:28:23.846696+0100 | INFO | Helius RPC calls this run: 1
+2026-02-17T18:42:49.173881+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-17T18:43:06.583022+0100 | INFO | PVE -> SKIP (curve_sol_missing) | ml_score=0.286
+2026-02-17T18:43:07.029514+0100 | WARNING | [TRADING] BUY failed mint=9t2U6KJQ5ozMT6RGgdSEfZq6qXjxapMRqZaRgT1Jpump err={'error': 'http_404', 'body': {}}
+2026-02-17T18:43:07.503726+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=2iaBGKDNpiofaS6Xup4W1xnH7ePLYXts33fNgxqapump | next_check_in=44s | ml_score=0.926
+2026-02-17T18:43:07.523882+0100 | WARNING | [TRADING] BUY failed mint=2iaBGKDNpiofaS6Xup4W1xnH7ePLYXts33fNgxqapump err={'error': 'http_404', 'body': {}}
+2026-02-17T18:43:21.951388+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=G9JVxirMoBKFrfxr9qWvhGpLegi9gYTHJQQpeCsDo2mQ | next_check_in=44s | ml_score=0.926
+2026-02-17T18:43:21.951388+0100 | WARNING | [TRADING] BUY failed mint=G9JVxirMoBKFrfxr9qWvhGpLegi9gYTHJQQpeCsDo2mQ err={'error': 'http_404', 'body': {}}
+2026-02-17T18:43:22.177723+0100 | INFO | Pearl -> SKIP (curve_sol_missing) | ml_score=0.912
+2026-02-17T18:43:37.984643+0100 | INFO | QT -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-17T18:43:37.989412+0100 | WARNING | [TRADING] BUY failed mint=JDvAQGgdM9boMgsQ2RGHcRmx6s8ooVfSsJAvEsiepump err={'error': 'http_404', 'body': {}}
+2026-02-17T18:43:38.314512+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=Fw4QReSZKTpn5GDGAz4aBPQW4GUMW7pSdYp9ZGatCnjQ | next_check_in=44s | ml_score=0.926
+2026-02-17T18:43:38.317674+0100 | WARNING | [TRADING] BUY failed mint=Fw4QReSZKTpn5GDGAz4aBPQW4GUMW7pSdYp9ZGatCnjQ err={'error': 'http_404', 'body': {}}
+2026-02-17T18:43:50.267614+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-17T18:43:50.268725+0100 | INFO | Helius RPC calls this run: 1
+2026-02-17T18:51:47.227604+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-17T18:52:03.038001+0100 | INFO | FEARLESS -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-17T18:52:03.618173+0100 | INFO | [TRADING] BUY sent mint=2iaBGKDNpiofaS6Xup4W1xnH7ePLYXts33fNgxqapump sig=ok
+2026-02-17T18:52:03.797652+0100 | WARNING | [TRADING] SELL failed mint=2iaBGKDNpiofaS6Xup4W1xnH7ePLYXts33fNgxqapump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-17T18:52:04.270383+0100 | INFO | TRUCE -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-17T18:52:04.700015+0100 | INFO | [TRADING] BUY sent mint=G9JVxirMoBKFrfxr9qWvhGpLegi9gYTHJQQpeCsDo2mQ sig=ok
+2026-02-17T18:52:04.825663+0100 | WARNING | [TRADING] SELL failed mint=G9JVxirMoBKFrfxr9qWvhGpLegi9gYTHJQQpeCsDo2mQ err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-17T18:52:05.297749+0100 | INFO | O14DAWD -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-17T18:52:05.706349+0100 | INFO | [TRADING] BUY sent mint=Fw4QReSZKTpn5GDGAz4aBPQW4GUMW7pSdYp9ZGatCnjQ sig=ok
+2026-02-17T18:52:05.837858+0100 | WARNING | [TRADING] SELL failed mint=Fw4QReSZKTpn5GDGAz4aBPQW4GUMW7pSdYp9ZGatCnjQ err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-17T18:52:06.254482+0100 | INFO | ELONICE -> SKIP (curve_sol_missing) | ml_score=0.685
+2026-02-17T18:52:06.547776+0100 | INFO | [TRADING] BUY sent mint=5CwZwApuPw4ChrwKvCWudci59dhvkgZeAHYj9fp1pump sig=ok
+2026-02-17T18:52:06.713978+0100 | WARNING | [TRADING] SELL failed mint=5CwZwApuPw4ChrwKvCWudci59dhvkgZeAHYj9fp1pump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-17T18:52:07.407792+0100 | INFO | HAMI -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-17T18:52:07.672825+0100 | INFO | [TRADING] BUY sent mint=DmCbDP7pdu1MywGym6ahgtYfLpXMJsbPZFznG2R6pump sig=ok
+2026-02-17T18:52:07.819398+0100 | WARNING | [TRADING] SELL failed mint=DmCbDP7pdu1MywGym6ahgtYfLpXMJsbPZFznG2R6pump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-17T18:52:23.882916+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=7sfkqe9ERdrSudgA9ZNrjUCPyfWyysuDP3y1TM1Mpump | next_check_in=44s | ml_score=0.926
+2026-02-17T18:52:24.652868+0100 | INFO | [TRADING] BUY sent mint=7sfkqe9ERdrSudgA9ZNrjUCPyfWyysuDP3y1TM1Mpump sig=ok
+2026-02-17T18:52:24.908143+0100 | WARNING | [TRADING] SELL failed mint=7sfkqe9ERdrSudgA9ZNrjUCPyfWyysuDP3y1TM1Mpump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-17T18:52:25.237630+0100 | INFO | DECHO -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-17T18:52:25.867739+0100 | INFO | [TRADING] BUY sent mint=C156iC43AjU66rHyXHvt9XVq7QnU6EvrY2JCPfefpump sig=ok
+2026-02-17T18:52:26.149032+0100 | WARNING | [TRADING] SELL failed mint=C156iC43AjU66rHyXHvt9XVq7QnU6EvrY2JCPfefpump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-17T18:52:42.789033+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=CGKXHsKCTdWw6w6tBrs4CQtSj4SYsTznGJpWXTTUpump | next_check_in=44s | ml_score=0.926
+2026-02-17T18:52:43.753441+0100 | INFO | [TRADING] BUY sent mint=CGKXHsKCTdWw6w6tBrs4CQtSj4SYsTznGJpWXTTUpump sig=ok
+2026-02-17T18:52:43.893339+0100 | WARNING | [TRADING] SELL failed mint=CGKXHsKCTdWw6w6tBrs4CQtSj4SYsTznGJpWXTTUpump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-17T18:52:55.004391+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-17T18:52:55.008016+0100 | INFO | Helius RPC calls this run: 1
+2026-02-23T23:59:03.421897+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-23T23:59:24.053294+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=ChizdVNrFLFzNaQZSjsXxJ1DBYD5HsohyuFAsUkopump | next_check_in=44s | ml_score=0.926
+2026-02-23T23:59:24.811631+0100 | INFO | [TRADING] BUY sent mint=ChizdVNrFLFzNaQZSjsXxJ1DBYD5HsohyuFAsUkopump sig=ok
+2026-02-23T23:59:25.002101+0100 | WARNING | [TRADING] SELL failed mint=ChizdVNrFLFzNaQZSjsXxJ1DBYD5HsohyuFAsUkopump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-23T23:59:25.353657+0100 | INFO | FREEDOM -> SKIP (curve_sol_missing) | ml_score=0.079
+2026-02-23T23:59:25.783471+0100 | INFO | [TRADING] BUY sent mint=6Hx4EEp2D858mVet3RyUx7RuM4zwCLztpvDDCtGA7cFU sig=ok
+2026-02-23T23:59:25.963603+0100 | WARNING | [TRADING] SELL failed mint=6Hx4EEp2D858mVet3RyUx7RuM4zwCLztpvDDCtGA7cFU err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-23T23:59:26.332988+0100 | INFO | AGANDA -> SKIP (curve_sol_missing) | ml_score=0.431
+2026-02-23T23:59:26.762023+0100 | INFO | [TRADING] BUY sent mint=6eUXkSrcnEoGpz8BhhNPx4dqnL45WcU1iz7SUoy8pump sig=ok
+2026-02-23T23:59:26.945961+0100 | WARNING | [TRADING] SELL failed mint=6eUXkSrcnEoGpz8BhhNPx4dqnL45WcU1iz7SUoy8pump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-23T23:59:27.429480+0100 | INFO | Freedom -> SKIP (curve_sol_missing) | ml_score=0.855
+2026-02-23T23:59:27.871028+0100 | INFO | [TRADING] BUY sent mint=DYBzLtAxPKAGU8HtJj1KCaye58DGqMJdhKR9oieQyc7k sig=ok
+2026-02-23T23:59:28.055917+0100 | WARNING | [TRADING] SELL failed mint=DYBzLtAxPKAGU8HtJj1KCaye58DGqMJdhKR9oieQyc7k err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-23T23:59:28.431914+0100 | INFO | Golemcoin -> SKIP (curve_sol_missing) | ml_score=0.181
+2026-02-23T23:59:28.806453+0100 | INFO | [TRADING] BUY sent mint=4ZGEqBBXP2hYC5N3Hpys3juyhUAtdeUVxMTpJ4Phpump sig=ok
+2026-02-23T23:59:28.988345+0100 | WARNING | [TRADING] SELL failed mint=4ZGEqBBXP2hYC5N3Hpys3juyhUAtdeUVxMTpJ4Phpump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-23T23:59:44.113252+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-23T23:59:44.121870+0100 | INFO | Helius RPC calls this run: 1
+2026-02-24T00:00:35.431080+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-24T00:00:57.832025+0100 | INFO | gamble -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-24T00:00:59.881737+0100 | WARNING | [TRADING] BUY failed mint=ChizdVNrFLFzNaQZSjsXxJ1DBYD5HsohyuFAsUkopump err={'error': 'executor_error:HTTPConnectionPool(host=\'127.0.0.1\', port=8787): Max retries exceeded with url: /trade (Caused by NewConnectionError("HTTPConnection(host=\'127.0.0.1\', port=8787): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))'}
+2026-02-24T00:01:02.141754+0100 | INFO | TOWER -> SKIP (curve_sol_missing) | ml_score=0.999
+2026-02-24T00:01:04.165831+0100 | WARNING | [TRADING] BUY failed mint=HjHcBYmkTwGPnsJpeE6mA41bmxdshg526rhajJTUpump err={'error': 'executor_error:HTTPConnectionPool(host=\'127.0.0.1\', port=8787): Max retries exceeded with url: /trade (Caused by NewConnectionError("HTTPConnection(host=\'127.0.0.1\', port=8787): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))'}
+2026-02-24T00:01:06.333485+0100 | INFO | MET -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-24T00:01:08.361090+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-24T00:01:08.363805+0100 | INFO | Helius RPC calls this run: 1
+2026-02-24T00:03:12.841858+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-24T00:03:33.651156+0100 | INFO | moss -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-24T00:03:33.651671+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=2wf7ucAWxStPh8eP158j95XWUXNd2jQr4a79xzD2pump (curve_sol_missing)
+2026-02-24T00:03:54.806478+0100 | INFO | UNKNOWN -> SKIP (curve_sol_lt_min) | ml_score=0.926
+2026-02-24T00:04:15.382060+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=95FuBcqywhFXScfqPECDRcUirmqiGGKJd2CSthYFpump | next_check_in=44s | ml_score=0.926
+2026-02-24T00:04:15.382060+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=95FuBcqywhFXScfqPECDRcUirmqiGGKJd2CSthYFpump (no_pairs)
+2026-02-24T00:04:15.391206+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=2wf7ucAWxStPh8eP158j95XWUXNd2jQr4a79xzD2pump
+2026-02-24T00:04:17.432001+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=rEXXMQgAGXAeWXZumea3s59xU39umVAp5yRnWJQpump | next_check_in=44s | ml_score=0.926
+2026-02-24T00:04:17.432001+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=rEXXMQgAGXAeWXZumea3s59xU39umVAp5yRnWJQpump (no_pairs)
+2026-02-24T00:04:19.495996+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=5wFUwgsBZe1k4ou5hP1rHrFLf49paE29hH3GtMHdpump | next_check_in=44s | ml_score=0.926
+2026-02-24T00:04:19.496977+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=5wFUwgsBZe1k4ou5hP1rHrFLf49paE29hH3GtMHdpump
+2026-02-24T00:04:21.583571+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=9qVwDQXjEiaAKuf6VXpsCEQdp9wP1vkxdn4xVv5npump | next_check_in=44s | ml_score=0.926
+2026-02-24T00:04:21.583571+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=9qVwDQXjEiaAKuf6VXpsCEQdp9wP1vkxdn4xVv5npump
+2026-02-24T00:04:23.637232+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=FkAfBXSgvL3r8sXJcWHBkcAtjJzLhXRReEtTpgTdpump | next_check_in=44s | ml_score=0.926
+2026-02-24T00:04:23.639241+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=FkAfBXSgvL3r8sXJcWHBkcAtjJzLhXRReEtTpgTdpump
+2026-02-24T00:04:25.697194+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DYguc4RqCXnjacWMNikDvqjRLg7mLZMxFTQX4RcApump | next_check_in=44s | ml_score=0.926
+2026-02-24T00:04:25.698176+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=DYguc4RqCXnjacWMNikDvqjRLg7mLZMxFTQX4RcApump
+2026-02-24T00:04:27.751876+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=5wccnnGBz3vfa52QgcWpsTsgFT5GThRxS9bfKZN6pump | next_check_in=44s | ml_score=0.926
+2026-02-24T00:04:27.751876+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=5wccnnGBz3vfa52QgcWpsTsgFT5GThRxS9bfKZN6pump
+2026-02-24T00:04:49.451617+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=FdwpkZZs78rUJPRMavGqfFDujYmCbxQFLWqupY5Hbonk | next_check_in=44s | ml_score=0.926
+2026-02-24T00:04:49.456551+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=FdwpkZZs78rUJPRMavGqfFDujYmCbxQFLWqupY5Hbonk
+2026-02-24T00:04:49.456551+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=95FuBcqywhFXScfqPECDRcUirmqiGGKJd2CSthYFpump
+2026-02-24T00:04:49.458562+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=rEXXMQgAGXAeWXZumea3s59xU39umVAp5yRnWJQpump
+2026-02-24T00:04:51.838437+0100 | INFO | kuro -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-24T00:04:51.853429+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=6NriggeC9UoKYxR2ZupRHAo3nPo7AZFFMVXZ6bKxpump (curve_sol_missing)
+2026-02-24T00:04:54.603513+0100 | INFO | Babel -> SKIP (curve_sol_missing) | ml_score=0.926
+2026-02-24T00:04:54.616987+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=9Y1co7YCbQDY1GBjCNrrZWSCqQNrKZ2RauTU545Tpump (curve_sol_missing)
+2026-02-24T00:04:57.029561+0100 | INFO | golem -> SKIP (curve_sol_missing) | ml_score=0.071
+2026-02-24T00:04:57.031645+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=DMCuTQAMcM2YwjW2SfBf9MH6wT1BoxQ9cFxYFbgGpump
+2026-02-24T00:05:17.679490+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=6Ke8JdQ1uu5jhSyecJkiPYK5QW2z5Hk1xkxUUHmZpump | next_check_in=44s | ml_score=0.926
+2026-02-24T00:05:17.682006+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=6Ke8JdQ1uu5jhSyecJkiPYK5QW2z5Hk1xkxUUHmZpump
+2026-02-24T00:05:17.682006+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=6NriggeC9UoKYxR2ZupRHAo3nPo7AZFFMVXZ6bKxpump
+2026-02-24T00:05:19.735875+0100 | INFO | Ouid -> SKIP (curve_sol_missing) | ml_score=0.525
+2026-02-24T00:05:19.736883+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=ohS3N2rGudcF9KurF4fynVojeRTgFpiX5fxQcBZpump (curve_sol_missing)
+2026-02-24T00:05:19.736883+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=9Y1co7YCbQDY1GBjCNrrZWSCqQNrKZ2RauTU545Tpump
+2026-02-24T00:05:21.948871+0100 | INFO | BOOPKINS -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-24T00:05:21.951880+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=C111cDw8eXeWPyajpqEGRetm1nJXsLn2oyqaNsShpump (curve_sol_missing)
+2026-02-24T00:05:43.130277+0100 | INFO | TRENCHES -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-24T00:05:45.292936+0100 | INFO | TRENCHES -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-24T00:05:45.292936+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=ohS3N2rGudcF9KurF4fynVojeRTgFpiX5fxQcBZpump
+2026-02-24T00:05:47.465729+0100 | INFO | TRENCHES -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-24T00:05:47.470389+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=5wFUwgsBZe1k4ou5hP1rHrFLf49paE29hH3GtMHdpump (curve_sol_missing)
+2026-02-24T00:05:47.470897+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=C111cDw8eXeWPyajpqEGRetm1nJXsLn2oyqaNsShpump
+2026-02-24T00:05:49.643103+0100 | INFO | TRENCHES -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-24T00:05:49.643103+0100 | WARNING | [TRADING][DRY_RUN] BUY 0.02 SOL mint=9qVwDQXjEiaAKuf6VXpsCEQdp9wP1vkxdn4xVv5npump (curve_sol_missing)
+2026-02-24T00:05:52.053988+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-24T00:05:52.053988+0100 | INFO | Helius RPC calls this run: 1
+2026-02-26T12:23:49.009017+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-26T12:24:04.949320+0100 | INFO | KWON -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T12:24:05.881549+0100 | INFO | [TRADING] BUY sent mint=9VDem7rtYeayh5BTyt35bBzkomUhBPgfjyRiVx9Tpump sig=ok
+2026-02-26T12:24:06.009172+0100 | WARNING | [TRADING] SELL failed mint=9VDem7rtYeayh5BTyt35bBzkomUhBPgfjyRiVx9Tpump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-26T12:24:06.335650+0100 | INFO | TOGE -> SKIP (curve_sol_missing) | ml_score=0.006
+2026-02-26T12:24:06.614242+0100 | INFO | [TRADING] BUY sent mint=9XdDyCcw5RaQuWwkZw8CD55recjLSAm7335bgHETpump sig=ok
+2026-02-26T12:24:06.756560+0100 | WARNING | [TRADING] SELL failed mint=9XdDyCcw5RaQuWwkZw8CD55recjLSAm7335bgHETpump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-26T12:24:07.175101+0100 | INFO | REALSLOP -> SKIP (curve_sol_missing) | ml_score=0.142
+2026-02-26T12:24:07.444092+0100 | INFO | [TRADING] BUY sent mint=C62VPaVens4WFD2Wjsf4SAFtdkZWAMZRkkJedckpump sig=ok
+2026-02-26T12:24:07.583988+0100 | WARNING | [TRADING] SELL failed mint=C62VPaVens4WFD2Wjsf4SAFtdkZWAMZRkkJedckpump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-26T12:24:22.420414+0100 | INFO | Gorkpin -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T12:24:22.826819+0100 | INFO | [TRADING] BUY sent mint=Ah7sM6JUtmKKaHaymFqRwZj6NboqyGLb7JN92Ficpump sig=ok
+2026-02-26T12:24:22.933085+0100 | WARNING | [TRADING] SELL failed mint=Ah7sM6JUtmKKaHaymFqRwZj6NboqyGLb7JN92Ficpump err={'error': 'http_400', 'body': {'ok': False, 'message': '[\n  {\n    "code": "invalid_type",\n    "expected": "number",\n    "received": "null",\n    "path": [\n      "amount_sol"\n    ],\n    "message": "Expected number, received null"\n  }\n]', 'dry_run': True}} why=stop_loss_-100.0%
+2026-02-26T12:24:27.548991+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-26T12:24:27.553852+0100 | INFO | Helius RPC calls this run: 1
+2026-02-26T12:28:34.491832+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-26T12:28:49.664897+0100 | INFO | VIBECOIN -> SKIP (curve_sol_missing) | ml_score=0.616
+2026-02-26T12:28:50.320168+0100 | INFO | [TRADING] BUY sent mint=3sTPyS5QTiNF4XQrpo3EJpoVU7CXa1dSaQEgYjfipump sig=ok
+2026-02-26T12:28:50.512458+0100 | WARNING | [TRADING] SELL failed mint=3sTPyS5QTiNF4XQrpo3EJpoVU7CXa1dSaQEgYjfipump err={'error': 'http_500', 'body': {'ok': False, 'dry_run': True, 'message': 'No token balance to sell'}} why=stop_loss_-100.0%
+2026-02-26T12:28:51.059311+0100 | INFO | $PALM -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T12:28:51.284466+0100 | INFO | [TRADING] BUY sent mint=CGVjZJmAPR6hZXNzd88Q2hc5zYHKp667EUa4LWq1pump sig=ok
+2026-02-26T12:28:51.478943+0100 | WARNING | [TRADING] SELL failed mint=CGVjZJmAPR6hZXNzd88Q2hc5zYHKp667EUa4LWq1pump err={'error': 'http_500', 'body': {'ok': False, 'dry_run': True, 'message': 'No token balance to sell'}} why=stop_loss_-100.0%
+2026-02-26T12:29:06.557606+0100 | INFO | Axiomgate -> SKIP (curve_sol_missing) | ml_score=0.999
+2026-02-26T12:29:06.929081+0100 | INFO | [TRADING] BUY sent mint=F7TdKsTesuTefHbZMwHEUhCpoiv5Fjx8XRKRzhz1pump sig=ok
+2026-02-26T12:29:07.749281+0100 | WARNING | [TRADING] SELL failed mint=F7TdKsTesuTefHbZMwHEUhCpoiv5Fjx8XRKRzhz1pump err={'error': 'http_500', 'body': {'ok': False, 'dry_run': True, 'message': 'No token balance to sell'}} why=stop_loss_-100.0%
+2026-02-26T12:29:08.053119+0100 | INFO | Coded -> SKIP (curve_sol_missing) | ml_score=0.064
+2026-02-26T12:29:08.909383+0100 | INFO | [TRADING] BUY sent mint=DSNR4k7jedXuXpA8S8DYY5iNvAhh7eKxUfDCvGwnpump sig=ok
+2026-02-26T12:29:09.720829+0100 | WARNING | [TRADING] SELL failed mint=DSNR4k7jedXuXpA8S8DYY5iNvAhh7eKxUfDCvGwnpump err={'error': 'http_500', 'body': {'ok': False, 'dry_run': True, 'message': 'No token balance to sell'}} why=stop_loss_-100.0%
+2026-02-26T12:29:42.389064+0100 | INFO | GORKPIN -> SKIP (curve_sol_missing) | ml_score=0.299
+2026-02-26T12:29:43.421554+0100 | INFO | [TRADING] BUY sent mint=E7FiAYJzvJUCDo4ZWzeG7Emb8JpSbVxAKFRmWdjopump sig=ok
+2026-02-26T12:29:43.651969+0100 | WARNING | [TRADING] SELL failed mint=E7FiAYJzvJUCDo4ZWzeG7Emb8JpSbVxAKFRmWdjopump err={'error': 'http_500', 'body': {'ok': False, 'dry_run': True, 'message': 'No token balance to sell'}} why=stop_loss_-100.0%
+2026-02-26T12:29:44.037337+0100 | INFO | $DUCK -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T12:29:45.589570+0100 | INFO | [TRADING] BUY sent mint=KRDiSrt9iLYTR7mRxW7ZZCuhM2aqWqdHYm2c9x6pump sig=ok
+2026-02-26T12:29:47.469422+0100 | WARNING | [TRADING] SELL failed mint=KRDiSrt9iLYTR7mRxW7ZZCuhM2aqWqdHYm2c9x6pump err={'error': 'http_500', 'body': {'ok': False, 'dry_run': True, 'message': 'No token balance to sell'}} why=stop_loss_-100.0%
+2026-02-26T12:29:47.772875+0100 | INFO | Trumppin -> SKIP (curve_sol_missing) | ml_score=0.256
+2026-02-26T12:29:48.036761+0100 | INFO | [TRADING] BUY sent mint=EQen2jKu7EFx53n6xZJ5fkZcXQEmnPNTSfU9pmqYpump sig=ok
+2026-02-26T12:29:48.859379+0100 | WARNING | [TRADING] SELL failed mint=EQen2jKu7EFx53n6xZJ5fkZcXQEmnPNTSfU9pmqYpump err={'error': 'http_500', 'body': {'ok': False, 'dry_run': True, 'message': 'No token balance to sell'}} why=stop_loss_-100.0%
+2026-02-26T12:29:53.889161+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-26T12:29:53.898905+0100 | INFO | Helius RPC calls this run: 1
+2026-02-26T17:55:09.871288+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-26T17:55:24.637937+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=BQ4azhdtyKsQp2LcpdN3FYfHYhftPeU8eqV4DGNXpump | next_check_in=44s | ml_score=0.926
+2026-02-26T17:55:25.407212+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=BQ4azhdtyKsQp2LcpdN3FYfHYhftPeU8eqV4DGNXpump token_out=652469518447
+2026-02-26T17:55:25.674017+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=Csh1DYWbYu1qtfaoDAV9HmZLX7isvQ2hF1vC4epKMi6q | next_check_in=44s | ml_score=0.926
+2026-02-26T17:55:25.947740+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=Csh1DYWbYu1qtfaoDAV9HmZLX7isvQ2hF1vC4epKMi6q token_out=706037126360
+2026-02-26T17:55:41.677941+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=3hkkjmGsAvWe8xU6dfYnH2LqciYPZbx31JWjC39Qpump | next_check_in=44s | ml_score=0.926
+2026-02-26T17:55:41.677941+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=3hkkjmGsAvWe8xU6dfYnH2LqciYPZbx31JWjC39Qpump
+2026-02-26T17:55:58.073290+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=HofksWRQjjvsnjc8D258V5gSgmKT8H8Ecovp55Lipump | next_check_in=44s | ml_score=0.926
+2026-02-26T17:55:58.086702+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=HofksWRQjjvsnjc8D258V5gSgmKT8H8Ecovp55Lipump
+2026-02-26T17:55:58.722323+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=BQ4azhdtyKsQp2LcpdN3FYfHYhftPeU8eqV4DGNXpump sol_out=19481507 pnl=-2.6%
+2026-02-26T17:55:59.582579+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=Csh1DYWbYu1qtfaoDAV9HmZLX7isvQ2hF1vC4epKMi6q sol_out=19480516 pnl=-2.6%
+2026-02-26T17:56:32.530534+0100 | INFO | DEATH -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T17:56:32.857558+0100 | INFO | bros -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T17:56:49.128201+0100 | INFO | DUSD -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-26T17:56:49.688694+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=3hkkjmGsAvWe8xU6dfYnH2LqciYPZbx31JWjC39Qpump token_out=585198849111
+2026-02-26T17:56:50.046422+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=7wZyQPWg1F3m6caJ65GZ2PtEwEiJ6An2NCGbuukdpump | next_check_in=44s | ml_score=0.926
+2026-02-26T17:56:51.592747+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=7wZyQPWg1F3m6caJ65GZ2PtEwEiJ6An2NCGbuukdpump token_out=706037126430
+2026-02-26T17:57:08.859464+0100 | INFO | MIC -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T17:57:08.859464+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=HofksWRQjjvsnjc8D258V5gSgmKT8H8Ecovp55Lipump
+2026-02-26T17:57:10.080722+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=AdqqUXZU68RUu9TxN7goE4PbyvLegJpH5GUJEDcEpump | next_check_in=44s | ml_score=0.926
+2026-02-26T17:57:10.080722+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=AdqqUXZU68RUu9TxN7goE4PbyvLegJpH5GUJEDcEpump
+2026-02-26T17:57:11.167885+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=C74NU9JMfBmxd5rQBi1KNiUghqhQGNU1Dpd5xZoipump | next_check_in=44s | ml_score=0.926
+2026-02-26T17:57:11.177799+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=C74NU9JMfBmxd5rQBi1KNiUghqhQGNU1Dpd5xZoipump
+2026-02-26T17:57:28.687978+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=Bw8MbJpzGBfqBSkkrBMHdokKuhv5BA6WUcwNpF8tpump | next_check_in=44s | ml_score=0.926
+2026-02-26T17:57:28.687978+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=Bw8MbJpzGBfqBSkkrBMHdokKuhv5BA6WUcwNpF8tpump
+2026-02-26T17:57:29.060883+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=3hkkjmGsAvWe8xU6dfYnH2LqciYPZbx31JWjC39Qpump sol_out=21863009 pnl=9.3%
+2026-02-26T17:57:29.917809+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=7wZyQPWg1F3m6caJ65GZ2PtEwEiJ6An2NCGbuukdpump sol_out=19480516 pnl=-2.6%
+2026-02-26T17:58:01.037755+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-26T17:58:01.047714+0100 | INFO | Helius RPC calls this run: 1
+2026-02-26T19:46:32.329539+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-26T19:47:02.115808+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=FmBzgUdknNNwQHXPk8AkSjy7TPHM5a6P2qy3zjALpump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:47:02.901931+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=FmBzgUdknNNwQHXPk8AkSjy7TPHM5a6P2qy3zjALpump token_out=705572628387
+2026-02-26T19:47:03.189774+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=CnnRmEaYCWv2qyCo2QXTJmmfc3VBG72tBsGzEPUMpump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:47:03.652655+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=CnnRmEaYCWv2qyCo2QXTJmmfc3VBG72tBsGzEPUMpump token_out=705572628387
+2026-02-26T19:47:04.126744+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=BT1DEQ6kBNZMsftWr6kiqVYUqo4x5FnD3G7Du5gipump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:47:04.126744+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=BT1DEQ6kBNZMsftWr6kiqVYUqo4x5FnD3G7Du5gipump
+2026-02-26T19:47:04.520034+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=G7rYctUQrWM6ABw74KaCJx6KEMk8YbU4MAPaVT6epump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:47:04.520034+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=G7rYctUQrWM6ABw74KaCJx6KEMk8YbU4MAPaVT6epump
+2026-02-26T19:47:05.029607+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DnUHcguhj6R21E1pMwAuAFbgYZRJajoAreUfEMa1pump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:47:05.036660+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=DnUHcguhj6R21E1pMwAuAFbgYZRJajoAreUfEMa1pump
+2026-02-26T19:47:05.601211+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=4f4MPUmDKaWKV2qAyQcqAj5f8TCTD6bZH45kUj1npump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:47:05.601211+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=4f4MPUmDKaWKV2qAyQcqAj5f8TCTD6bZH45kUj1npump
+2026-02-26T19:47:39.809450+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=8KwpZ9atoxTrtzSLoiTrEHNwmcrxUpWddkmG83L5pump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:47:39.809450+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=8KwpZ9atoxTrtzSLoiTrEHNwmcrxUpWddkmG83L5pump
+2026-02-26T19:47:40.423224+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=FmBzgUdknNNwQHXPk8AkSjy7TPHM5a6P2qy3zjALpump sol_out=19480525 pnl=-2.6%
+2026-02-26T19:47:40.607022+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=CnnRmEaYCWv2qyCo2QXTJmmfc3VBG72tBsGzEPUMpump sol_out=19480525 pnl=-2.6%
+2026-02-26T19:47:40.850576+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=77oVEh5pxJyj4qgf4g93j4MeGdcf2kqZHco3ZCdZpump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:47:42.235889+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=77oVEh5pxJyj4qgf4g93j4MeGdcf2kqZHco3ZCdZpump token_out=584848325639
+2026-02-26T19:48:15.139881+0100 | INFO | READ -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:48:15.462345+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=77oVEh5pxJyj4qgf4g93j4MeGdcf2kqZHco3ZCdZpump sol_out=19482820 pnl=-2.6%
+2026-02-26T19:48:15.789868+0100 | INFO | READ -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:48:16.097907+0100 | INFO | READ -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:48:16.773729+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=BT1DEQ6kBNZMsftWr6kiqVYUqo4x5FnD3G7Du5gipump token_out=705572628387
+2026-02-26T19:48:17.934450+0100 | INFO | READ -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-26T19:48:18.390900+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=G7rYctUQrWM6ABw74KaCJx6KEMk8YbU4MAPaVT6epump token_out=706037126430
+2026-02-26T19:48:20.662066+0100 | INFO | READ -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:48:20.663054+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=DnUHcguhj6R21E1pMwAuAFbgYZRJajoAreUfEMa1pump
+2026-02-26T19:48:21.313817+0100 | INFO | Tyra -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-26T19:48:21.314815+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=4f4MPUmDKaWKV2qAyQcqAj5f8TCTD6bZH45kUj1npump
+2026-02-26T19:48:22.022236+0100 | INFO | OVER -> SKIP (curve_sol_missing) | ml_score=0.886
+2026-02-26T19:48:22.024234+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=CWmi8vWsAk1CdQiZpNHgkKxckVSZ9RSjkHE37K6jpump
+2026-02-26T19:48:38.419884+0100 | INFO | Black -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:48:38.420884+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=8KwpZ9atoxTrtzSLoiTrEHNwmcrxUpWddkmG83L5pump
+2026-02-26T19:48:39.667319+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=HbsN8ALBFMe9FjdFWPHtqapqXgv7z4PMrx5kMryubxaV | next_check_in=44s | ml_score=0.926
+2026-02-26T19:48:39.667319+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=HbsN8ALBFMe9FjdFWPHtqapqXgv7z4PMrx5kMryubxaV
+2026-02-26T19:48:40.136125+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=3xLmTpRsjsNk9ajXBRVi6TwGZWLE8My6cHt8HwNoY41y | next_check_in=44s | ml_score=0.926
+2026-02-26T19:48:40.136125+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=3xLmTpRsjsNk9ajXBRVi6TwGZWLE8My6cHt8HwNoY41y
+2026-02-26T19:48:41.801044+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=HAMY8VKK7bnTuWh5cof1icB3DHprg9ibWURyNXnq6WT2 | next_check_in=44s | ml_score=0.926
+2026-02-26T19:48:41.801044+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=HAMY8VKK7bnTuWh5cof1icB3DHprg9ibWURyNXnq6WT2
+2026-02-26T19:48:41.932575+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=BT1DEQ6kBNZMsftWr6kiqVYUqo4x5FnD3G7Du5gipump sol_out=19467709 pnl=-2.7%
+2026-02-26T19:48:42.497817+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=A13cmmCuN1FXUCj5GukC1S6J9hErGdQs3cLGrisEnYv6 | next_check_in=44s | ml_score=0.926
+2026-02-26T19:48:43.524997+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=A13cmmCuN1FXUCj5GukC1S6J9hErGdQs3cLGrisEnYv6 token_out=706037126430
+2026-02-26T19:48:45.458494+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=G7rYctUQrWM6ABw74KaCJx6KEMk8YbU4MAPaVT6epump sol_out=19480516 pnl=-2.6%
+2026-02-26T19:49:04.024823+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-26T19:49:04.026272+0100 | INFO | Helius RPC calls this run: 1
+2026-02-26T19:49:54.445322+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-26T19:50:09.885781+0100 | INFO | TEST -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:50:10.686550+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=77oVEh5pxJyj4qgf4g93j4MeGdcf2kqZHco3ZCdZpump token_out=706037126430
+2026-02-26T19:50:11.131685+0100 | INFO | everything -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:50:11.594924+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=HbsN8ALBFMe9FjdFWPHtqapqXgv7z4PMrx5kMryubxaV token_out=706037126430
+2026-02-26T19:50:12.485228+0100 | INFO | everything -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:50:12.486514+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=3xLmTpRsjsNk9ajXBRVi6TwGZWLE8My6cHt8HwNoY41y
+2026-02-26T19:50:13.150351+0100 | INFO | everything -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:50:13.150351+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=HAMY8VKK7bnTuWh5cof1icB3DHprg9ibWURyNXnq6WT2
+2026-02-26T19:50:13.664908+0100 | INFO | everything -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:50:13.666169+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=A13cmmCuN1FXUCj5GukC1S6J9hErGdQs3cLGrisEnYv6
+2026-02-26T19:50:29.105550+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=Gt1AgQbN9r1zKzYWffudu1mTjmqM41nAXTqQenxqF6TR | next_check_in=44s | ml_score=0.926
+2026-02-26T19:50:29.105550+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=Gt1AgQbN9r1zKzYWffudu1mTjmqM41nAXTqQenxqF6TR
+2026-02-26T19:50:29.803319+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=H1XTS5wtiEHDya3NdQWMqb5Bg9wo4F3zWBEcgoSX7DbJ | next_check_in=44s | ml_score=0.926
+2026-02-26T19:50:29.803319+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=H1XTS5wtiEHDya3NdQWMqb5Bg9wo4F3zWBEcgoSX7DbJ
+2026-02-26T19:51:03.999731+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=B4Jy1tXA5TzN82btnf5PY6vfNxBmCysHxjw6ECPypump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:51:03.999731+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=B4Jy1tXA5TzN82btnf5PY6vfNxBmCysHxjw6ECPypump
+2026-02-26T19:51:04.555793+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=77oVEh5pxJyj4qgf4g93j4MeGdcf2kqZHco3ZCdZpump sol_out=19480516 pnl=-2.6%
+2026-02-26T19:51:04.986973+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=HbsN8ALBFMe9FjdFWPHtqapqXgv7z4PMrx5kMryubxaV sol_out=19480516 pnl=-2.6%
+2026-02-26T19:51:05.222833+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DJ1X9KCGSXq5cHTgGXDhRSbzJvxAYWrrLXnFR9ZLXi75 | next_check_in=44s | ml_score=0.926
+2026-02-26T19:51:06.566192+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=DJ1X9KCGSXq5cHTgGXDhRSbzJvxAYWrrLXnFR9ZLXi75 token_out=706037126407
+2026-02-26T19:51:24.113473+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=7yG1WTa4JrGhZV4o7sKxKoCKcNHKar8JQcRLPZxEbysV | next_check_in=44s | ml_score=0.926
+2026-02-26T19:51:24.708433+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=7yG1WTa4JrGhZV4o7sKxKoCKcNHKar8JQcRLPZxEbysV token_out=706037126336
+2026-02-26T19:51:25.798161+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=7Cn32UHr462DCty1KPy7ueMPa4APzxpySTATVFfdZNMT | next_check_in=44s | ml_score=0.926
+2026-02-26T19:51:25.799161+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=7Cn32UHr462DCty1KPy7ueMPa4APzxpySTATVFfdZNMT
+2026-02-26T19:51:43.445784+0100 | INFO | point -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:51:43.449710+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=Gt1AgQbN9r1zKzYWffudu1mTjmqM41nAXTqQenxqF6TR
+2026-02-26T19:51:43.801892+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=DJ1X9KCGSXq5cHTgGXDhRSbzJvxAYWrrLXnFR9ZLXi75 sol_out=19480516 pnl=-2.6%
+2026-02-26T19:51:44.239878+0100 | INFO | Leonard -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:51:44.625069+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=H1XTS5wtiEHDya3NdQWMqb5Bg9wo4F3zWBEcgoSX7DbJ token_out=706037126407
+2026-02-26T19:51:47.563022+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=GzYe9JFXwXD17AKiT34s9o3H8ZFF7zJmDzYtG35M9AJf | next_check_in=44s | ml_score=0.926
+2026-02-26T19:51:47.565005+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=GzYe9JFXwXD17AKiT34s9o3H8ZFF7zJmDzYtG35M9AJf
+2026-02-26T19:51:48.518978+0100 | INFO | Everything -> SKIP (curve_sol_missing) | ml_score=0.926
+2026-02-26T19:51:48.529443+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=FBzubvnY7U4iELfERfxWjHhwRSNL5GvDqd9bMdeMpump
+2026-02-26T19:52:05.102160+0100 | INFO | moon -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:52:05.102160+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=B4Jy1tXA5TzN82btnf5PY6vfNxBmCysHxjw6ECPypump
+2026-02-26T19:52:05.414823+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=7yG1WTa4JrGhZV4o7sKxKoCKcNHKar8JQcRLPZxEbysV sol_out=19480516 pnl=-2.6%
+2026-02-26T19:52:05.810937+0100 | INFO | Sniper -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:52:38.584683+0100 | INFO | ASD -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:52:39.695100+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=H1XTS5wtiEHDya3NdQWMqb5Bg9wo4F3zWBEcgoSX7DbJ sol_out=19480516 pnl=-2.6%
+2026-02-26T19:52:40.154423+0100 | INFO | TREECOIN -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-26T19:52:40.651137+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=7Cn32UHr462DCty1KPy7ueMPa4APzxpySTATVFfdZNMT token_out=706037126266
+2026-02-26T19:52:41.716780+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=7zSgzHCWxFLK2W6o2npDcJvFTVhVkEBTvL9pJZUnpump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:52:43.353436+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=7zSgzHCWxFLK2W6o2npDcJvFTVhVkEBTvL9pJZUnpump token_out=662183794019
+2026-02-26T19:53:01.714096+0100 | INFO | Pringles -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:53:01.714096+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=GzYe9JFXwXD17AKiT34s9o3H8ZFF7zJmDzYtG35M9AJf
+2026-02-26T19:53:02.457406+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=E8gLPyvLWfRKAJt4rrr2qdsknPWZYNXuB9XKy1cx7BU8 | next_check_in=44s | ml_score=0.926
+2026-02-26T19:53:02.460508+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=E8gLPyvLWfRKAJt4rrr2qdsknPWZYNXuB9XKy1cx7BU8
+2026-02-26T19:53:35.653873+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=Do5xMymG3MgdT5qGyCx5k1rwPoHsEYPNCQh8bvhMoGnN | next_check_in=44s | ml_score=0.926
+2026-02-26T19:53:35.654928+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=Do5xMymG3MgdT5qGyCx5k1rwPoHsEYPNCQh8bvhMoGnN
+2026-02-26T19:53:35.976510+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=7Cn32UHr462DCty1KPy7ueMPa4APzxpySTATVFfdZNMT sol_out=19480516 pnl=-2.6%
+2026-02-26T19:53:36.743281+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=7zSgzHCWxFLK2W6o2npDcJvFTVhVkEBTvL9pJZUnpump sol_out=18271290 pnl=-8.6%
+2026-02-26T19:53:53.336622+0100 | INFO | tolyclaw -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:53:53.691089+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=6NkDWMrvHvExtQzbGy7H2X2gBmv4aSWnLXZXUA5kpump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:53:54.798157+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=6NkDWMrvHvExtQzbGy7H2X2gBmv4aSWnLXZXUA5kpump token_out=697106655691
+2026-02-26T19:54:11.082070+0100 | INFO | ASD -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:54:12.869704+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=E8gLPyvLWfRKAJt4rrr2qdsknPWZYNXuB9XKy1cx7BU8 token_out=706037126336
+2026-02-26T19:54:15.143950+0100 | INFO | UNKNOWN -> SKIP (curve_sol_lt_min) | ml_score=0.926
+2026-02-26T19:54:15.913035+0100 | INFO | AI -> SKIP (curve_sol_missing) | ml_score=0.068
+2026-02-26T19:54:15.913035+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=vbtXTPtCfic3W194MPUmWH8G88JMuTVt4bcyEHPpump
+2026-02-26T19:54:33.203188+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=Fp493fHBT66SbizNwmxmCp7snNqPaCCCiZCJywwNpump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:54:33.205188+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=Fp493fHBT66SbizNwmxmCp7snNqPaCCCiZCJywwNpump
+2026-02-26T19:54:33.528435+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=6NkDWMrvHvExtQzbGy7H2X2gBmv4aSWnLXZXUA5kpump sol_out=19234273 pnl=-3.8%
+2026-02-26T19:54:33.873194+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=gQFqc6MPnuRY3zymvj3Xgs9GWzvx5QrgJbzSn47pump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:54:34.890361+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=gQFqc6MPnuRY3zymvj3Xgs9GWzvx5QrgJbzSn47pump token_out=412835476958
+2026-02-26T19:54:52.947256+0100 | INFO | Agent -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-26T19:54:52.948398+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=Do5xMymG3MgdT5qGyCx5k1rwPoHsEYPNCQh8bvhMoGnN
+2026-02-26T19:54:53.802592+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=E8gLPyvLWfRKAJt4rrr2qdsknPWZYNXuB9XKy1cx7BU8 sol_out=19480516 pnl=-2.6%
+2026-02-26T19:54:54.593628+0100 | WARNING | [TRADING][DRY_RUN] SELL (take_profit_53.4%) mint=gQFqc6MPnuRY3zymvj3Xgs9GWzvx5QrgJbzSn47pump sol_out=30687842 pnl=53.4%
+2026-02-26T19:54:54.903351+0100 | INFO | computer -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-26T19:54:55.227262+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=58L3VvkeigJunN9NP5eCpZ2pYNnYboD3dKj2jt7ipump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:54:55.742241+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=58L3VvkeigJunN9NP5eCpZ2pYNnYboD3dKj2jt7ipump token_out=705572628363
+2026-02-26T19:55:12.692565+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DJrDsPoZj1UJHJEzoMproCzEb17vNgTkYxvNvPxQpump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:55:14.434367+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=DJrDsPoZj1UJHJEzoMproCzEb17vNgTkYxvNvPxQpump token_out=763108767616
+2026-02-26T19:55:32.407171+0100 | INFO | MSTR -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T19:55:32.407171+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=Fp493fHBT66SbizNwmxmCp7snNqPaCCCiZCJywwNpump
+2026-02-26T19:55:32.792716+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=58L3VvkeigJunN9NP5eCpZ2pYNnYboD3dKj2jt7ipump sol_out=19480525 pnl=-2.6%
+2026-02-26T19:55:33.516940+0100 | WARNING | [TRADING][DRY_RUN] SELL (stop_loss_-46.7%) mint=DJrDsPoZj1UJHJEzoMproCzEb17vNgTkYxvNvPxQpump sol_out=10665765 pnl=-46.7%
+2026-02-26T19:55:33.933961+0100 | INFO | Emilio -> SKIP (curve_sol_missing) | ml_score=0.992
+2026-02-26T19:55:34.262657+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=7HVHNhcLAo7NfTvMTZV1dnYSEuV3vrfrLrYyA57xpump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:55:36.337131+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=7HVHNhcLAo7NfTvMTZV1dnYSEuV3vrfrLrYyA57xpump token_out=109331762909
+2026-02-26T19:55:36.649289+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=5ZndZSoZb5ikdktCKTAfLq2EqXvTT9uV6JM4UoA5pump | next_check_in=44s | ml_score=0.926
+2026-02-26T19:55:37.614350+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=5ZndZSoZb5ikdktCKTAfLq2EqXvTT9uV6JM4UoA5pump token_out=634915210698
+2026-02-26T19:55:42.637337+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-26T19:55:42.637337+0100 | INFO | Helius RPC calls this run: 1
+2026-02-26T20:02:30.901130+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-26T20:02:49.119572+0100 | INFO | SDV10 -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T20:02:51.149665+0100 | WARNING | [TRADING] BUY failed mint=58L3VvkeigJunN9NP5eCpZ2pYNnYboD3dKj2jt7ipump err={'error': 'executor_error:HTTPConnectionPool(host=\'127.0.0.1\', port=8787): Max retries exceeded with url: /trade (Caused by NewConnectionError("HTTPConnection(host=\'127.0.0.1\', port=8787): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))'}
+2026-02-26T20:02:53.464231+0100 | INFO | ACCT -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-26T20:02:55.494068+0100 | WARNING | [TRADING] BUY failed mint=DJrDsPoZj1UJHJEzoMproCzEb17vNgTkYxvNvPxQpump err={'error': 'executor_error:HTTPConnectionPool(host=\'127.0.0.1\', port=8787): Max retries exceeded with url: /trade (Caused by NewConnectionError("HTTPConnection(host=\'127.0.0.1\', port=8787): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))'}
+2026-02-26T20:02:57.667936+0100 | INFO | Banana2 -> SKIP (curve_sol_missing) | ml_score=0.085
+2026-02-26T20:02:59.701430+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-26T20:02:59.704325+0100 | INFO | Helius RPC calls this run: 1
+2026-02-27T00:57:19.972637+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-27T00:57:50.371766+0100 | INFO | colonys -> SKIP (curve_sol_missing) | ml_score=0.802
+2026-02-27T00:58:03.181636+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=5bA9g8wRvqefttb4yLAV9zcEk91RHcwroYb1T3LyESC2 | next_check_in=44s | ml_score=0.926
+2026-02-27T00:58:20.123104+0100 | INFO | BENDER -> SKIP (curve_sol_missing) | ml_score=0.143
+2026-02-27T00:58:20.421315+0100 | INFO | 9-5 -> SKIP (curve_sol_missing) | ml_score=0.020
+2026-02-27T00:58:35.472865+0100 | INFO | PNL+ -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T00:58:35.791563+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=79boffHpqCAiDsWs2WsEPReJZF6mdMY51RqGquNxpump | next_check_in=44s | ml_score=0.926
+2026-02-27T00:58:35.994508+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=BTbvJfUyShCdnskweePfgQPkYghVHzsw7U4xgJsLkrkK | next_check_in=44s | ml_score=0.926
+2026-02-27T00:58:51.867838+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=D6CetQmyMdNpSvZLn7wAPoNUTbpsCNeHGcnzJBjkpump | next_check_in=44s | ml_score=0.926
+2026-02-27T00:58:52.072103+0100 | INFO | asshole -> SKIP (curve_sol_missing) | ml_score=0.316
+2026-02-27T00:59:08.106715+0100 | INFO | JVJ -> SKIP (curve_sol_missing) | ml_score=0.071
+2026-02-27T00:59:24.206235+0100 | INFO | Pippina -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T00:59:24.511549+0100 | INFO | PeaceClaude -> SKIP (curve_sol_missing) | ml_score=0.046
+2026-02-27T00:59:40.691759+0100 | INFO | GICU -> SKIP (curve_sol_missing) | ml_score=0.722
+2026-02-27T00:59:41.002998+0100 | INFO | T2 -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T00:59:41.661803+0100 | INFO | pain -> SKIP (curve_sol_missing) | ml_score=0.974
+2026-02-27T00:59:56.784666+0100 | INFO | META -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:00:29.542560+0100 | INFO | Amish -> SKIP (curve_sol_missing) | ml_score=0.116
+2026-02-27T01:00:29.913469+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=8AR9qqABJA48Lw8cpgp9Gj94eRBziKAf94a1KvXapump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:01:01.916693+0100 | INFO | CLAWVICULAR -> SKIP (curve_sol_missing) | ml_score=0.982
+2026-02-27T01:01:02.629939+0100 | INFO | OD -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:01:33.664815+0100 | INFO | cwawl -> SKIP (curve_sol_missing) | ml_score=0.003
+2026-02-27T01:01:34.123054+0100 | INFO | ONLYFANS -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:01:34.422822+0100 | INFO | BABYPUNCH -> SKIP (curve_sol_missing) | ml_score=0.002
+2026-02-27T01:01:34.711677+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=5dJxZ9oMVtCyj4FxLc68QS8m6eLcpyt7rqFRQ9jksaxW | next_check_in=44s | ml_score=0.926
+2026-02-27T01:01:34.905351+0100 | INFO | REPLACEMENT -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:02:06.220092+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=2rcgfNoQZtyJUpBLptnEQjT5zpsp5epTRvqFtVzqsfEC | next_check_in=44s | ml_score=0.926
+2026-02-27T01:02:22.987040+0100 | INFO | Tartugito -> SKIP (curve_sol_missing) | ml_score=0.998
+2026-02-27T01:02:30.868917+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-27T01:02:30.871730+0100 | INFO | Helius RPC calls this run: 1
+2026-02-27T01:03:01.720495+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-27T01:03:14.585781+0100 | INFO | GoonGPT -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:03:15.116395+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=5dJxZ9oMVtCyj4FxLc68QS8m6eLcpyt7rqFRQ9jksaxW token_out=706037126266
+2026-02-27T01:03:15.546864+0100 | INFO | SADOGE -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:03:15.801708+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=2rcgfNoQZtyJUpBLptnEQjT5zpsp5epTRvqFtVzqsfEC token_out=706037126383
+2026-02-27T01:03:34.159617+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=CLoZVJg6DqXKY5MLsw8SXVNobCamCfviRnFeR5Lrpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:03:34.162018+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=CLoZVJg6DqXKY5MLsw8SXVNobCamCfviRnFeR5Lrpump
+2026-02-27T01:03:51.371834+0100 | INFO | replaced -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:03:51.371834+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=BH4Dgd9cBTZDtqHjopomdfZZS4ry26qADcW13MNRpump
+2026-02-27T01:03:51.572132+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=5dJxZ9oMVtCyj4FxLc68QS8m6eLcpyt7rqFRQ9jksaxW sol_out=19480516 pnl=-2.6%
+2026-02-27T01:03:52.283339+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=2rcgfNoQZtyJUpBLptnEQjT5zpsp5epTRvqFtVzqsfEC sol_out=19480516 pnl=-2.6%
+2026-02-27T01:04:08.290599+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=7U7aGvJ5R1Fr7DwRNpQQDKkh8ywmKMiGXfisJBgRpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:04:10.876397+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=7U7aGvJ5R1Fr7DwRNpQQDKkh8ywmKMiGXfisJBgRpump token_out=245730847280
+2026-02-27T01:04:27.087859+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=12BPYhqzhgVy6mvZ5XVPyCUBUt9omEJC7SWkJqp5pump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:04:28.365656+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=12BPYhqzhgVy6mvZ5XVPyCUBUt9omEJC7SWkJqp5pump token_out=706037126430
+2026-02-27T01:04:29.122097+0100 | WARNING | [TRADING][DRY_RUN] SELL (take_profit_50.9%) mint=7U7aGvJ5R1Fr7DwRNpQQDKkh8ywmKMiGXfisJBgRpump sol_out=30186378 pnl=50.9%
+2026-02-27T01:04:31.067566+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DrcK3PC6Zxuo3FaLiRL24PdAXsW2yAEq8zgm9q8xpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:04:31.413432+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=DrcK3PC6Zxuo3FaLiRL24PdAXsW2yAEq8zgm9q8xpump token_out=706037126430
+2026-02-27T01:04:32.571284+0100 | INFO | HMC -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T01:04:32.571789+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=AYJPqMvUAVcKTCHzznyHQComsUc384iJyXep5cRYpump
+2026-02-27T01:04:33.733804+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=GEnrtbnFAF571u5vTWbmAT9oXqPSgqfjpJ8n76xxpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:04:33.733804+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=GEnrtbnFAF571u5vTWbmAT9oXqPSgqfjpJ8n76xxpump
+2026-02-27T01:04:34.699081+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=ESgMqUdJQqRWLQbG8xfVzN4n8g7dsi92gmZqnYqfpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:04:34.699981+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=ESgMqUdJQqRWLQbG8xfVzN4n8g7dsi92gmZqnYqfpump
+2026-02-27T01:04:51.810008+0100 | INFO | Peace -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:04:51.811513+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=CLoZVJg6DqXKY5MLsw8SXVNobCamCfviRnFeR5Lrpump
+2026-02-27T01:04:52.344258+0100 | INFO | DIT -> SKIP (curve_sol_missing) | ml_score=0.992
+2026-02-27T01:04:52.351935+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=B79BKsCKd8zY3aFxJUEDBVPj9VihJnScLAh7t2wjWdr4
+2026-02-27T01:05:04.677920+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-27T01:05:04.681936+0100 | INFO | Helius RPC calls this run: 1
+2026-02-27T01:45:27.993922+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-27T01:45:58.145309+0100 | INFO | CHARA -> SKIP (curve_sol_missing) | ml_score=0.530
+2026-02-27T01:45:58.837951+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=6CD1Ekx5S2s8oKwSFYjpjQsyN4qbX3NqhFL5QCk9pump token_out=166489241231
+2026-02-27T01:45:59.400350+0100 | INFO | Scat -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:45:59.604183+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=CUgGt3qaSh5BiSUEh4UpxVDcoRBNQTGW6VsJJ3tjpump token_out=884489489639
+2026-02-27T01:46:00.144033+0100 | INFO | Eloncoin -> SKIP (curve_sol_missing) | ml_score=0.110
+2026-02-27T01:46:00.144033+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=9vjoVZvobZMckZMCMLXSCn3XNuDgBwJYCjUPf6q9pump
+2026-02-27T01:46:16.311538+0100 | INFO | JACK -> SKIP (curve_sol_missing) | ml_score=0.732
+2026-02-27T01:46:16.312539+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=6H86gfmgQ3xF5WsXPzNsHuyJqRApEKJUYb9sPBHMpump
+2026-02-27T01:46:16.956617+0100 | INFO | Imposter -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:46:16.958942+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=7Apyjs1eTogJ9uN4LTtRJ3az4jCkxHmAg4idxeBbonk
+2026-02-27T01:46:34.306149+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=ftpcWSHzkFK7MA5gaQbyZqq71uSfvYW9du3MkSwpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:46:34.307194+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=ftpcWSHzkFK7MA5gaQbyZqq71uSfvYW9du3MkSwpump
+2026-02-27T01:46:34.549985+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=6CD1Ekx5S2s8oKwSFYjpjQsyN4qbX3NqhFL5QCk9pump sol_out=18340596 pnl=-8.3%
+2026-02-27T01:46:35.284308+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=CUgGt3qaSh5BiSUEh4UpxVDcoRBNQTGW6VsJJ3tjpump sol_out=19502471 pnl=-2.5%
+2026-02-27T01:46:35.495472+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=EqS8RJEV7A6PhQX1mvj3rZs17QzkhtdGp3d3nnPjpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:46:36.337991+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=EqS8RJEV7A6PhQX1mvj3rZs17QzkhtdGp3d3nnPjpump token_out=706037126430
+2026-02-27T01:46:36.654274+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=87aJDj2U2YziB5prp6P6gY4CrPGkP74NiLpL8djApump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:46:37.464239+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=87aJDj2U2YziB5prp6P6gY4CrPGkP74NiLpL8djApump token_out=706037126430
+2026-02-27T01:46:40.025017+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=Dcqui2TqJxABJCj6Su7vGK2yKxGVPFTQrnJUf5iwpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:46:40.025593+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=Dcqui2TqJxABJCj6Su7vGK2yKxGVPFTQrnJUf5iwpump
+2026-02-27T01:46:40.400146+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DnmR8PzbRQhTKtboD12EwaquHU5BFDYAX5MGzZQWpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:46:40.401062+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=DnmR8PzbRQhTKtboD12EwaquHU5BFDYAX5MGzZQWpump
+2026-02-27T01:46:40.768133+0100 | INFO | MCTrade -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:46:40.769118+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=GomBu8MosBwTt3AexPy6Cfuqtfgfr6M6Fu7WBoyUpump
+2026-02-27T01:46:57.519311+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=FrtDowLT5mxX1oXVZUvrYramr48E8ksRR46jvMavpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:46:57.519311+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=FrtDowLT5mxX1oXVZUvrYramr48E8ksRR46jvMavpump
+2026-02-27T01:46:58.586148+0100 | INFO | NotDivided -> SKIP (curve_sol_missing) | ml_score=0.003
+2026-02-27T01:46:58.594311+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=2SkhBCGt4MQsZc91b9mppgPMvi2pCd9GAtvqu8z1N4T8
+2026-02-27T01:47:32.705792+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=7fqch37nnNHNMmuxpz4ADqBZk79hSiMwBeKbANQfpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:47:32.705792+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=7fqch37nnNHNMmuxpz4ADqBZk79hSiMwBeKbANQfpump
+2026-02-27T01:47:32.965889+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=EqS8RJEV7A6PhQX1mvj3rZs17QzkhtdGp3d3nnPjpump sol_out=19480516 pnl=-2.6%
+2026-02-27T01:47:33.109697+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=87aJDj2U2YziB5prp6P6gY4CrPGkP74NiLpL8djApump sol_out=19480516 pnl=-2.6%
+2026-02-27T01:47:33.333686+0100 | INFO | Peel -> SKIP (curve_sol_missing) | ml_score=0.004
+2026-02-27T01:47:34.106402+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=DKmeViJazHLqp35LPkWSoLzxJBXiJdM7msyWTRbDpump token_out=133851969150
+2026-02-27T01:47:34.492795+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=4BuNEgN5gKqrN5Z8HAr1hWF6bugUaWG9DP2xnSAZpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:47:36.895555+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=4BuNEgN5gKqrN5Z8HAr1hWF6bugUaWG9DP2xnSAZpump token_out=706032479269
+2026-02-27T01:47:54.357425+0100 | INFO | BUTCHERLARP -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T01:47:54.360736+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=ftpcWSHzkFK7MA5gaQbyZqq71uSfvYW9du3MkSwpump
+2026-02-27T01:47:55.106501+0100 | INFO | BUTCHERLARP -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T01:47:55.600370+0100 | INFO | BUTCHERLARP -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:47:57.151400+0100 | INFO | MLC -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:47:57.156878+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=Dcqui2TqJxABJCj6Su7vGK2yKxGVPFTQrnJUf5iwpump
+2026-02-27T01:47:57.626135+0100 | INFO | BUTCHERLARP -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T01:47:57.627131+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=DnmR8PzbRQhTKtboD12EwaquHU5BFDYAX5MGzZQWpump
+2026-02-27T01:48:15.194105+0100 | INFO | 85th -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:48:15.194105+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=FrtDowLT5mxX1oXVZUvrYramr48E8ksRR46jvMavpump
+2026-02-27T01:48:16.024692+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=DKmeViJazHLqp35LPkWSoLzxJBXiJdM7msyWTRbDpump sol_out=20671671 pnl=3.4%
+2026-02-27T01:48:17.895109+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=4BuNEgN5gKqrN5Z8HAr1hWF6bugUaWG9DP2xnSAZpump sol_out=19480517 pnl=-2.6%
+2026-02-27T01:48:33.886719+0100 | INFO | EPOCH -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:48:35.794007+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=7fqch37nnNHNMmuxpz4ADqBZk79hSiMwBeKbANQfpump token_out=705276068871
+2026-02-27T01:48:36.154176+0100 | INFO | MINE -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:48:52.474255+0100 | INFO | MOGGER -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:48:53.361711+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=B7DKXjSNinR6iSvdb3WAZrrQGn837VM6wSwmfJGTpump token_out=706037126383
+2026-02-27T01:49:10.856149+0100 | INFO | Blue -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:49:10.859145+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=GzRhfPVSGGmXnRgq1PsWSRUwUU2KTtLUgbhqBUBPpump
+2026-02-27T01:49:11.151011+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=7fqch37nnNHNMmuxpz4ADqBZk79hSiMwBeKbANQfpump sol_out=19480530 pnl=-2.6%
+2026-02-27T01:49:13.121335+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=3snsPzG3o9UXw7wKrZQzbHTCbH1ZV91wkPpmpC61pump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:49:13.314367+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=3snsPzG3o9UXw7wKrZQzbHTCbH1ZV91wkPpmpC61pump token_out=543830862969
+2026-02-27T01:49:14.300831+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=3k4WFgu3MkDANVpzyibtxbEaCKhzmmp3RQWez49jqFfo | next_check_in=44s | ml_score=0.926
+2026-02-27T01:49:14.302814+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=3k4WFgu3MkDANVpzyibtxbEaCKhzmmp3RQWez49jqFfo
+2026-02-27T01:49:32.034220+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=E3UmVJKyZ93bDzzx4ruTmr17AnrVGwx2L5tC1Qzzpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:49:32.035228+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=E3UmVJKyZ93bDzzx4ruTmr17AnrVGwx2L5tC1Qzzpump
+2026-02-27T01:49:32.244047+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=B7DKXjSNinR6iSvdb3WAZrrQGn837VM6wSwmfJGTpump sol_out=19480516 pnl=-2.6%
+2026-02-27T01:49:32.548332+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=3WhGUGRVS3FsbnHjkVwBsLtHVpzqUShHfJ1RKxakpump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:49:33.326658+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=3WhGUGRVS3FsbnHjkVwBsLtHVpzqUShHfJ1RKxakpump token_out=661761887049
+2026-02-27T01:49:51.556676+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DWZNRNv291cNKqwadjk8aAsuprtYeMkuACbbaxoUM3yL | next_check_in=44s | ml_score=0.926
+2026-02-27T01:49:51.557606+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=DWZNRNv291cNKqwadjk8aAsuprtYeMkuACbbaxoUM3yL
+2026-02-27T01:49:52.334462+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=3snsPzG3o9UXw7wKrZQzbHTCbH1ZV91wkPpmpC61pump sol_out=22871926 pnl=14.4%
+2026-02-27T01:49:52.965784+0100 | INFO | SPACEX -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:49:53.194951+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=H6792Jf8uHnjEk3bgkSTvJc6zu8MysuWQNNfDgVNpump token_out=2530721994911
+2026-02-27T01:50:08.522878+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-27T01:50:08.528241+0100 | INFO | Helius RPC calls this run: 1
+2026-02-27T01:50:39.646946+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-27T01:50:53.115334+0100 | INFO | NPC -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:50:53.589695+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=3snsPzG3o9UXw7wKrZQzbHTCbH1ZV91wkPpmpC61pump token_out=440801322465
+2026-02-27T01:50:53.924291+0100 | INFO | UX4 -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:50:54.174213+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=3k4WFgu3MkDANVpzyibtxbEaCKhzmmp3RQWez49jqFfo token_out=706037126430
+2026-02-27T01:50:54.624419+0100 | INFO | EDGAR -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:50:54.624419+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=E3UmVJKyZ93bDzzx4ruTmr17AnrVGwx2L5tC1Qzzpump
+2026-02-27T01:50:55.047942+0100 | INFO | $JAI -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:50:55.054318+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=3WhGUGRVS3FsbnHjkVwBsLtHVpzqUShHfJ1RKxakpump
+2026-02-27T01:50:55.562754+0100 | INFO | DUOL -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:50:55.564260+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=DWZNRNv291cNKqwadjk8aAsuprtYeMkuACbbaxoUM3yL
+2026-02-27T01:51:12.975439+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=GVU8JB9AKjVQkdQ5m93pBErKbaqfbeSgXjuAaAzupump | next_check_in=44s | ml_score=0.926
+2026-02-27T01:51:12.975439+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=GVU8JB9AKjVQkdQ5m93pBErKbaqfbeSgXjuAaAzupump
+2026-02-27T01:51:15.155829+0100 | INFO | $SICK -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:51:15.155829+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=8RP6BtMoLEZKBfBTD6Sdg7d9pexKmy9Ebiuq5RMmpump
+2026-02-27T01:51:32.116771+0100 | INFO | DELTA -> SKIP (curve_sol_missing) | ml_score=0.619
+2026-02-27T01:51:32.118648+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=4MidSDMqyUFvb4hG3GPrJ953oLP5ZoZ7LuG3QxqKpump
+2026-02-27T01:51:32.334276+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=3snsPzG3o9UXw7wKrZQzbHTCbH1ZV91wkPpmpC61pump sol_out=15720052 pnl=-21.4%
+2026-02-27T01:51:33.084346+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=3k4WFgu3MkDANVpzyibtxbEaCKhzmmp3RQWez49jqFfo sol_out=19480516 pnl=-2.6%
+2026-02-27T01:51:33.514193+0100 | INFO | tol -> SKIP (curve_sol_missing) | ml_score=0.630
+2026-02-27T01:51:34.299809+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=FCABBkWEcTyKoaCZ2DqY4uugAWmjf6zmxNwJehZppump token_out=657192460836
+2026-02-27T01:51:51.058775+0100 | INFO | KOVA -> SKIP (curve_sol_missing) | ml_score=0.002
+2026-02-27T01:51:52.483415+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=HcAnt9HKAuLCbV8F6widWjNnLBy98LyPGxBSkUgjpump token_out=157076187428
+2026-02-27T01:52:09.404252+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=F8ck9Ln9jfLi5HRxLvvqHgUAhvqZN9mFWRZhmpbrcdsW | next_check_in=44s | ml_score=0.926
+2026-02-27T01:52:09.404252+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=F8ck9Ln9jfLi5HRxLvvqHgUAhvqZN9mFWRZhmpbrcdsW
+2026-02-27T01:52:10.194449+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=FCABBkWEcTyKoaCZ2DqY4uugAWmjf6zmxNwJehZppump sol_out=18133651 pnl=-9.3%
+2026-02-27T01:52:12.245990+0100 | INFO | Clank -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:52:12.478226+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=BDWRtYFgrJXYADpQvXXTD9w3ZPaDK88sisqUYzwXpump token_out=537963161844
+2026-02-27T01:52:30.134432+0100 | INFO | peregrine -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:52:30.134432+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=GVU8JB9AKjVQkdQ5m93pBErKbaqfbeSgXjuAaAzupump
+2026-02-27T01:52:30.335384+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=HcAnt9HKAuLCbV8F6widWjNnLBy98LyPGxBSkUgjpump sol_out=20650517 pnl=3.3%
+2026-02-27T01:52:31.404317+0100 | INFO | JUSTPUMP -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T01:52:32.169608+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=HTas8ZnwiRjAKcB1y8V1GKcHBVKo9VaWwu6d7Kh2pump token_out=700178125657
+2026-02-27T01:52:34.204587+0100 | INFO | Jack -> SKIP (curve_sol_missing) | ml_score=0.053
+2026-02-27T01:52:34.204587+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=DDbpa6KFMfUqRMP8JsmuTXnwgB8ScVsTnBPjzTBppump
+2026-02-27T01:52:46.594445+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-27T01:52:46.594445+0100 | INFO | Helius RPC calls this run: 1
+2026-02-27T10:07:51.225126+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-27T10:08:06.046700+0100 | INFO | 6d656d65 -> SKIP (curve_sol_missing) | ml_score=0.002
+2026-02-27T10:08:06.450134+0100 | INFO | LAWYER -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:08:06.736643+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=4BZb5Dh49kcHHcwGCb1JytQx34o2rcENeaNoKfWRpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:08:07.493012+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=4BZb5Dh49kcHHcwGCb1JytQx34o2rcENeaNoKfWRpump token_out=636593538924
+2026-02-27T10:08:07.761443+0100 | INFO | Echo -> SKIP (curve_sol_missing) | ml_score=0.002
+2026-02-27T10:08:53.134929+0100 | INFO | Pikachu -> SKIP (curve_sol_missing) | ml_score=0.340
+2026-02-27T10:09:10.510102+0100 | INFO | PEPECHU -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:09:11.354199+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=4BZb5Dh49kcHHcwGCb1JytQx34o2rcENeaNoKfWRpump sol_out=20692906 pnl=3.5%
+2026-02-27T10:09:28.223732+0100 | INFO | PepeShark -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:09:43.607267+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=E3S2tjrTaMbs6GwYbD9i5QGniD1XBaduGSxPXqsBpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:09:45.149304+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=E3S2tjrTaMbs6GwYbD9i5QGniD1XBaduGSxPXqsBpump token_out=706037126430
+2026-02-27T10:09:45.501983+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=C7t1dRBqPqAWS3LymqacrtABMF28QAaYQx3apB75pump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:09:46.316122+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=C7t1dRBqPqAWS3LymqacrtABMF28QAaYQx3apB75pump token_out=706037126430
+2026-02-27T10:09:47.292121+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=HbbEEznWz4AdoZ7R1r98njmG7de4X6kkXyN94MrGpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:09:47.292121+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=HbbEEznWz4AdoZ7R1r98njmG7de4X6kkXyN94MrGpump
+2026-02-27T10:09:48.451246+0100 | INFO | NotDivided -> SKIP (curve_sol_missing) | ml_score=0.970
+2026-02-27T10:09:49.527976+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=zv9aNkB2vwHHe3FAeWENriviSC9MvgFLjBXd19dpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:09:49.527976+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=zv9aNkB2vwHHe3FAeWENriviSC9MvgFLjBXd19dpump
+2026-02-27T10:09:50.515724+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=9xYbdobmagccqjuwtT6FQM5WFy8BCrAwqEtivehppump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:09:50.517730+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=9xYbdobmagccqjuwtT6FQM5WFy8BCrAwqEtivehppump
+2026-02-27T10:10:08.183122+0100 | INFO | Walnut -> SKIP (curve_sol_missing) | ml_score=0.883
+2026-02-27T10:10:41.294491+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DkmzVHQKBZFsrM9VP8SJysGuRLa3FmHgnVjytWarpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:10:41.294491+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=DkmzVHQKBZFsrM9VP8SJysGuRLa3FmHgnVjytWarpump
+2026-02-27T10:10:42.467406+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=GWYiXMwLnmaMib3zs6kzX3wv9UkFoxHgtRBemsxxsGsL | next_check_in=44s | ml_score=0.926
+2026-02-27T10:10:42.467406+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=GWYiXMwLnmaMib3zs6kzX3wv9UkFoxHgtRBemsxxsGsL
+2026-02-27T10:10:43.416907+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=eBKmidocD4ABhFdYAm5FDyn9u11Tb8ubqM57faKpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:10:43.416907+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=eBKmidocD4ABhFdYAm5FDyn9u11Tb8ubqM57faKpump
+2026-02-27T10:10:44.420206+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=FvSdv7tSuK1mx2gNVNdnE1KSDZBbJ2reFBsxttwRseU | next_check_in=44s | ml_score=0.926
+2026-02-27T10:10:44.420206+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=FvSdv7tSuK1mx2gNVNdnE1KSDZBbJ2reFBsxttwRseU
+2026-02-27T10:11:02.017870+0100 | INFO | NotDivided -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T10:11:02.252223+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=E3S2tjrTaMbs6GwYbD9i5QGniD1XBaduGSxPXqsBpump sol_out=19480516 pnl=-2.6%
+2026-02-27T10:11:02.930302+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=C7t1dRBqPqAWS3LymqacrtABMF28QAaYQx3apB75pump sol_out=19480516 pnl=-2.6%
+2026-02-27T10:11:03.246382+0100 | INFO | NotDivided -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T10:11:03.560616+0100 | INFO | NotDivided -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T10:11:03.859054+0100 | INFO | NotDivided -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T10:11:04.141721+0100 | INFO | NotDivided -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T10:11:04.477354+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=8Dx9LWWTHp7GpKvkLKh32tNYKWXcZgbHpA2Ar7Xupump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:11:04.756400+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=8Dx9LWWTHp7GpKvkLKh32tNYKWXcZgbHpA2Ar7Xupump token_out=679396629896
+2026-02-27T10:11:05.185814+0100 | INFO | PEWBOT -> SKIP (curve_sol_missing) | ml_score=0.926
+2026-02-27T10:11:05.930772+0100 | INFO | ORB -> SKIP (curve_sol_missing) | ml_score=0.105
+2026-02-27T10:11:22.089534+0100 | INFO | ORB -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:11:22.571749+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=D777Lwhs7KNJsRxbGKFyAtZ8LnYP7hZeP9WHpktxpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:11:22.894858+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=D777Lwhs7KNJsRxbGKFyAtZ8LnYP7hZeP9WHpktxpump token_out=701455581434
+2026-02-27T10:11:25.348249+0100 | INFO | GS -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T10:11:25.977179+0100 | INFO | abcde -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:11:26.597716+0100 | INFO | PEWBOT -> SKIP (curve_sol_missing) | ml_score=0.661
+2026-02-27T10:11:43.739347+0100 | INFO | ORB -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T10:11:44.595225+0100 | INFO | ORB -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:11:45.642539+0100 | INFO | ORB -> SKIP (curve_sol_missing) | ml_score=0.034
+2026-02-27T10:11:46.171199+0100 | INFO | T14 -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:12:02.806234+0100 | INFO | BAGAPPSTOR -> SKIP (curve_sol_missing) | ml_score=0.926
+2026-02-27T10:12:20.054241+0100 | INFO | ZipAir -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:12:20.296837+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=8Dx9LWWTHp7GpKvkLKh32tNYKWXcZgbHpA2Ar7Xupump sol_out=19495055 pnl=-2.5%
+2026-02-27T10:12:21.429158+0100 | INFO | POKE30 -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T10:12:21.807499+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=2adMpHide3NPNP5paSJJeWCU2q4QQg67nSKL5uZGpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:12:23.689487+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=2adMpHide3NPNP5paSJJeWCU2q4QQg67nSKL5uZGpump token_out=170835098723
+2026-02-27T10:12:23.849031+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=D777Lwhs7KNJsRxbGKFyAtZ8LnYP7hZeP9WHpktxpump sol_out=19495052 pnl=-2.5%
+2026-02-27T10:12:40.420485+0100 | INFO | Z COIN -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:12:41.194656+0100 | WARNING | [TRADING][DRY_RUN] SELL (stop_loss_-47.4%) mint=2adMpHide3NPNP5paSJJeWCU2q4QQg67nSKL5uZGpump sol_out=10523871 pnl=-47.4%
+2026-02-27T10:12:41.493649+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=2iKoyk9JYsqgagok3mkajSomVD3XoFdcYeeKN7gtk1Sw | next_check_in=44s | ml_score=0.926
+2026-02-27T10:12:42.333975+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=2iKoyk9JYsqgagok3mkajSomVD3XoFdcYeeKN7gtk1Sw token_out=706036897208
+2026-02-27T10:12:43.214811+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=3So8BxVFuqqPszibz9ehTH71CDBuBjg46PtdRoBspump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:12:44.000218+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=3So8BxVFuqqPszibz9ehTH71CDBuBjg46PtdRoBspump token_out=706037126430
+2026-02-27T10:13:17.996548+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=5MH2vDBonTeuZ1cccHA37pDQHvuLjhQ6hKReBY644CZE | next_check_in=44s | ml_score=0.926
+2026-02-27T10:13:17.996548+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=5MH2vDBonTeuZ1cccHA37pDQHvuLjhQ6hKReBY644CZE
+2026-02-27T10:13:19.071692+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=F6Sj4bWyqJp4vKbvLTcbHsek8Qfies1N2h9i4byedjCc | next_check_in=44s | ml_score=0.926
+2026-02-27T10:13:19.071692+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=F6Sj4bWyqJp4vKbvLTcbHsek8Qfies1N2h9i4byedjCc
+2026-02-27T10:13:19.391118+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=CxDTfTbGoQw81NV4X1jiFmho336FR1EnafPxkMXmFnCJ | next_check_in=44s | ml_score=0.926
+2026-02-27T10:13:19.391118+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=CxDTfTbGoQw81NV4X1jiFmho336FR1EnafPxkMXmFnCJ
+2026-02-27T10:13:37.276105+0100 | INFO | Odysseus -> SKIP (curve_sol_missing) | ml_score=0.013
+2026-02-27T10:13:38.627579+0100 | INFO | ajcoin -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:13:39.139661+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=2vdyK2MJgTJKRmFDWY5tJbUs4T22TRugTZmSHwMcL3Tr | next_check_in=44s | ml_score=0.926
+2026-02-27T10:13:39.139661+0100 | INFO | [TRADING] skip buy (max_open_positions reached) mint=2vdyK2MJgTJKRmFDWY5tJbUs4T22TRugTZmSHwMcL3Tr
+2026-02-27T10:13:56.717716+0100 | INFO | CHATOS -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:13:56.952891+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=2iKoyk9JYsqgagok3mkajSomVD3XoFdcYeeKN7gtk1Sw sol_out=19480510 pnl=-2.6%
+2026-02-27T10:13:58.704639+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=3So8BxVFuqqPszibz9ehTH71CDBuBjg46PtdRoBspump sol_out=19480516 pnl=-2.6%
+2026-02-27T10:13:58.990702+0100 | INFO | BOOTS -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:13:59.354704+0100 | INFO | ISWA -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:13:59.792295+0100 | INFO | off -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:14:00.116098+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=5Ut4PM9mG9bFeRuaA6ScgSCmGyP4DAVumijJYaZ2pump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:14:00.364377+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=5Ut4PM9mG9bFeRuaA6ScgSCmGyP4DAVumijJYaZ2pump token_out=706037126430
+2026-02-27T10:14:01.073414+0100 | INFO | MOD -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:14:01.285064+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-27T10:14:01.287060+0100 | INFO | Helius RPC calls this run: 1
+2026-02-27T10:16:06.895081+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-02-27T10:16:20.616031+0100 | INFO | Odysseus -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:16:21.069455+0100 | INFO | Odysseus -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:16:21.515230+0100 | INFO | Odysseus -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:16:21.999533+0100 | INFO | CHATOS -> SKIP (curve_sol_missing) | ml_score=0.004
+2026-02-27T10:16:22.305892+0100 | INFO | 海狮 -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:16:22.764104+0100 | INFO | leaving -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:16:23.061257+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=62oT16h4ZqecktmjeF9mhXftkzaitzC2m2o4mQcaW5B9 | next_check_in=44s | ml_score=0.926
+2026-02-27T10:16:23.583972+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=62oT16h4ZqecktmjeF9mhXftkzaitzC2m2o4mQcaW5B9 token_out=706037126454
+2026-02-27T10:16:23.868888+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=9SgHwjoZk5EvjK1gisFQgD4gMqFXAPS25pyQcBbjwa8M | next_check_in=44s | ml_score=0.926
+2026-02-27T10:16:24.176617+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=9SgHwjoZk5EvjK1gisFQgD4gMqFXAPS25pyQcBbjwa8M token_out=706037126454
+2026-02-27T10:16:24.935555+0100 | INFO | Odysseus -> SKIP (curve_sol_missing) | ml_score=0.926
+2026-02-27T10:16:25.646632+0100 | INFO | Odysseus -> SKIP (curve_sol_missing) | ml_score=0.926
+2026-02-27T10:16:40.099489+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=4zvf2ZdotVoDsh5BX7DFqPYLvVhrFyRCgis71N6Xpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:16:40.560517+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=4zvf2ZdotVoDsh5BX7DFqPYLvVhrFyRCgis71N6Xpump token_out=705501187369
+2026-02-27T10:16:42.235268+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=F3xwdHzP4vvxVW8xkKz3ePHkEXu3ippgsvNrcN3apump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:16:43.049671+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=F3xwdHzP4vvxVW8xkKz3ePHkEXu3ippgsvNrcN3apump token_out=705454734597
+2026-02-27T10:17:33.815929+0100 | INFO | Odysseus -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:17:34.143586+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=62oT16h4ZqecktmjeF9mhXftkzaitzC2m2o4mQcaW5B9 sol_out=19480516 pnl=-2.6%
+2026-02-27T10:17:34.836832+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=9SgHwjoZk5EvjK1gisFQgD4gMqFXAPS25pyQcBbjwa8M sol_out=19480516 pnl=-2.6%
+2026-02-27T10:17:36.650695+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=4zvf2ZdotVoDsh5BX7DFqPYLvVhrFyRCgis71N6Xpump sol_out=19480526 pnl=-2.6%
+2026-02-27T10:17:36.795129+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=F3xwdHzP4vvxVW8xkKz3ePHkEXu3ippgsvNrcN3apump sol_out=19480527 pnl=-2.6%
+2026-02-27T10:17:37.203763+0100 | INFO | Odysseus -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:17:37.631383+0100 | INFO | Stick -> SKIP (curve_sol_missing) | ml_score=0.002
+2026-02-27T10:17:38.069119+0100 | INFO | GojoAgenC -> SKIP (curve_sol_missing) | ml_score=0.939
+2026-02-27T10:17:54.127497+0100 | INFO | Gogo -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:17:54.648063+0100 | INFO | Ball -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:17:55.056969+0100 | INFO | PEWBOT -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:17:55.458116+0100 | INFO | POKEMON30 -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:18:42.184147+0100 | INFO | TIRED -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:19:31.100191+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=FqTEkEdRWUDdKZZ1pTnQj455uQHuPoVRu1mncssvpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:19:32.020401+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=FqTEkEdRWUDdKZZ1pTnQj455uQHuPoVRu1mncssvpump token_out=706037126407
+2026-02-27T10:19:48.352834+0100 | INFO | NIGGAMON -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:19:49.905372+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=3Dm3Tr84Y6xcdnye7N5JpnwugAcqrmgJK9wRNWyQpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:19:50.330751+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=3Dm3Tr84Y6xcdnye7N5JpnwugAcqrmgJK9wRNWyQpump token_out=706037125513
+2026-02-27T10:20:08.803261+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=2BoGYkKntq1ZeNVJW19ms5HRAjyY8ffywbn2tpQApump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:20:09.138447+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=2BoGYkKntq1ZeNVJW19ms5HRAjyY8ffywbn2tpQApump token_out=437079902978
+2026-02-27T10:20:10.653707+0100 | INFO | N0PE -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:20:13.426291+0100 | INFO | HOUSE -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:20:30.421697+0100 | INFO | Ouroboro -> SKIP (curve_sol_missing) | ml_score=0.010
+2026-02-27T10:20:31.229595+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=FqTEkEdRWUDdKZZ1pTnQj455uQHuPoVRu1mncssvpump sol_out=19480516 pnl=-2.6%
+2026-02-27T10:20:32.463285+0100 | INFO | Panya -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:20:33.674410+0100 | INFO | StockMarket -> SKIP (curve_sol_missing) | ml_score=0.982
+2026-02-27T10:20:50.898200+0100 | INFO | CCoin -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:20:51.261839+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=3Dm3Tr84Y6xcdnye7N5JpnwugAcqrmgJK9wRNWyQpump sol_out=19480516 pnl=-2.6%
+2026-02-27T10:20:52.020897+0100 | WARNING | [TRADING][DRY_RUN] SELL (stop_loss_-12.3%) mint=2BoGYkKntq1ZeNVJW19ms5HRAjyY8ffywbn2tpQApump sol_out=16705065 pnl=-16.5%
+2026-02-27T10:20:52.430038+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=2N4suBSVqxCLThLkY6ciheYZjEhRPkgvUYmbG8igpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:20:53.227933+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=2N4suBSVqxCLThLkY6ciheYZjEhRPkgvUYmbG8igpump token_out=706019023181
+2026-02-27T10:21:10.120067+0100 | INFO | Odysseus -> SKIP (curve_sol_missing) | ml_score=0.046
+2026-02-27T10:21:11.146244+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=7ihMBNawAdy7NzpdJonqpbdWnCNz9Erb77WaF4sEpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:21:12.041688+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=7ihMBNawAdy7NzpdJonqpbdWnCNz9Erb77WaF4sEpump token_out=706037126054
+2026-02-27T10:21:45.253818+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=5jVy91Sj4UpDWcDM7vr6Ybkce6LhTHjtup298iL7pump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:21:46.826487+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=5jVy91Sj4UpDWcDM7vr6Ybkce6LhTHjtup298iL7pump token_out=706037125560
+2026-02-27T10:21:47.014084+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=2N4suBSVqxCLThLkY6ciheYZjEhRPkgvUYmbG8igpump sol_out=19480517 pnl=-2.6%
+2026-02-27T10:22:05.700622+0100 | INFO | AIC -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:22:05.986361+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=7ihMBNawAdy7NzpdJonqpbdWnCNz9Erb77WaF4sEpump sol_out=19480516 pnl=-2.6%
+2026-02-27T10:22:06.356839+0100 | INFO | ODYSSEUS -> SKIP (curve_sol_missing) | ml_score=1.000
+2026-02-27T10:22:06.710333+0100 | INFO | ChatOS -> SKIP (curve_sol_missing) | ml_score=0.991
+2026-02-27T10:22:23.785211+0100 | INFO | ChatOS -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:22:40.666230+0100 | INFO | CHARA -> SKIP (curve_sol_missing) | ml_score=0.559
+2026-02-27T10:22:40.943702+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=5jVy91Sj4UpDWcDM7vr6Ybkce6LhTHjtup298iL7pump sol_out=19480516 pnl=-2.6%
+2026-02-27T10:22:41.264833+0100 | INFO | Tango -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T10:22:41.557177+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=A3m5zugFA2n87aNesdyuCdGhrPh62TThSw1ZmQ64pump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:22:42.409733+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=A3m5zugFA2n87aNesdyuCdGhrPh62TThSw1ZmQ64pump token_out=705990656040
+2026-02-27T10:23:00.230077+0100 | INFO | BWF -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:23:00.748585+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=9SW5pdZenns7o3bgD7qfNisQZGGkmzfS4yJWq2wLpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:23:00.982405+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=9SW5pdZenns7o3bgD7qfNisQZGGkmzfS4yJWq2wLpump token_out=309561240103
+2026-02-27T10:23:34.881861+0100 | INFO | 420lbs -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:23:35.136914+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=A3m5zugFA2n87aNesdyuCdGhrPh62TThSw1ZmQ64pump sol_out=19480517 pnl=-2.6%
+2026-02-27T10:23:35.299552+0100 | WARNING | [TRADING][DRY_RUN] SELL (stop_loss_-55.1%) mint=9SW5pdZenns7o3bgD7qfNisQZGGkmzfS4yJWq2wLpump sol_out=8984567 pnl=-55.1%
+2026-02-27T10:23:52.770577+0100 | INFO | BABY PUNCH -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:23:53.076779+0100 | INFO | Life -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T10:24:08.116315+0100 | INFO | 1jellybean -> SKIP (curve_sol_missing) | ml_score=0.014
+2026-02-27T10:24:08.439166+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=GfRuzU7A5BB46YLZ2ZhzUGRc8zHJzV8Fexc81fYppump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:24:09.334735+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=GfRuzU7A5BB46YLZ2ZhzUGRc8zHJzV8Fexc81fYppump token_out=705573876007
+2026-02-27T10:24:10.186988+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=H8o4B16TnSvW84GRrSqbeU2P9Crf793vD5ne2h465c6t | next_check_in=44s | ml_score=0.926
+2026-02-27T10:24:11.014225+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=H8o4B16TnSvW84GRrSqbeU2P9Crf793vD5ne2h465c6t token_out=705499472697
+2026-02-27T10:24:28.087324+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=Budc1BMLZPw8xwiwun55K72DYDVGX8ZTWAniUqFzpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:24:29.006928+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=Budc1BMLZPw8xwiwun55K72DYDVGX8ZTWAniUqFzpump token_out=682833018241
+2026-02-27T10:24:47.379319+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=hNkcRBmLMsTffF2oAWcQ8JAqoaZQWMkogBggSfMpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:24:48.820253+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=hNkcRBmLMsTffF2oAWcQ8JAqoaZQWMkogBggSfMpump token_out=706003835031
+2026-02-27T10:24:51.043231+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=Da97wGLUFALTjAS4BMPwoscNabxAqo4uGqEMfzsQpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:24:51.844515+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=Da97wGLUFALTjAS4BMPwoscNabxAqo4uGqEMfzsQpump token_out=529664707230
+2026-02-27T10:25:10.613534+0100 | INFO | WAR -> SKIP (curve_sol_missing) | ml_score=0.889
+2026-02-27T10:25:11.416615+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=GfRuzU7A5BB46YLZ2ZhzUGRc8zHJzV8Fexc81fYppump sol_out=19480525 pnl=-2.6%
+2026-02-27T10:25:12.134160+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=H8o4B16TnSvW84GRrSqbeU2P9Crf793vD5ne2h465c6t sol_out=19480526 pnl=-2.6%
+2026-02-27T10:25:14.920989+0100 | INFO | SHIWACK0 -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:25:15.118430+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=Budc1BMLZPw8xwiwun55K72DYDVGX8ZTWAniUqFzpump sol_out=19465862 pnl=-2.7%
+2026-02-27T10:25:15.771050+0100 | INFO | Eelstar -> SKIP (curve_sol_missing) | ml_score=0.996
+2026-02-27T10:25:32.994683+0100 | INFO | $MJhero -> SKIP (curve_sol_missing) | ml_score=0.136
+2026-02-27T10:25:34.316588+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=6PRT8FRE4bAAPkDhqnv46WTBNv8PTFLSWZtdGaULpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:25:34.845177+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=6PRT8FRE4bAAPkDhqnv46WTBNv8PTFLSWZtdGaULpump token_out=706037124196
+2026-02-27T10:25:36.711779+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=hNkcRBmLMsTffF2oAWcQ8JAqoaZQWMkogBggSfMpump sol_out=19479599 pnl=-2.6%
+2026-02-27T10:25:37.139128+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=27iuEzpjZJQrBzMpjReNtBMK1haG1jBt99o5oB1rpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:25:37.942686+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=27iuEzpjZJQrBzMpjReNtBMK1haG1jBt99o5oB1rpump token_out=706037126430
+2026-02-27T10:25:39.905286+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=Da97wGLUFALTjAS4BMPwoscNabxAqo4uGqEMfzsQpump sol_out=19823037 pnl=-0.9%
+2026-02-27T10:25:40.333692+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=EejTkuidogdjxbNWR47WuPydEYz7g2c41nA2RgNepump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:25:41.167438+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=EejTkuidogdjxbNWR47WuPydEYz7g2c41nA2RgNepump token_out=705498980750
+2026-02-27T10:25:43.977973+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DSbVx4oZwaNbNKT5sTbWjbjouvpaQeY5Qfc8amB3pump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:25:44.209029+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=DSbVx4oZwaNbNKT5sTbWjbjouvpaQeY5Qfc8amB3pump token_out=705498980750
+2026-02-27T10:26:02.328705+0100 | INFO | r/antiai -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:26:04.359820+0100 | INFO | ATO -> SKIP (curve_sol_missing) | ml_score=0.003
+2026-02-27T10:26:06.155819+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DdGnw415XcGsStiAsUrwCUnXvvSnmoKY8tdkjAtHDyPC | next_check_in=44s | ml_score=0.926
+2026-02-27T10:26:06.951499+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=DdGnw415XcGsStiAsUrwCUnXvvSnmoKY8tdkjAtHDyPC token_out=641827689652
+2026-02-27T10:26:11.031794+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=3HSVgqFEYXZhZEeJ3q81MvgT3ve1nZDHdL3yphUYpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:26:11.271484+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=3HSVgqFEYXZhZEeJ3q81MvgT3ve1nZDHdL3yphUYpump token_out=704729303689
+2026-02-27T10:26:46.895422+0100 | INFO | Decentra -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:26:47.305519+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=6PRT8FRE4bAAPkDhqnv46WTBNv8PTFLSWZtdGaULpump sol_out=19480516 pnl=-2.6%
+2026-02-27T10:26:48.069425+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=27iuEzpjZJQrBzMpjReNtBMK1haG1jBt99o5oB1rpump sol_out=19480516 pnl=-2.6%
+2026-02-27T10:26:48.307225+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=EejTkuidogdjxbNWR47WuPydEYz7g2c41nA2RgNepump sol_out=19465678 pnl=-2.7%
+2026-02-27T10:26:49.034714+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=DSbVx4oZwaNbNKT5sTbWjbjouvpaQeY5Qfc8amB3pump sol_out=19465678 pnl=-2.7%
+2026-02-27T10:26:50.840060+0100 | WARNING | [TRADING][DRY_RUN] SELL (stop_loss_-10.6%) mint=DdGnw415XcGsStiAsUrwCUnXvvSnmoKY8tdkjAtHDyPC sol_out=17876556 pnl=-10.6%
+2026-02-27T10:26:51.236000+0100 | INFO | PEWBOT5000 -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-02-27T10:26:51.604247+0100 | INFO | PEWBOT5000 -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:26:51.979214+0100 | INFO | PEWBOT5000 -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:27:08.250023+0100 | INFO | StockMarket -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:27:09.101766+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=3HSVgqFEYXZhZEeJ3q81MvgT3ve1nZDHdL3yphUYpump sol_out=19480540 pnl=-2.6%
+2026-02-27T10:27:09.515471+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=3HTCt82bsKDWRvGgtG9eTroXUUovRsjytj3GEeKDpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:27:10.371316+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=3HTCt82bsKDWRvGgtG9eTroXUUovRsjytj3GEeKDpump token_out=706031517592
+2026-02-27T10:27:44.647578+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=3jWPntXgFmaAfCf3GHZoRoCBwXhdTijakHfHkSDxpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:27:45.137670+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=3jWPntXgFmaAfCf3GHZoRoCBwXhdTijakHfHkSDxpump token_out=706037126454
+2026-02-27T10:27:46.196599+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DAhEvU3XLSEviAKoLCA43zb8cq4xNTuusYdW4xG8pump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:27:47.128654+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=DAhEvU3XLSEviAKoLCA43zb8cq4xNTuusYdW4xG8pump token_out=674596796700
+2026-02-27T10:27:48.272971+0100 | INFO | HowCrypto -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:28:06.675754+0100 | INFO | PEWBOT5000 -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-02-27T10:28:06.933092+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=3HTCt82bsKDWRvGgtG9eTroXUUovRsjytj3GEeKDpump sol_out=19480517 pnl=-2.6%
+2026-02-27T10:28:09.076818+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=FiHKMJtJ3gHYTWoFsC6ZsofsXZbik59RaNFTDzsNpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:28:09.362874+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=FiHKMJtJ3gHYTWoFsC6ZsofsXZbik59RaNFTDzsNpump token_out=706037126430
+2026-02-27T10:28:10.576058+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=FHyEBxDhrgD7BqrCkL6Bg92Ag3mAtDHfZKV9qeDRpump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:28:12.218557+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=FHyEBxDhrgD7BqrCkL6Bg92Ag3mAtDHfZKV9qeDRpump token_out=706037126430
+2026-02-27T10:28:14.042756+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=4xsvhrmvAw7DJfxsJ8YCKom1HzcMic8D8pzL3sMppump | next_check_in=44s | ml_score=0.926
+2026-02-27T10:28:14.878796+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=4xsvhrmvAw7DJfxsJ8YCKom1HzcMic8D8pzL3sMppump token_out=706032479269
+2026-02-27T10:28:21.736307+0100 | INFO | Stopped by user (Ctrl+C).
+2026-02-27T10:28:21.743154+0100 | INFO | Helius RPC calls this run: 1
+2026-03-01T16:36:41.847201+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-03-01T16:37:13.575820+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=CDDDf9fnqMnbi4PFvv74RdpfYSSugFtkpTHeiLGRpump | next_check_in=44s | ml_score=0.926
+2026-03-01T16:37:14.577168+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=CDDDf9fnqMnbi4PFvv74RdpfYSSugFtkpTHeiLGRpump token_out=653402697601
+2026-03-01T16:37:14.964650+0100 | INFO | JEW -> SKIP (curve_sol_missing) | ml_score=0.196
+2026-03-01T16:37:28.739616+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DZ3YMyf9WHXR2zLDZebTGNYFAVCdT75KpNE8k31npump | next_check_in=44s | ml_score=0.926
+2026-03-01T16:37:29.149381+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=DZ3YMyf9WHXR2zLDZebTGNYFAVCdT75KpNE8k31npump token_out=683361971879
+2026-03-01T16:37:30.170477+0100 | INFO | WW3 -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:37:30.590498+0100 | INFO | Epstein -> SKIP (curve_sol_missing) | ml_score=0.550
+2026-03-01T16:37:32.760057+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=J3rofnaqsgXTB6NQ5CyzXuymWoTrs3vedmezxY9npump | next_check_in=44s | ml_score=0.926
+2026-03-01T16:37:33.031132+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=J3rofnaqsgXTB6NQ5CyzXuymWoTrs3vedmezxY9npump token_out=661742781968
+2026-03-01T16:37:50.783166+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=CB8K9mGEMgFWGgjFUtn8P9LzeN8HwSjFGHX7zAmPpump | next_check_in=44s | ml_score=0.926
+2026-03-01T16:37:51.765670+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=CB8K9mGEMgFWGgjFUtn8P9LzeN8HwSjFGHX7zAmPpump token_out=705990656063
+2026-03-01T16:37:51.947547+0100 | WARNING | [TRADING][DRY_RUN] SELL (take_profit_117.3%) mint=CDDDf9fnqMnbi4PFvv74RdpfYSSugFtkpTHeiLGRpump sol_out=43458621 pnl=117.3%
+2026-03-01T16:37:54.292399+0100 | INFO | NXP -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:38:11.511076+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=27RrHoBF6vP6d3o8zYVCQqW57KkJjdVDLXh8Cavjpump | next_check_in=44s | ml_score=0.926
+2026-03-01T16:38:13.084528+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=27RrHoBF6vP6d3o8zYVCQqW57KkJjdVDLXh8Cavjpump token_out=706037126242
+2026-03-01T16:38:14.887508+0100 | INFO | ZAHRA -> SKIP (curve_sol_missing) | ml_score=0.009
+2026-03-01T16:38:15.037564+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=DZ3YMyf9WHXR2zLDZebTGNYFAVCdT75KpNE8k31npump sol_out=19480932 pnl=-2.6%
+2026-03-01T16:38:17.499214+0100 | INFO | $ORELHA -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:38:34.746678+0100 | INFO | ShadowEconomy -> SKIP (curve_sol_missing) | ml_score=1.000
+2026-03-01T16:38:35.149603+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=J3rofnaqsgXTB6NQ5CyzXuymWoTrs3vedmezxY9npump sol_out=18372451 pnl=-8.1%
+2026-03-01T16:38:36.309609+0100 | INFO | Rabbit -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:38:37.447394+0100 | INFO | Voisin III -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:38:38.181189+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=CB8K9mGEMgFWGgjFUtn8P9LzeN8HwSjFGHX7zAmPpump sol_out=19480517 pnl=-2.6%
+2026-03-01T16:38:38.945402+0100 | INFO | Koda -> SKIP (curve_sol_missing) | ml_score=0.874
+2026-03-01T16:38:39.339818+0100 | INFO | Capitán -> SKIP (curve_sol_missing) | ml_score=1.000
+2026-03-01T16:38:39.828625+0100 | INFO | smoon -> SKIP (curve_sol_missing) | ml_score=0.913
+2026-03-01T16:38:40.197355+0100 | INFO | Machine -> SKIP (curve_sol_missing) | ml_score=0.010
+2026-03-01T16:38:56.206699+0100 | INFO | NOUTILITY -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:38:57.317372+0100 | INFO | Warpin -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:38:57.681185+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=GkBPysBBxHM6cSGxEA3aF74bEX4cNDgu7ywMVH9Xpump | next_check_in=44s | ml_score=0.926
+2026-03-01T16:38:57.997397+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=GkBPysBBxHM6cSGxEA3aF74bEX4cNDgu7ywMVH9Xpump token_out=598168970796
+2026-03-01T16:38:59.189613+0100 | INFO | Scarface -> SKIP (curve_sol_missing) | ml_score=0.639
+2026-03-01T16:39:00.092289+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=27RrHoBF6vP6d3o8zYVCQqW57KkJjdVDLXh8Cavjpump sol_out=19480516 pnl=-2.6%
+2026-03-01T16:39:00.644314+0100 | INFO | 30MREAPER -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-03-01T16:39:17.957624+0100 | INFO | LS -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:39:18.260766+0100 | WARNING | [TRADING][DRY_RUN] SELL (stop_loss_-17.5%) mint=GkBPysBBxHM6cSGxEA3aF74bEX4cNDgu7ywMVH9Xpump sol_out=16506408 pnl=-17.5%
+2026-03-01T16:39:18.580280+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=EzBpTzqo5yWMwF9SaqLCGH5cR2Bba2zUDRJU3FEUpump | next_check_in=44s | ml_score=0.926
+2026-03-01T16:39:18.865129+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=EzBpTzqo5yWMwF9SaqLCGH5cR2Bba2zUDRJU3FEUpump token_out=549206724521
+2026-03-01T16:39:52.155870+0100 | INFO | HORMUZ -> SKIP (curve_sol_missing) | ml_score=0.003
+2026-03-01T16:39:53.339317+0100 | WARNING | [TRADING][DRY_RUN] SELL (stop_loss_-23.9%) mint=EzBpTzqo5yWMwF9SaqLCGH5cR2Bba2zUDRJU3FEUpump sol_out=15229427 pnl=-23.9%
+2026-03-01T16:39:53.997566+0100 | INFO | WWW -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:39:54.476463+0100 | INFO | TRENCH WAR -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:40:09.602934+0100 | INFO | Toxicroac -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:40:09.945984+0100 | INFO | KING PINGS -> SKIP (curve_sol_missing) | ml_score=1.000
+2026-03-01T16:40:10.388591+0100 | INFO | Kim -> SKIP (curve_sol_missing) | ml_score=0.341
+2026-03-01T16:40:10.869455+0100 | INFO | UNKNOWN -> SKIP (curve_sol_missing) | ml_score=0.926
+2026-03-01T16:40:26.813503+0100 | INFO | Ryzhik -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:40:27.182391+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=H8M1wkJ6ybjeyYDpfp5Lwo4KtZoU4Q4BFTCcruZDdtGZ | next_check_in=44s | ml_score=0.926
+2026-03-01T16:40:27.587867+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=H8M1wkJ6ybjeyYDpfp5Lwo4KtZoU4Q4BFTCcruZDdtGZ token_out=706037126430
+2026-03-01T16:40:27.824965+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=6eR3dpwZ5os1fSEKyPWEyuLPDy5jmgz2fsB8CMnwXdLA | next_check_in=44s | ml_score=0.926
+2026-03-01T16:40:28.067532+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=6eR3dpwZ5os1fSEKyPWEyuLPDy5jmgz2fsB8CMnwXdLA token_out=706037079400
+2026-03-01T16:40:29.118840+0100 | INFO | Kim -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:40:30.357540+0100 | INFO | POGE -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:40:31.514653+0100 | INFO | JUSTICE NARRA -> SKIP (curve_sol_missing) | ml_score=0.011
+2026-03-01T16:40:48.293133+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=5dpmv8maLe51k15jrzAUqmAPwXqJDx7FRX8xPo3uRfVD | next_check_in=44s | ml_score=0.926
+2026-03-01T16:40:49.768729+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=5dpmv8maLe51k15jrzAUqmAPwXqJDx7FRX8xPo3uRfVD token_out=701355175863
+2026-03-01T16:40:52.018260+0100 | INFO | Unfazed -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:40:52.836118+0100 | INFO | Offboarding -> SKIP (curve_sol_missing) | ml_score=0.016
+2026-03-01T16:40:54.030763+0100 | INFO | DEFCON -> SKIP (curve_sol_missing) | ml_score=0.095
+2026-03-01T16:40:55.502391+0100 | INFO | Love -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:40:57.889357+0100 | INFO | Mojtaba -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:41:14.358667+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=BhAV7jL5qrQYCwG4urrQnMXqDSfXVnHXQLvLJnMqeqaa | next_check_in=44s | ml_score=0.926
+2026-03-01T16:41:16.196074+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=BhAV7jL5qrQYCwG4urrQnMXqDSfXVnHXQLvLJnMqeqaa token_out=692214495960
+2026-03-01T16:41:16.501808+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=H8M1wkJ6ybjeyYDpfp5Lwo4KtZoU4Q4BFTCcruZDdtGZ sol_out=19480516 pnl=-2.6%
+2026-03-01T16:41:17.279488+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=6eR3dpwZ5os1fSEKyPWEyuLPDy5jmgz2fsB8CMnwXdLA sol_out=19480516 pnl=-2.6%
+2026-03-01T16:41:18.534005+0100 | INFO | neh -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T16:41:25.557489+0100 | INFO | Stopped by user (Ctrl+C).
+2026-03-01T16:41:25.561964+0100 | INFO | Helius RPC calls this run: 1
+2026-03-01T17:59:26.242686+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-03-01T17:59:40.072483+0100 | INFO | TAIL -> SKIP (curve_sol_missing) | ml_score=0.512
+2026-03-01T17:59:40.417748+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=HMWhgKLoJCJzNXGJGtVDqfCvrmjQTn96fAo3XfM1pump | next_check_in=44s | ml_score=0.926
+2026-03-01T17:59:41.199457+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=HMWhgKLoJCJzNXGJGtVDqfCvrmjQTn96fAo3XfM1pump token_out=703462952636
+2026-03-01T17:59:41.483833+0100 | INFO | CORPHISH -> SKIP (curve_sol_missing) | ml_score=0.087
+2026-03-01T17:59:42.044064+0100 | INFO | AUSTIN -> SKIP (curve_sol_missing) | ml_score=0.955
+2026-03-01T17:59:56.582469+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=9UVUGgk2qZGD2SF6p6dCjdWkeByxgm4y16EGpoxkpump | next_check_in=44s | ml_score=0.926
+2026-03-01T17:59:57.177860+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=9UVUGgk2qZGD2SF6p6dCjdWkeByxgm4y16EGpoxkpump token_out=697877129945
+2026-03-01T17:59:58.194495+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=C58ErU8dkWuQqQzxR3myCXxSkohG3avj4SsMFEPWpump | next_check_in=44s | ml_score=0.926
+2026-03-01T17:59:59.092592+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=C58ErU8dkWuQqQzxR3myCXxSkohG3avj4SsMFEPWpump token_out=706037126430
+2026-03-01T18:00:16.822582+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=Czd7jY15S6bXYPLtdbxdybDVJXHjMke7F3MPhVyMzv5w | next_check_in=44s | ml_score=0.926
+2026-03-01T18:00:17.972428+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=Czd7jY15S6bXYPLtdbxdybDVJXHjMke7F3MPhVyMzv5w token_out=706037126430
+2026-03-01T18:00:20.023928+0100 | INFO | POGE -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:00:38.705538+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=5mdhfsCZjbH4hy5p2VpsF4dP87pwhVWPc6pSrSxSpump | next_check_in=44s | ml_score=0.926
+2026-03-01T18:00:39.173646+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=5mdhfsCZjbH4hy5p2VpsF4dP87pwhVWPc6pSrSxSpump token_out=661742781946
+2026-03-01T18:00:39.959727+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=HMWhgKLoJCJzNXGJGtVDqfCvrmjQTn96fAo3XfM1pump sol_out=19480564 pnl=-2.6%
+2026-03-01T18:00:43.134884+0100 | INFO | DUST -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:00:43.314499+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=9UVUGgk2qZGD2SF6p6dCjdWkeByxgm4y16EGpoxkpump sol_out=20920135 pnl=4.6%
+2026-03-01T18:00:44.538731+0100 | INFO | BABOOB -> SKIP (curve_sol_missing) | ml_score=0.123
+2026-03-01T18:00:44.725176+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=C58ErU8dkWuQqQzxR3myCXxSkohG3avj4SsMFEPWpump sol_out=19480516 pnl=-2.6%
+2026-03-01T18:01:05.282529+0100 | INFO | Singulatarian -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:01:05.612854+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=Czd7jY15S6bXYPLtdbxdybDVJXHjMke7F3MPhVyMzv5w sol_out=19480516 pnl=-2.6%
+2026-03-01T18:01:06.056202+0100 | INFO | CAVA -> SKIP (curve_sol_missing) | ml_score=0.774
+2026-03-01T18:01:06.567123+0100 | INFO | Impala -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:01:06.999176+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=DJ9PNZkLPo9pKMxenuE8dFFyDuKqcGQf9ChwALqnpump | next_check_in=44s | ml_score=0.926
+2026-03-01T18:01:07.294589+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=DJ9PNZkLPo9pKMxenuE8dFFyDuKqcGQf9ChwALqnpump token_out=610149102960
+2026-03-01T18:01:07.808942+0100 | INFO | AURA -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:01:23.944755+0100 | INFO | $GSHIFT -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:01:25.307108+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=4LZXTwSQSmoSLSUE4UJNtoZTWYH7te9JvWKNXBeRpump | next_check_in=44s | ml_score=0.926
+2026-03-01T18:01:25.780034+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=4LZXTwSQSmoSLSUE4UJNtoZTWYH7te9JvWKNXBeRpump token_out=706035732350
+2026-03-01T18:01:26.797112+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=5mdhfsCZjbH4hy5p2VpsF4dP87pwhVWPc6pSrSxSpump sol_out=18545687 pnl=-7.3%
+2026-03-01T18:01:28.441293+0100 | INFO | Lore -> SKIP (curve_sol_missing) | ml_score=0.312
+2026-03-01T18:01:29.656842+0100 | INFO | gork-1 -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:01:30.359145+0100 | INFO | frankbot -> SKIP (curve_sol_missing) | ml_score=0.391
+2026-03-01T18:01:31.399505+0100 | INFO | GHOST -> SKIP (curve_sol_missing) | ml_score=0.003
+2026-03-01T18:01:47.927076+0100 | INFO | Duq -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:01:49.188256+0100 | INFO | DEERFLOW -> SKIP (curve_sol_missing) | ml_score=0.886
+2026-03-01T18:01:50.862813+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=2umaXE8niRBzq93E4GsN8TgmZteH9YL4r2dfULTipump | next_check_in=44s | ml_score=0.926
+2026-03-01T18:01:51.179992+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=2umaXE8niRBzq93E4GsN8TgmZteH9YL4r2dfULTipump token_out=661761887049
+2026-03-01T18:02:09.415863+0100 | INFO | illegalwar -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:02:09.789357+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=DJ9PNZkLPo9pKMxenuE8dFFyDuKqcGQf9ChwALqnpump sol_out=19482321 pnl=-2.6%
+2026-03-01T18:02:10.977786+0100 | INFO | Babyruck -> SKIP (curve_sol_missing) | ml_score=0.779
+2026-03-01T18:02:11.292753+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=4LZXTwSQSmoSLSUE4UJNtoZTWYH7te9JvWKNXBeRpump sol_out=19480516 pnl=-2.6%
+2026-03-01T18:02:12.428669+0100 | INFO | glow -> SKIP (curve_sol_missing) | ml_score=0.005
+2026-03-01T18:02:29.593300+0100 | INFO | $TRUMP -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:02:30.195691+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=ETA6L94AdQLpLDfdUyFi7e7tjtqoi4vmmz6FdnJZDW2k | next_check_in=44s | ml_score=0.926
+2026-03-01T18:02:30.457650+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=ETA6L94AdQLpLDfdUyFi7e7tjtqoi4vmmz6FdnJZDW2k token_out=706037126430
+2026-03-01T18:02:31.656862+0100 | INFO | Jim Carrey -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:02:32.526695+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=5qDrDBBX1k768i5TD4PEMj9H345WD32BYTZjGHZwpump | next_check_in=44s | ml_score=0.926
+2026-03-01T18:02:32.992819+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=5qDrDBBX1k768i5TD4PEMj9H345WD32BYTZjGHZwpump token_out=699020582023
+2026-03-01T18:02:52.687823+0100 | INFO | VOSS -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:02:53.607650+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=2umaXE8niRBzq93E4GsN8TgmZteH9YL4r2dfULTipump sol_out=19496530 pnl=-2.5%
+2026-03-01T18:02:54.179264+0100 | INFO | SUAE -> SKIP (curve_sol_missing) | ml_score=0.016
+2026-03-01T18:02:54.930556+0100 | INFO | MIAU -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:03:12.240313+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=7sZSTDWu6XsUpUwqAxdxeDN6wHMrXPnuAkxJ5FAipump | next_check_in=44s | ml_score=0.926
+2026-03-01T18:03:13.352927+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=7sZSTDWu6XsUpUwqAxdxeDN6wHMrXPnuAkxJ5FAipump token_out=592292894276
+2026-03-01T18:03:15.172573+0100 | INFO | ad -> SKIP (curve_sol_missing) | ml_score=0.001
+2026-03-01T18:03:32.483962+0100 | INFO | Jim Carrey -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:03:33.007916+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=ETA6L94AdQLpLDfdUyFi7e7tjtqoi4vmmz6FdnJZDW2k sol_out=19480516 pnl=-2.6%
+2026-03-01T18:03:33.794075+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=5qDrDBBX1k768i5TD4PEMj9H345WD32BYTZjGHZwpump sol_out=19480097 pnl=-2.6%
+2026-03-01T18:03:34.266874+0100 | INFO | Singulatarian -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:03:35.395280+0100 | INFO | FrankBot -> SKIP (curve_sol_missing) | ml_score=0.926
+2026-03-01T18:03:35.923774+0100 | INFO | Blu -> SKIP (curve_sol_missing) | ml_score=0.941
+2026-03-01T18:03:36.482653+0100 | INFO | Hell -> SKIP (curve_sol_missing) | ml_score=0.949
+2026-03-01T18:04:25.546820+0100 | INFO | Crash -> SKIP (curve_sol_missing) | ml_score=0.011
+2026-03-01T18:04:25.936842+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=7sZSTDWu6XsUpUwqAxdxeDN6wHMrXPnuAkxJ5FAipump sol_out=19395728 pnl=-3.0%
+2026-03-01T18:04:26.729011+0100 | INFO | PFIC -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:04:27.218813+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=nRxdTDAKKZp2mRhoXB3vTdqJNyeTorEgBGzaJfKpump | next_check_in=44s | ml_score=0.926
+2026-03-01T18:04:27.666458+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=nRxdTDAKKZp2mRhoXB3vTdqJNyeTorEgBGzaJfKpump token_out=706017392923
+2026-03-01T18:04:44.407593+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=H19fEafGnGKEXCpgwSnGYVJNa8JKwcLEJL8dbBJpump | next_check_in=44s | ml_score=0.926
+2026-03-01T18:04:44.927876+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=H19fEafGnGKEXCpgwSnGYVJNa8JKwcLEJL8dbBJpump token_out=696862337891
+2026-03-01T18:04:46.099909+0100 | INFO | BABOOBS -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:05:03.398783+0100 | INFO | UNKNOWN -> PENDING (no_pairs) | CA=CJEJWtS5vtzDqsB3pManrwnj9CRJP5718C5so2Cppump | next_check_in=44s | ml_score=0.926
+2026-03-01T18:05:04.022578+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=CJEJWtS5vtzDqsB3pManrwnj9CRJP5718C5so2Cppump token_out=453760024178
+2026-03-01T18:05:05.376084+0100 | INFO | AT -> SKIP (curve_sol_missing) | ml_score=0.000
+2026-03-01T18:05:17.618535+0100 | INFO | Stopped by user (Ctrl+C).
+2026-03-01T18:05:17.623059+0100 | INFO | Helius RPC calls this run: 1
+2026-03-01T20:11:56.400556+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-03-01T20:12:23.435130+0100 | INFO | Ali Alive -> PENDING (trade_m5_lt_min) | CA=6bvGS1nSrubdCCErCGBAQH4rSi4JzKdWt9eYrczopump | next_check_in=44s | ml_score=0.792 | https://dexscreener.com/solana/anlevygkwpejmeekeqsrotqmcxmed3bn5fmzxw2ghyqw
+2026-03-01T20:12:48.689282+0100 | INFO | Stare -> SKIP (age_gt_max) | ml_score=0.998
+2026-03-01T20:12:49.397752+0100 | INFO | Jordan -> SKIP (age_gt_max) | ml_score=0.342
+2026-03-01T20:12:50.107436+0100 | INFO | Kitler -> WATCH (ml_score_lt_thr) | CA=Bcn1osFaSojixaCeDNFUG73YEtTvTJH1dLWCvpDvpump | ml_score=0.000 | https://dexscreener.com/solana/d8ckpcdqm2t48mbqvyft3cw8eiuc2jxzc1vjrue62yh1
+2026-03-01T20:12:50.715229+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=Bcn1osFaSojixaCeDNFUG73YEtTvTJH1dLWCvpDvpump token_out=207589157880
+2026-03-01T20:13:19.830681+0100 | INFO | BLou -> ALLOW (ml_score_ge_thr) | ml_score=0.994
+2026-03-01T20:13:20.131900+0100 | WARNING | [TRADING][DRY_RUN] SELL (stop_loss_-60.1%) mint=Bcn1osFaSojixaCeDNFUG73YEtTvTJH1dLWCvpDvpump sol_out=7984783 pnl=-60.1%
+2026-03-01T20:13:20.556261+0100 | INFO | irangork -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:13:51.207647+0100 | INFO | STARE -> ALLOW (ml_score_ge_thr) | ml_score=1.000
+2026-03-01T20:13:51.697380+0100 | INFO | Short -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:13:52.581554+0100 | INFO | REVENGE -> WATCH (ml_score_lt_thr) | CA=F5GARjPxLXP7Kwc2irPGniga384hYqeqe97cVomJpump | ml_score=0.173 | https://dexscreener.com/solana/ae2kk9wkbg6xlpfccwroevok1prt3csetq6cf8kyer1c
+2026-03-01T20:13:53.011342+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=F5GARjPxLXP7Kwc2irPGniga384hYqeqe97cVomJpump token_out=153769786192
+2026-03-01T20:13:56.655643+0100 | INFO | TOPHAM -> ALLOW (ml_score_ge_thr) | ml_score=0.721
+2026-03-01T20:13:57.244130+0100 | INFO | BULL -> SKIP (curve_sol_lt_min) | ml_score=0.001
+2026-03-01T20:14:22.420205+0100 | INFO | PEACE -> SKIP (age_gt_max) | ml_score=0.001
+2026-03-01T20:14:22.885940+0100 | INFO | SOLDIER -> ALLOW (ml_score_ge_thr) | ml_score=1.000
+2026-03-01T20:14:23.439268+0100 | INFO | ELON -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:14:24.269358+0100 | INFO | BABOOB -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:14:54.173920+0100 | INFO | PIG -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:14:54.472043+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=F5GARjPxLXP7Kwc2irPGniga384hYqeqe97cVomJpump sol_out=18730264 pnl=-6.3%
+2026-03-01T20:15:23.580081+0100 | INFO | RWH -> SKIP (curve_sol_lt_min) | ml_score=0.799
+2026-03-01T20:15:23.901885+0100 | INFO | LINCOLN -> SKIP (age_gt_max) | ml_score=0.020
+2026-03-01T20:15:24.415994+0100 | INFO | ELRUBIO -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:15:24.753960+0100 | INFO | RWH -> SKIP (age_gt_max) | ml_score=0.998
+2026-03-01T20:15:25.126811+0100 | INFO | KRONOS -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:15:26.004654+0100 | INFO | KRONOS -> WATCH (ml_score_lt_thr) | CA=Hcgn7HZPEetQ79W1GvzsTuVbsEFs2R1WNjk9e8A4pump | ml_score=0.501 | https://dexscreener.com/solana/6dyljggjcyouc2qksrd8d9k6nhbukpmz98d13kercxx1
+2026-03-01T20:15:26.425692+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=Hcgn7HZPEetQ79W1GvzsTuVbsEFs2R1WNjk9e8A4pump token_out=169823577546
+2026-03-01T20:15:54.800764+0100 | INFO | Arafi -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:15:55.339498+0100 | INFO | rawr -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:16:52.950670+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=Hcgn7HZPEetQ79W1GvzsTuVbsEFs2R1WNjk9e8A4pump sol_out=18737025 pnl=-6.3%
+2026-03-01T20:16:53.194515+0100 | INFO | StoryWorld -> SKIP (age_gt_max) | ml_score=0.810
+2026-03-01T20:17:22.567334+0100 | INFO | tatsu -> ALLOW (ml_score_ge_thr) | ml_score=0.999
+2026-03-01T20:17:22.949748+0100 | INFO | LOCKINNNN -> SKIP (curve_sol_lt_min) | ml_score=0.011
+2026-03-01T20:17:23.276047+0100 | INFO | SingleCoin -> SKIP (curve_sol_lt_min) | ml_score=0.010
+2026-03-01T20:17:23.785806+0100 | INFO | ZAHRA -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:17:51.420815+0100 | INFO | UNKNOWN -> SKIP (abs_price_change_h24_too_high) | ml_score=0.926
+2026-03-01T20:17:51.779774+0100 | INFO | StoryWorld -> SKIP (age_gt_max) | ml_score=0.268
+2026-03-01T20:17:52.258769+0100 | INFO | TRUMP -> SKIP (curve_sol_lt_min) | ml_score=0.019
+2026-03-01T20:17:52.885622+0100 | INFO | OVER -> WATCH (ml_score_lt_thr) | CA=FtwvviNJgWEjqSKjnnCSWoCDWAvs8St2NTzNhC53pump | ml_score=0.000 | https://dexscreener.com/solana/a2ucuxerkyu4qnilicpdvnjaprhl6yhaaueych1uympj
+2026-03-01T20:17:53.855446+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=FtwvviNJgWEjqSKjnnCSWoCDWAvs8St2NTzNhC53pump token_out=680195536532
+2026-03-01T20:17:54.481002+0100 | INFO | $DROCKET -> SKIP (curve_sol_lt_min) | ml_score=0.001
+2026-03-01T20:18:24.284169+0100 | INFO | SECRETARY -> SKIP (curve_sol_lt_min) | ml_score=0.001
+2026-03-01T20:18:24.695893+0100 | INFO | UNKNOWN -> SKIP (curve_sol_lt_min) | ml_score=0.926
+2026-03-01T20:18:29.837338+0100 | INFO | tatsu -> WATCH (ml_score_lt_thr) | CA=F36QiLZAho8o6YotCpfppT1SRzc6Tsqa8MhGfRd9pump | ml_score=0.001 | https://dexscreener.com/solana/bo9jhagz6x3yudvdfvllrtolbvklsecgy2kh4km3bte
+2026-03-01T20:18:30.287083+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=F36QiLZAho8o6YotCpfppT1SRzc6Tsqa8MhGfRd9pump token_out=249102202314
+2026-03-01T20:18:57.080363+0100 | INFO | VTRM -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:18:57.670899+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=FtwvviNJgWEjqSKjnnCSWoCDWAvs8St2NTzNhC53pump sol_out=18952249 pnl=-5.2%
+2026-03-01T20:18:58.339397+0100 | INFO | underdog -> SKIP (curve_sol_lt_min) | ml_score=0.011
+2026-03-01T20:18:59.020956+0100 | INFO | PEACE -> SKIP (age_gt_max) | ml_score=0.450
+2026-03-01T20:19:28.581384+0100 | INFO | OTTO -> SKIP (curve_sol_lt_min) | ml_score=0.091
+2026-03-01T20:19:28.902243+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=F36QiLZAho8o6YotCpfppT1SRzc6Tsqa8MhGfRd9pump sol_out=18037227 pnl=-9.8%
+2026-03-01T20:19:29.475979+0100 | INFO | CypherAid -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:19:29.976024+0100 | INFO | Glow -> WATCH (ml_score_lt_thr) | CA=9v7rkDDYHTbi3nJpruG63SgQNsaHUeed1qQeWYA3pump | ml_score=0.074 | https://dexscreener.com/solana/b8hr5mad9r7h6h7hrmsgfergguhbt83dsfsxncyxuhi9
+2026-03-01T20:19:30.815822+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=9v7rkDDYHTbi3nJpruG63SgQNsaHUeed1qQeWYA3pump token_out=553150123892
+2026-03-01T20:19:59.542748+0100 | INFO | Ali Alive -> SKIP (trade_m5_lt_min) | ml_score=0.000
+2026-03-01T20:20:00.328231+0100 | INFO | Nuke -> SKIP (age_lt_min) | ml_score=0.001
+2026-03-01T20:20:01.681222+0100 | INFO | ChillDog -> SKIP (curve_sol_lt_min) | ml_score=0.002
+2026-03-01T20:20:02.194160+0100 | INFO | UNKNOWN -> SKIP (curve_sol_lt_min) | ml_score=0.926
+2026-03-01T20:20:02.808345+0100 | INFO | TALE -> ALLOW (ml_score_ge_thr) | ml_score=0.981
+2026-03-01T20:20:04.085466+0100 | WARNING | [TRADING][DRY_RUN] SELL (stop_loss_-11.3%) mint=9v7rkDDYHTbi3nJpruG63SgQNsaHUeed1qQeWYA3pump sol_out=17747221 pnl=-11.3%
+2026-03-01T20:20:05.402937+0100 | INFO | REVENGE -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:20:05.994515+0100 | INFO | dOIL -> ALLOW (ml_score_ge_thr) | ml_score=0.899
+2026-03-01T20:20:32.684445+0100 | INFO | WAR -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:20:33.275023+0100 | INFO | Speed -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:20:33.897351+0100 | INFO | TOPHAM -> WATCH (ml_score_lt_thr) | CA=B3o24rPHXEANywio7hSq6JJqu8zfEDgmx8W1633cpump | ml_score=0.000 | https://dexscreener.com/solana/adw33eossgyrgqkl6embtrygmmcqbzv6g5e7vrfwyoip
+2026-03-01T20:20:35.102165+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=B3o24rPHXEANywio7hSq6JJqu8zfEDgmx8W1633cpump token_out=673853613379
+2026-03-01T20:21:04.224987+0100 | INFO | WAYMO -> SKIP (age_gt_max) | ml_score=0.025
+2026-03-01T20:21:04.999766+0100 | INFO | Shell -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:21:34.426972+0100 | INFO | Panchi -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:21:34.809096+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=B3o24rPHXEANywio7hSq6JJqu8zfEDgmx8W1633cpump sol_out=19481107 pnl=-2.6%
+2026-03-01T20:22:03.623287+0100 | INFO | satanyahu -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:22:04.026432+0100 | INFO | Drones -> SKIP (curve_sol_lt_min) | ml_score=0.107
+2026-03-01T20:22:04.586358+0100 | INFO | UNKNOWN -> SKIP (abs_price_change_h24_too_high) | ml_score=0.926
+2026-03-01T20:22:32.659548+0100 | INFO | WWT -> SKIP (age_gt_max) | ml_score=0.019
+2026-03-01T20:22:33.093299+0100 | INFO | UNKNOWN -> SKIP (abs_price_change_h24_too_high) | ml_score=0.926
+2026-03-01T20:22:33.423339+0100 | INFO | UNKNOWN -> SKIP (abs_price_change_h24_too_high) | ml_score=0.926
+2026-03-01T20:22:33.751626+0100 | INFO | PORTAL -> ALLOW (ml_score_ge_thr) | ml_score=0.660
+2026-03-01T20:22:34.180686+0100 | INFO | UNKNOWN -> SKIP (abs_price_change_h24_too_high) | ml_score=0.926
+2026-03-01T20:23:01.644160+0100 | INFO | UNKNOWN -> SKIP (abs_price_change_h24_too_high) | ml_score=0.926
+2026-03-01T20:23:02.282659+0100 | INFO | JEETS -> SKIP (curve_sol_lt_min) | ml_score=0.992
+2026-03-01T20:23:02.793471+0100 | INFO | $MIPEAK -> SKIP (curve_sol_lt_min) | ml_score=0.802
+2026-03-01T20:23:30.485116+0100 | INFO | brat -> WATCH (ml_score_lt_thr) | CA=64SnK3aRcUPyT6HEBfVbM9jKQdc9k5r4eff85bcepump | ml_score=0.004 | https://dexscreener.com/solana/8gkmekxpyx3nua5hpgd8okay15oauc1rge73qvq66mau
+2026-03-01T20:23:32.617345+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=64SnK3aRcUPyT6HEBfVbM9jKQdc9k5r4eff85bcepump token_out=390994225714
+2026-03-01T20:23:33.270882+0100 | INFO | suitcase  -> PENDING (trade_m5_lt_min) | CA=GNxfjJQMemvfywJP3ioBgYCuei4VjPWQELXu3ZFCpump | next_check_in=44s | ml_score=0.990 | https://dexscreener.com/solana/a1gsptuxdbgvohggswdr5yvo4ymzytsklszg8xkqzvb2
+2026-03-01T20:23:33.793310+0100 | INFO | PORTAL -> SKIP (curve_sol_lt_min) | ml_score=0.091
+2026-03-01T20:23:34.534094+0100 | INFO | KENNY -> WATCH (ml_score_lt_thr) | CA=35PFMZktRLhk3BeUTvS5bHiJP3UX3npBBuGj5jqBpump | ml_score=0.150 | https://dexscreener.com/solana/jvnrueszhh83dctahe9soansjhuavf93yppasxtxkwl
+2026-03-01T20:23:36.478850+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=35PFMZktRLhk3BeUTvS5bHiJP3UX3npBBuGj5jqBpump token_out=682952391121
+2026-03-01T20:24:06.177972+0100 | INFO | UNKNOWN -> SKIP (curve_sol_lt_min) | ml_score=0.926
+2026-03-01T20:24:08.218122+0100 | INFO | warcoin -> WATCH (ml_score_lt_thr) | CA=9frVkdgGPUx3h8QcgKBuBexjpDwsYbXBHL4DzZo2pump | ml_score=0.003 | https://dexscreener.com/solana/8mthbqcyk2tk8whfprrfes4dvqd2pgbyn23jea758sfo
+2026-03-01T20:24:08.651597+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=9frVkdgGPUx3h8QcgKBuBexjpDwsYbXBHL4DzZo2pump token_out=123978226560
+2026-03-01T20:24:39.859684+0100 | INFO | KRONOS -> WATCH (ml_score_lt_thr) | CA=8XysZNB8LcWpUKayaT1C9y7oiS4cLdnTd2EaQ6Dgpump | ml_score=0.341 | https://dexscreener.com/solana/49lcjjusmsjjebsumpxzp9ytyrzakwmrarekrsjejh8u
+2026-03-01T20:24:40.850569+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=8XysZNB8LcWpUKayaT1C9y7oiS4cLdnTd2EaQ6Dgpump token_out=210814186444
+2026-03-01T20:24:41.682564+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=64SnK3aRcUPyT6HEBfVbM9jKQdc9k5r4eff85bcepump sol_out=25449441 pnl=27.2%
+2026-03-01T20:24:43.592248+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=35PFMZktRLhk3BeUTvS5bHiJP3UX3npBBuGj5jqBpump sol_out=19480939 pnl=-2.6%
+2026-03-01T20:24:44.186347+0100 | INFO | UNKNOWN -> SKIP (abs_price_change_h24_too_high) | ml_score=0.926
+2026-03-01T20:25:14.085184+0100 | INFO | suitcase  -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:25:14.526854+0100 | WARNING | [TRADING][DRY_RUN] SELL (take_profit_67.2%) mint=9frVkdgGPUx3h8QcgKBuBexjpDwsYbXBHL4DzZo2pump sol_out=33445046 pnl=67.2%
+2026-03-01T20:25:15.482448+0100 | INFO | CL1 -> SKIP (curve_sol_lt_min) | ml_score=0.001
+2026-03-01T20:25:16.150593+0100 | INFO | UNKNOWN -> SKIP (curve_sol_missing) | ml_score=0.926
+2026-03-01T20:25:45.242637+0100 | INFO | pissedoff -> SKIP (curve_sol_lt_min) | ml_score=0.928
+2026-03-01T20:25:45.981842+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=8XysZNB8LcWpUKayaT1C9y7oiS4cLdnTd2EaQ6Dgpump sol_out=19495530 pnl=-2.5%
+2026-03-01T20:25:46.665277+0100 | INFO | CL1 -> WATCH (ml_score_lt_thr) | CA=F1hLEWH6rTtFoaRDrV8aEh9LenAatxBQBW7suw8vuQUb | ml_score=0.498 | https://dexscreener.com/solana/jazzv9huafhms6ykvasmo9piw9sgdztvzbq3cqfgdtkb
+2026-03-01T20:25:47.023550+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=F1hLEWH6rTtFoaRDrV8aEh9LenAatxBQBW7suw8vuQUb token_out=687649333637
+2026-03-01T20:25:48.258269+0100 | INFO | FLAB -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:25:49.234956+0100 | INFO | NEURON -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:26:18.503385+0100 | INFO | PREDICTIVE -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:26:20.413210+0100 | INFO | Microbite -> WATCH (ml_score_lt_thr) | CA=FJbgS9fFpiaxN7iLtKBKmHcduT3Hg8mHgkZbDbdXpump | ml_score=0.000 | https://dexscreener.com/solana/geqb61qkf78hwqce6r2xyletfgdeygznupefrizkzwqq
+2026-03-01T20:26:20.782083+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=FJbgS9fFpiaxN7iLtKBKmHcduT3Hg8mHgkZbDbdXpump token_out=688100910256
+2026-03-01T20:26:21.952510+0100 | INFO | HWJ -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:26:23.152546+0100 | INFO | UNKNOWN -> SKIP (curve_sol_lt_min) | ml_score=0.926
+2026-03-01T20:26:52.506406+0100 | INFO | VS -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:26:52.733685+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=F1hLEWH6rTtFoaRDrV8aEh9LenAatxBQBW7suw8vuQUb sol_out=19107120 pnl=-4.5%
+2026-03-01T20:26:54.833121+0100 | INFO | TOPHAM -> PENDING (trade_m5_lt_min) | CA=ALBJGYG8XwTTbScQc34Kt2C3bmEMswvpN4oPGxBSpump | next_check_in=44s | ml_score=0.652 | https://dexscreener.com/solana/grnbplhnt4xzr1xvyshynvz4gns5qfor9tjynrjvjwby
+2026-03-01T20:27:23.837408+0100 | INFO | no snipe -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T20:27:24.108210+0100 | WARNING | [TRADING][DRY_RUN] SELL (time) mint=FJbgS9fFpiaxN7iLtKBKmHcduT3Hg8mHgkZbDbdXpump sol_out=19443979 pnl=-2.8%
+2026-03-01T20:27:24.571987+0100 | INFO | PGL -> ALLOW (ml_score_ge_thr) | ml_score=0.972
+2026-03-01T20:27:24.881593+0100 | INFO | PANNA -> SKIP (age_gt_max) | ml_score=0.007
+2026-03-01T20:27:53.677415+0100 | INFO | Zano -> ALLOW (ml_score_ge_thr) | ml_score=0.997
+2026-03-01T20:28:22.476591+0100 | INFO | Sol -> SKIP (abs_price_change_h24_too_high) | ml_score=0.855
+2026-03-01T20:28:23.030704+0100 | INFO | WW3 -> PENDING (trade_m5_lt_min) | CA=7mztwnyBp953eArVcEydGdiVmG1BScpDZ9yEZUwwpump | next_check_in=44s | ml_score=0.149 | https://dexscreener.com/solana/j8wsrguuigcju21yj2hpbwhfntuh3d9s3pvykyxdnqap
+2026-03-01T20:28:23.276194+0100 | INFO | SITDECK -> SKIP (age_gt_max) | ml_score=0.001
+2026-03-01T20:28:50.346373+0100 | INFO | dobby -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:28:50.898184+0100 | INFO | datadog -> WATCH (ml_score_lt_thr) | CA=3d3dnqAzv7Swoou8VyaVq4DinkpTM7wbVPdvAkLDpump | ml_score=0.369 | https://dexscreener.com/solana/3s5ba2o8jgtdrnvbpbxvbf3vfqzarbvnwhvrvvzzl2ql
+2026-03-01T20:28:51.861437+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=3d3dnqAzv7Swoou8VyaVq4DinkpTM7wbVPdvAkLDpump token_out=703686779790
+2026-03-01T20:28:55.679831+0100 | INFO | AI -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:28:56.236203+0100 | INFO | IF-CHAN -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:29:23.296361+0100 | INFO | Obama -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T20:29:23.932413+0100 | INFO | Kitler -> SKIP (curve_sol_lt_min) | ml_score=0.001
+2026-03-01T20:29:29.608913+0100 | INFO | Stopped by user (Ctrl+C).
+2026-03-01T20:29:29.616304+0100 | INFO | Helius RPC calls this run: 43
+2026-03-01T21:02:40.994716+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-03-01T21:03:07.074436+0100 | INFO | ETRUMP -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T21:03:07.417556+0100 | INFO | March -> SKIP (age_gt_max) | ml_score=0.003
+2026-03-01T21:03:07.834471+0100 | INFO | Solus -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:03:08.173529+0100 | INFO | JOBLESS -> SKIP (age_gt_max) | ml_score=0.084
+2026-03-01T21:03:33.814423+0100 | INFO | Spiker -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T21:03:34.140582+0100 | INFO | Peel -> SKIP (curve_sol_lt_min) | ml_score=0.001
+2026-03-01T21:04:02.743605+0100 | INFO | 1 Dog -> WATCH (ml_score_lt_thr) | CA=729b9dTbfJi1nH283fVm4iXEd2t3VPq3M3ncCezypump | ml_score=0.000 | https://dexscreener.com/solana/ccqvazrl7eslspnteensezmdmaj7iagka5bcpyxuyy1i
+2026-03-01T21:04:03.939768+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=729b9dTbfJi1nH283fVm4iXEd2t3VPq3M3ncCezypump token_out=420565303456
+2026-03-01T21:04:04.611716+0100 | INFO | LEPE -> PENDING (trade_m5_lt_min) | CA=AaiRPWmLQ1db6UvBWnTHqSmB9KsMRKZ1DgcEinGfGkBr | next_check_in=44s | ml_score=0.995 | https://dexscreener.com/solana/9acmnpqfafjhqnaisbdildhemranrpeazbjrvsuvfd7t
+2026-03-01T21:04:05.343157+0100 | INFO | Glow -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:04:05.872589+0100 | INFO | Grub -> SKIP (age_gt_max) | ml_score=0.001
+2026-03-01T21:04:06.893658+0100 | INFO | MM -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:04:36.587790+0100 | INFO | MONKERS -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:04:36.866716+0100 | WARNING | [TRADING][DRY_RUN] SELL (stop_loss_-41.7%) mint=729b9dTbfJi1nH283fVm4iXEd2t3VPq3M3ncCezypump sol_out=11659104 pnl=-41.7%
+2026-03-01T21:05:08.121718+0100 | INFO | Sapiens -> SKIP (curve_sol_lt_min) | ml_score=0.105
+2026-03-01T21:05:08.758855+0100 | INFO | house -> SKIP (curve_sol_lt_min) | ml_score=0.926
+2026-03-01T21:05:10.144380+0100 | INFO | TRUMP2 -> SKIP (age_gt_max) | ml_score=0.112
+2026-03-01T21:05:11.414000+0100 | INFO | alien -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:05:12.451844+0100 | INFO | Sapiens -> SKIP (curve_sol_lt_min) | ml_score=0.002
+2026-03-01T21:05:13.116244+0100 | INFO | DUSKFALL -> SKIP (age_gt_max) | ml_score=0.019
+2026-03-01T21:05:37.702586+0100 | INFO | LEPE -> SKIP (age_gt_max) | ml_score=0.001
+2026-03-01T21:05:38.291293+0100 | INFO | SADPIGEON -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:05:38.571404+0100 | INFO | CHART -> SKIP (curve_sol_lt_min) | ml_score=0.761
+2026-03-01T21:05:38.921831+0100 | INFO | UNKNOWN -> SKIP (abs_price_change_h24_too_high) | ml_score=0.926
+2026-03-01T21:06:06.548531+0100 | INFO | Pokke -> SKIP (age_gt_max) | ml_score=0.026
+2026-03-01T21:06:07.024428+0100 | INFO | UNKNOWN -> SKIP (curve_sol_lt_min) | ml_score=0.926
+2026-03-01T21:06:07.583363+0100 | INFO | Fartpin -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:06:23.110563+0100 | INFO | Stopped by user (Ctrl+C).
+2026-03-01T21:06:23.114270+0100 | INFO | Helius RPC calls this run: 4
+2026-03-01T21:08:29.912882+0100 | INFO | Helius RPC: connected (startup ping OK)
+2026-03-01T21:08:57.581477+0100 | INFO | adcoin -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:09:22.017902+0100 | INFO | UNKNOWN -> SKIP (abs_price_change_h24_too_high) | ml_score=0.926
+2026-03-01T21:09:22.430247+0100 | INFO | WOJTEK -> SKIP (age_gt_max) | ml_score=0.146
+2026-03-01T21:09:51.048542+0100 | INFO | PIP -> SKIP (age_gt_max) | ml_score=0.243
+2026-03-01T21:09:51.668110+0100 | INFO | MONITOR -> WATCH (ml_score_lt_thr) | CA=3hyRhrc6aSRHQMea7DEhF7ZPXnkFHcWdJvudn8gzpump | ml_score=0.025 | https://dexscreener.com/solana/9pgrtxb6x7s3epsulszmuqoaqwawmetd4kfn5lcffddk
+2026-03-01T21:09:52.704936+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=3hyRhrc6aSRHQMea7DEhF7ZPXnkFHcWdJvudn8gzpump token_out=75781121720
+2026-03-01T21:09:53.361850+0100 | INFO | MM -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T21:09:53.812023+0100 | INFO | Jewish Cat -> SKIP (curve_sol_lt_min) | ml_score=0.926
+2026-03-01T21:09:54.925240+0100 | INFO | Ellie -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:10:23.445853+0100 | INFO | employim -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:10:23.751735+0100 | WARNING | [TRADING][DRY_RUN] SELL (stop_loss_-30.1%) mint=3hyRhrc6aSRHQMea7DEhF7ZPXnkFHcWdJvudn8gzpump sol_out=13988378 pnl=-30.1%
+2026-03-01T21:10:24.811793+0100 | INFO | clawster -> SKIP (curve_sol_lt_min) | ml_score=0.855
+2026-03-01T21:10:25.282117+0100 | INFO | YaYa -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:10:25.740165+0100 | INFO | Ayatollah -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:10:54.089823+0100 | INFO | SAPIENS -> WATCH (ml_score_lt_thr) | CA=HtAGt9iMiA9Wzup5hS9NMc4TAyovWrMffAB4CMctpump | ml_score=0.000 | https://dexscreener.com/solana/7h6vynhcksyukyt9knyqrqtdxusgkcgvwlawht1ianen
+2026-03-01T21:10:55.061036+0100 | INFO | [TRADING][DRY_RUN] BUY built mint=HtAGt9iMiA9Wzup5hS9NMc4TAyovWrMffAB4CMctpump token_out=92024580687
+2026-03-01T21:10:56.586873+0100 | INFO | 24\7 -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:10:57.058872+0100 | INFO | UNKNOWN -> SKIP (curve_sol_lt_min) | ml_score=0.926
+2026-03-01T21:10:57.686638+0100 | INFO | PufferAI -> SKIP (curve_sol_lt_min) | ml_score=0.000
+2026-03-01T21:11:26.872063+0100 | INFO | SND -> SKIP (age_gt_max) | ml_score=1.000
+2026-03-01T21:11:27.102205+0100 | WARNING | [TRADING][DRY_RUN] SELL (stop_loss_-100.0%) mint=HtAGt9iMiA9Wzup5hS9NMc4TAyovWrMffAB4CMctpump sol_out=0 pnl=-100.0%
+2026-03-01T21:11:27.782808+0100 | INFO | SAPIENS -> SKIP (curve_sol_lt_min) | ml_score=0.481
+2026-03-01T21:11:28.366326+0100 | INFO | Sharjah  -> SKIP (curve_sol_lt_min) | ml_score=0.661
+2026-03-01T21:11:56.512194+0100 | INFO | NPC -> SKIP (age_gt_max) | ml_score=0.000
+2026-03-01T21:11:56.847787+0100 | INFO | UNKNOWN -> SKIP (abs_price_change_h24_too_high) | ml_score=0.926
+2026-03-01T21:12:09.087622+0100 | INFO | Stopped by user (Ctrl+C).
+2026-03-01T21:12:09.091736+0100 | INFO | Helius RPC calls this run: 7
+2026-03-02T00:16:55.198198+0100 | INFO | Генерирую 15 свежих кошельков...
+2026-03-02T00:17:19.893453+0100 | INFO | Генерирую 15 свежих кошельков...
+2026-03-02T00:21:38.402229+0100 | INFO | Генерирую 15 свежих кошельков...
+2026-03-02T00:28:24.647788+0100 | INFO | Генерирую 15 свежих кошельков...
+2026-03-02T00:28:24.656210+0100 | SUCCESS | ✅ 15 кошельков сохранены → data\wallets.json
+2026-03-02T00:33:51.840457+0100 | INFO | Отправляю bundle create + 15 buy...
+2026-03-02T00:35:01.142212+0100 | INFO | Отправляю bundle create + 15 buy...
+2026-03-02T00:35:01.406440+0100 | SUCCESS | ✅ Токен создан + Jito bundle отправлен!
+2026-03-02T00:35:01.406440+0100 | INFO | Mint: DRY_RUN_MINT_1772408101410
+2026-03-02T00:35:01.406440+0100 | INFO | Bundle: dry-run-ok
+2026-03-02T00:35:01.406440+0100 | INFO | 🚀 Запускаю volume maker (buy/sell между кошельками)...
+2026-03-02T00:36:21.480617+0100 | INFO | Отправляю bundle create + 15 buy...
+2026-03-02T00:36:21.489353+0100 | SUCCESS | ✅ Токен создан + Jito bundle отправлен!
+2026-03-02T00:36:21.489353+0100 | INFO | Mint: DRY_RUN_MINT_1772408181489
+2026-03-02T00:36:21.489353+0100 | INFO | Bundle: dry-run-ok
+2026-03-02T00:36:21.489353+0100 | INFO | 🚀 Запускаю volume maker (buy/sell между кошельками)...
+2026-03-02T01:28:09.797052+0100 | WARNING | Уже есть 15 кошельков. Используй --force чтобы пересоздать.
+2026-03-02T01:36:53.719254+0100 | ERROR | Не удалось подключиться к executor: HTTPConnectionPool(host='127.0.0.1', port=8790): Max retries exceeded with url: /launch_bundle (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8790): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-03-02T01:38:56.876187+0100 | ERROR | Не найден id.json в executor_ts/
+2026-03-02T01:40:50.943454+0100 | ERROR | Не найден id.json в executor_ts/
+2026-03-02T01:49:19.585885+0100 | ERROR | Не найден id.json в executor_ts/
+2026-03-02T01:50:54.132877+0100 | ERROR | Не найден id.json в executor_ts/
+2026-03-02T01:52:22.508486+0100 | ERROR | Не найден id.json в executor_ts/
+2026-03-02T01:53:48.073218+0100 | SUCCESS | ✅ Главный ключ успешно загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-02T02:01:28.842476+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-02T02:01:37.215521+0100 | WARNING | Уже есть кошельки. Используй --force
+2026-03-02T02:05:17.158774+0100 | ERROR | Не удалось подключиться к executor: HTTPConnectionPool(host='127.0.0.1', port=8790): Max retries exceeded with url: /launch_bundle (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8790): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-03-02T02:10:30.923441+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-02T02:12:08.310069+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-02T02:12:13.118630+0100 | INFO | 🚀 Volume Maker запущен на 30 минут (0.01 SOL за трейд)
+2026-03-02T02:12:13.118630+0100 | INFO | Цикл 1...
+2026-03-02T02:13:32.483872+0100 | INFO | Цикл 2...
+2026-03-02T02:17:30.511064+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-02T02:18:13.422120+0100 | INFO | 🚀 Volume Maker запущен на 5 минут (0.01 SOL за трейд)
+2026-03-02T02:18:13.422120+0100 | INFO | Цикл 1...
+2026-03-02T02:19:40.395657+0100 | INFO | Цикл 2...
+2026-03-02T02:21:02.711697+0100 | INFO | Цикл 3...
+2026-03-02T02:22:19.545426+0100 | INFO | Цикл 4...
+2026-03-02T02:23:40.367497+0100 | SUCCESS | Volume Maker завершён после 5 минут
+2026-03-02T02:27:01.757491+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-02T02:27:18.044364+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-02T02:37:59.873570+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-02T02:42:54.542246+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-02T02:44:40.061672+0100 | ERROR | Не удалось подключиться к executor: HTTPConnectionPool(host='127.0.0.1', port=8790): Max retries exceeded with url: /launch_bundle (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8790): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-03-02T02:54:53.302391+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-02T02:58:16.933348+0100 | INFO | 🚀 Volume Maker запущен на 2 минут (0.01 SOL за трейд)
+2026-03-02T02:58:16.933348+0100 | INFO | Цикл 1...
+2026-03-02T02:59:32.542821+0100 | INFO | Цикл 2...
+2026-03-02T03:00:59.508420+0100 | SUCCESS | Volume Maker завершён после 2 минут
+2026-03-02T03:01:36.000665+0100 | WARNING | Уже есть кошельки. Используй --force
+2026-03-02T03:09:09.120140+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-02T03:11:29.376823+0100 | ERROR | Не удалось подключиться к executor: HTTPConnectionPool(host='127.0.0.1', port=8790): Max retries exceeded with url: /launch_bundle (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8790): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-03-02T03:11:51.729818+0100 | SUCCESS | ✅ Bundle отправлен!
+2026-03-02T03:11:51.729818+0100 | INFO | Mint: DRY_RUN_MINT_1772417511725
+2026-03-02T03:11:51.729818+0100 | INFO | Bundle: dry-run-ok
+2026-03-02T03:12:16.983318+0100 | INFO | 🚀 Volume Maker запущен на 2 минут по токену DRY_RUN_...
+2026-03-02T03:12:16.983318+0100 | INFO | Цикл 1...
+2026-03-02T03:13:03.310528+0100 | INFO | Цикл 2...
+2026-03-02T03:14:01.080147+0100 | INFO | Цикл 3...
+2026-03-02T03:14:53.598849+0100 | SUCCESS | Volume Maker завершён
+2026-03-03T10:39:39.444452+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T10:49:47.062601+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T10:51:44.608670+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T10:52:41.416966+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T10:55:00.102284+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T11:01:17.572984+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T11:12:17.443933+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T11:17:10.761625+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T11:17:23.809480+0100 | WARNING | Уже есть кошельки.
+2026-03-03T11:17:42.395648+0100 | ERROR | Не удалось подключиться к executor: HTTPConnectionPool(host='127.0.0.1', port=8790): Max retries exceeded with url: /launch_bundle (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8790): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-03-03T11:19:03.512601+0100 | WARNING | Уже есть кошельки.
+2026-03-03T11:22:36.845991+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T14:35:09.267574+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T15:40:46.265963+0100 | INFO | 🚀 Volume Maker запущен на 100 минут по токену DRY_RUN_...
+2026-03-03T15:41:02.996509+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T15:42:06.273449+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T15:42:15.359205+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T15:45:46.644517+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T15:45:51.565107+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T15:45:51.565107+0100 | INFO | Цикл 1...
+2026-03-03T15:49:34.604814+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T15:53:21.283786+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T16:01:00.444490+0100 | INFO | Генерирую 15 кошельков...
+2026-03-03T16:01:00.444490+0100 | SUCCESS | ✅ 15 кошельков сохранены
+2026-03-03T16:21:54.680286+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T16:38:54.154546+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T16:39:10.579366+0100 | ERROR | Не удалось подключиться к executor: HTTPConnectionPool(host='127.0.0.1', port=8790): Max retries exceeded with url: /launch_bundle (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8790): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-03-03T16:39:25.896332+0100 | SUCCESS | ✅ Bundle отправлен!
+2026-03-03T16:39:25.896332+0100 | INFO | Mint: DRY_RUN_MINT_1772552365890
+2026-03-03T16:39:25.896332+0100 | INFO | Bundle: dry-run-ok
+2026-03-03T16:39:44.109326+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T16:39:44.109326+0100 | INFO | Цикл 1...
+2026-03-03T17:20:26.915410+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T17:20:40.867207+0100 | ERROR | Не удалось подключиться к executor: HTTPConnectionPool(host='127.0.0.1', port=8790): Max retries exceeded with url: /launch_bundle (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8790): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-03-03T17:21:00.384495+0100 | SUCCESS | ✅ Bundle отправлен!
+2026-03-03T17:21:00.384495+0100 | INFO | Mint: DRY_RUN_MINT_1772554860378
+2026-03-03T17:21:00.384495+0100 | INFO | Bundle: dry-run-ok
+2026-03-03T17:21:12.411723+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T17:21:12.427390+0100 | INFO | Цикл 1...
+2026-03-03T17:26:06.444051+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T17:26:14.384259+0100 | INFO | Генерирую 20 кошельков...
+2026-03-03T17:26:14.384259+0100 | SUCCESS | ✅ 20 кошельков сохранены
+2026-03-03T17:26:29.269222+0100 | INFO | Генерирую 3 кошельков...
+2026-03-03T17:26:29.269222+0100 | SUCCESS | ✅ 3 кошельков сохранены
+2026-03-03T19:06:37.269825+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T19:27:01.829077+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T19:36:18.640856+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T19:48:52.021810+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T19:49:00.483454+0100 | ERROR | Ошибка мониторинга цены: HTTPConnectionPool(host='127.0.0.1', port=8790): Max retries exceeded with url: /state?mint= (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8790): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-03-03T19:49:04.507591+0100 | ERROR | Ошибка мониторинга цены: HTTPConnectionPool(host='127.0.0.1', port=8790): Max retries exceeded with url: /state?mint= (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8790): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-03-03T19:49:23.862898+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T19:51:26.990430+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T19:55:31.977518+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T19:59:50.159619+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T20:00:16.482830+0100 | INFO | 🛑 Мониторинг Auto Sell остановлен
+2026-03-03T20:00:16.482830+0100 | SUCCESS | ✅ Auto Sell полностью остановлен
+2026-03-03T20:04:40.435066+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T20:04:55.032245+0100 | INFO | 🛑 Мониторинг Auto Sell остановлен
+2026-03-03T20:04:55.032245+0100 | SUCCESS | ✅ Auto Sell полностью остановлен
+2026-03-03T20:07:30.030281+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T20:08:52.869946+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T20:09:08.744289+0100 | INFO | 🛑 Мониторинг Auto Sell остановлен
+2026-03-03T20:09:08.744289+0100 | SUCCESS | ✅ Auto Sell полностью остановлен
+2026-03-03T20:10:58.190080+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T20:11:11.691694+0100 | INFO | 🛑 Мониторинг Auto Sell остановлен
+2026-03-03T20:11:11.691694+0100 | SUCCESS | ✅ Auto Sell полностью остановлен
+2026-03-03T20:21:07.800313+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T20:49:27.571743+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T20:49:40.106173+0100 | SUCCESS | ✅ Bundle отправлен!
+2026-03-03T20:49:40.106977+0100 | INFO | Mint: DRY_RUN_MINT_1772567380099
+2026-03-03T20:49:40.106977+0100 | INFO | Bundle: dry-run-ok
+2026-03-03T20:49:50.091726+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T20:49:50.091726+0100 | INFO | Цикл 1...
+2026-03-03T20:49:50.091726+0100 | SUCCESS | Volume Maker завершён
+2026-03-03T20:50:55.461825+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T20:51:24.061692+0100 | SUCCESS | ✅ Bundle отправлен!
+2026-03-03T20:51:24.062448+0100 | INFO | Mint: DRY_RUN_MINT_1772567484057
+2026-03-03T20:51:24.062448+0100 | INFO | Bundle: dry-run-ok
+2026-03-03T20:51:34.232172+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T20:51:34.232172+0100 | INFO | Цикл 1...
+2026-03-03T20:51:34.232172+0100 | SUCCESS | Volume Maker завершён
+2026-03-03T20:58:59.510416+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T20:59:11.130803+0100 | SUCCESS | ✅ Bundle отправлен!
+2026-03-03T20:59:11.130803+0100 | INFO | Mint: DRY_RUN_MINT_1772567951118
+2026-03-03T20:59:11.130803+0100 | INFO | Bundle: dry-run-ok
+2026-03-03T20:59:16.052432+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T20:59:16.052432+0100 | INFO | Volume Maker остановлен по запросу
+2026-03-03T20:59:16.052432+0100 | SUCCESS | Volume Maker завершён
+2026-03-03T21:04:14.131929+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T21:04:23.501543+0100 | SUCCESS | ✅ Bundle отправлен!
+2026-03-03T21:04:23.501543+0100 | INFO | Mint: DRY_RUN_MINT_1772568263491
+2026-03-03T21:04:23.501543+0100 | INFO | Bundle: dry-run-ok
+2026-03-03T21:04:44.689496+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T21:04:44.692489+0100 | INFO | Цикл 1...
+2026-03-03T21:05:10.514524+0100 | INFO | Цикл 2...
+2026-03-03T21:10:55.934258+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T21:11:01.422404+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T21:11:01.422404+0100 | INFO | Цикл 1...
+2026-03-03T21:11:32.309434+0100 | INFO | Цикл 2...
+2026-03-03T21:13:05.837614+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T21:13:16.773037+0100 | ERROR | Не удалось подключиться к executor: HTTPConnectionPool(host='127.0.0.1', port=8790): Max retries exceeded with url: /launch_bundle (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8790): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-03-03T21:13:32.612699+0100 | SUCCESS | ✅ Bundle отправлен!
+2026-03-03T21:13:32.612699+0100 | INFO | Mint: DRY_RUN_MINT_1772568812607
+2026-03-03T21:13:32.612699+0100 | INFO | Bundle: dry-run-ok
+2026-03-03T21:15:07.552714+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T21:15:07.552714+0100 | INFO | Цикл 1...
+2026-03-03T21:18:57.957837+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T21:19:07.412983+0100 | SUCCESS | ✅ Bundle отправлен!
+2026-03-03T21:19:07.413988+0100 | INFO | Mint: DRY_RUN_MINT_1772569147408
+2026-03-03T21:19:07.413988+0100 | INFO | Bundle: dry-run-ok
+2026-03-03T21:19:11.096394+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T21:19:11.096394+0100 | INFO | Цикл 1...
+2026-03-03T21:19:33.024759+0100 | SUCCESS | ✅ Bundle отправлен!
+2026-03-03T21:19:33.025796+0100 | INFO | Mint: DRY_RUN_MINT_1772569173023
+2026-03-03T21:19:33.025796+0100 | INFO | Bundle: dry-run-ok
+2026-03-03T21:19:36.639210+0100 | INFO | Цикл 2...
+2026-03-03T21:19:36.946131+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T21:19:36.946131+0100 | INFO | Цикл 1...
+2026-03-03T21:19:52.636812+0100 | INFO | Цикл 3...
+2026-03-03T21:19:56.062436+0100 | INFO | Цикл 2...
+2026-03-03T21:20:11.340620+0100 | INFO | Цикл 4...
+2026-03-03T21:20:22.272583+0100 | INFO | Цикл 3...
+2026-03-03T21:20:29.112051+0100 | INFO | Цикл 5...
+2026-03-03T21:20:43.033497+0100 | INFO | Цикл 4...
+2026-03-03T21:20:47.246667+0100 | SUCCESS | ✅ Volume Maker полностью остановлен
+2026-03-03T21:20:49.902059+0100 | INFO | Volume Maker остановлен по запросу
+2026-03-03T21:20:49.902059+0100 | SUCCESS | Volume Maker завершён
+2026-03-03T21:21:02.350801+0100 | INFO | Volume Maker остановлен по запросу
+2026-03-03T21:21:02.350801+0100 | SUCCESS | Volume Maker завершён
+2026-03-03T21:45:33.997300+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T21:45:56.990248+0100 | SUCCESS | ✅ Bundle отправлен!
+2026-03-03T21:45:56.990248+0100 | INFO | Mint: DRY_RUN_MINT_1772570756984
+2026-03-03T21:45:56.990248+0100 | INFO | Bundle: dry-run-ok
+2026-03-03T21:46:02.248464+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T21:46:58.027347+0100 | SUCCESS | ✅ Volume Maker полностью остановлен
+2026-03-03T21:47:14.818793+0100 | SUCCESS | Volume Maker завершён
+2026-03-03T21:47:51.154132+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T21:50:50.094245+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T21:51:03.405487+0100 | SUCCESS | ✅ Bundle отправлен!
+2026-03-03T21:51:03.405487+0100 | INFO | Mint: DRY_RUN_MINT_1772571063399
+2026-03-03T21:51:03.406361+0100 | INFO | Bundle: dry-run-ok
+2026-03-03T21:51:25.023314+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
+2026-03-03T21:52:10.067921+0100 | SUCCESS | ✅ Volume Maker полностью остановлен
+2026-03-03T21:52:11.289385+0100 | SUCCESS | Volume Maker завершён
+2026-03-03T21:54:25.791761+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T22:03:35.524045+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-03T22:04:03.028295+0100 | SUCCESS | ✅ Bundle отправлен с анти-детектом!
+2026-03-03T22:04:03.029393+0100 | INFO | Mint: DRY_RUN_MINT_1772571843022
+2026-03-03T22:04:03.029393+0100 | INFO | Bundle: dry-run-ok
+2026-03-03T22:04:08.494084+0100 | INFO | 🚀 Volume Maker запущен на 30 минут по токену DRY_RUN_...
