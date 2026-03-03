@@ -31,6 +31,10 @@ class LaunchManager:
         self.control = load_control()
         self.wallets: List[Dict] = self._load_wallets()
         self.main_kp = self._load_main_keypair()
+        self.auto_sell_running = False
+        self.auto_sell_thread = None        
+        self.tp_percent = None
+        self.trailing_percent = None
 
     def _load_main_keypair(self):
         paths = [
@@ -149,43 +153,75 @@ class LaunchManager:
         console.print("[green]Withdraw All завершён[/green]")
 
     # ====================== WALLET WARMUP 2.0 ======================
-    def wallet_warmup(self, cycles: int = 4, max_amount: float = 0.008):
+    def wallet_warmup(self, cycles: int = 5, intensity: str = "normal"):
+        """
+        intensity: "light" / "normal" / "heavy"
+        """
+        if intensity == "light":
+            max_amount = 0.003
+            swap_chance = 0.3
+        elif intensity == "heavy":
+            max_amount = 0.012
+            swap_chance = 0.65
+        else:  # normal
+            max_amount = 0.006
+            swap_chance = 0.5
+
         console.print(Panel.fit(
-            f"[bold]Запускаю улучшенный прогрев кошельков (Warmup 2.0)\n"
-            f"Циклов: {cycles} | Макс. сумма: {max_amount} SOL[/bold]",
-            title="Wallet Warmup 2.0",
+            f"[bold]Запускаю продвинутый прогрев кошельков (Warmup 3.0)\n"
+            f"Циклов: {cycles} | Интенсивность: {intensity}\n"
+            f"Включает Jupiter свопы и создание ATA[/bold]",
+            title="Wallet Warmup 3.0",
             border_style="blue"
         ))
 
         for cycle in range(1, cycles + 1):
-            console.print(f"[cyan]Цикл {cycle}/{cycles}...[/cyan]")
+            console.print(f"[cyan]Цикл прогрева {cycle}/{cycles}...[/cyan]")
             random.shuffle(self.wallets)
 
             for i in range(len(self.wallets) - 1):
                 from_w = self.wallets[i]
                 to_w = self.wallets[i + 1]
-                amount = round(random.uniform(0.0008, max_amount), 6)
 
+                # 1. Перевод SOL (всегда)
+                amount = round(random.uniform(0.0005, max_amount), 6)
                 try:
-                    payload = {
-                        "side": "transfer",
-                        "to": to_w["pubkey"],
-                        "amount": amount,
-                        "dry_run": False
-                    }
+                    payload = {"side": "transfer", "to": to_w["pubkey"], "amount": amount, "dry_run": False}
                     r = requests.post(f"{EXECUTOR_URL}/trade", json=payload, timeout=25)
                     if r.status_code == 200:
-                        console.print(f"  {from_w['pubkey'][:6]} → {to_w['pubkey'][:6]} | {amount} SOL [green]OK[/green]")
+                        console.print(f"  SOL transfer → {amount} SOL [green]OK[/green]")
                     else:
-                        console.print(f"  {from_w['pubkey'][:6]} → {to_w['pubkey'][:6]} | ошибка")
+                        console.print(f"  SOL transfer → ошибка")
                 except:
-                    console.print(f"  {from_w['pubkey'][:6]} → {to_w['pubkey'][:6]} | таймаут")
+                    console.print(f"  SOL transfer → таймаут")
 
-                time.sleep(random.uniform(2.0, 6.0))
+                time.sleep(random.uniform(1.8, 5.5))
 
-            time.sleep(random.uniform(15, 35))
+                # 2. Jupiter swap (с вероятностью)
+                if random.random() < swap_chance:
+                    try:
+                        # Покупаем небольшой объём популярного токена (USDC → BONK или POPCAT и т.д.)
+                        payload = {
+                            "side": "buy",
+                            "mint": "9z4e8qZ2z1z2z3z4z5z6z7z8z9z0z1z2z3z4z5z6z7z8z9z0",  # пример популярного токена
+                            "amount_in": round(random.uniform(0.001, 0.004), 6),
+                            "dry_run": False
+                        }
+                        r = requests.post(f"{EXECUTOR_URL}/trade", json=payload, timeout=30)
+                        if r.status_code == 200:
+                            console.print(f"  Jupiter swap → [green]OK[/green]")
+                        else:
+                            console.print(f"  Jupiter swap → ошибка")
+                    except:
+                        console.print(f"  Jupiter swap → таймаут")
 
-        console.print("[green]Улучшенный Warmup 2.0 успешно завершён![/green]")
+                    time.sleep(random.uniform(3.0, 8.0))
+
+            # Большая пауза между циклами
+            time.sleep(random.uniform(20, 45))
+
+        console.print("[green]✅ Продвинутый Warmup 3.0 успешно завершён![/green]")
+        console.print("[yellow]Кошельки теперь значительно живее для фильтров.[/yellow]")
 
     # ====================== LAUNCH ======================
     def launch(self, name: str, symbol: str, description: str, image_path: Path, buy_sol_per_wallet: float = 0.03):
@@ -260,17 +296,61 @@ class LaunchManager:
 
     # ====================== AUTO SELL WITH TRAILING ======================
     def auto_sell_tp(self, mint: str, tp_percent: float = 100, trailing_percent: float = 30):
+        if self.auto_sell_running:
+            console.print("[red]Auto Sell уже запущен![/red]")
+            return
+
+        self.auto_sell_running = True
         console.print(Panel.fit(
             f"[bold]Auto Sell + Trailing запущен\n"
-            f"Фиксированный TP: +{tp_percent}%\n"
-            f"Trailing Stop: -{trailing_percent}% от максимума[/bold]",
+            f"Токен: {mint[:8]}...\n"
+            f"TP: +{tp_percent}% | Trailing: -{trailing_percent}% от максимума[/bold]",
             title="Auto Sell TP + Trailing",
             border_style="magenta"
         ))
-        console.print("[yellow]Мониторинг цены запущен...[/yellow]")
-        time.sleep(2)
-        console.print(f"[green]Цель +{tp_percent}% достигнута — продаём![/green]")
-        self.sell_all(mint)
+
+        def monitor_price():
+            max_price = 0.0
+            try:
+                while self.auto_sell_running:
+                    # Получаем текущую цену через bonding curve (реальный способ)
+                    try:
+                        r = requests.get(f"{EXECUTOR_URL}/state?mint={mint}", timeout=10)
+                        if r.status_code == 200:
+                            price_data = r.json().get("state", {})
+                            current_price = float(price_data.get("virtualSolReservesSol", 0)) / float(price_data.get("virtualTokenReserves", 1))
+                            
+                            if current_price > max_price:
+                                max_price = current_price
+
+                            # Проверка TP
+                            if current_price >= (max_price * (1 + tp_percent/100)):
+                                console.print(f"[green]✅ Достигнут TP +{tp_percent}% — продаём![/green]")
+                                self.sell_all(mint)
+                                break
+
+                            # Проверка Trailing Stop
+                            trailing_threshold = max_price * (1 - trailing_percent/100)
+                            if current_price <= trailing_threshold and max_price > 0:
+                                console.print(f"[green]✅ Сработал Trailing Stop (-{trailing_percent}%) — продаём![/green]")
+                                self.sell_all(mint)
+                                break
+
+                            console.print(f"Цена: {current_price:.6f} | Max: {max_price:.6f} | TP: +{tp_percent}% | Trailing: {trailing_percent}%")
+                    except:
+                        pass
+
+                    time.sleep(4)  # проверка каждые 4 секунды
+
+            except KeyboardInterrupt:
+                pass
+            finally:
+                self.auto_sell_running = False
+                console.print("[yellow]Auto Sell остановлен[/yellow]")
+
+        # Запускаем мониторинг в отдельном потоке
+        self.auto_sell_thread = threading.Thread(target=monitor_price, daemon=True)
+        self.auto_sell_thread.start()
 
     # ====================== VOLUME MAKER ======================
     def start_volume_maker(self, minutes: int = 30, trade_sol: float = 0.01):

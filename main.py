@@ -145,7 +145,7 @@ def sell_menu(manager: LaunchManager):
         if choice == "5":
             mint = Prompt.ask("Mint токена")
             tp = float(Prompt.ask("TP % (50, 100, 200...)", default="100"))
-            trailing = Prompt.ask("Использовать Trailing Stop? (y/n)", choices=["y","n"]) == "y"
+            trailing = float(Prompt.ask("Trailing Stop %", default="30"))
             manager.auto_sell_tp(mint, tp, trailing if trailing else 0)    
         elif choice == "6":
             break
