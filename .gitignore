@@ -6,7 +6,7 @@ config/secrets.yaml
 # Notebooks
 .ipynb_checkpoints/
 id.json
-wallets.json
+data/wallets.json
 
 logs/
 data/*.log
