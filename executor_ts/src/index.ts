@@ -9,6 +9,7 @@ import {
   Transaction,
   VersionedTransaction,
   SystemProgram,
+  TransactionMessage,
 } from "@solana/web3.js";
 
 import { OrderRequestSchema } from "./types.js";
@@ -348,44 +349,67 @@ app.get("/quote", async (req, res) => {
   }
 });
 app.post("/trade", async (req, res) => {
-  try {
-    const parsed = OrderRequestSchema.safeParse(req.body);
-    if (!parsed.success) {
-      return res
-        .status(400)
-        .json({ ok: false, message: parsed.error.message, dry_run: true });
+  const parsed = OrderRequestSchema.safeParse(req.body);
+  if (!parsed.success) {
+    return res.status(400).json({ ok: false, message: parsed.error.message, dry_run: true });
+  }
+  const o = parsed.data;
+
+  const side = o.side ?? (o.action as "buy" | "sell" | "transfer"| undefined);
+  const mintStr = o.mint;
+  const toStr = o.to;
+  const amountIn = o.amount_in ?? o.amount_sol;
+  const bodyDryRun = o.dry_run;  // Единственное объявление
+  const dryRun = typeof bodyDryRun === "boolean" ? bodyDryRun : DEFAULT_DRY_RUN;  // Единственное объявление
+
+  console.log(`[trade] side=${side} dryRun=${dryRun} live=${LIVE_ENABLED}`);  // Добавь для логов
+
+  if (side === "transfer") {
+    if (!toStr) {
+      return res.status(400).json({ ok: false, message: "to required for transfer", dry_run: true });
     }
-    const o = parsed.data;
+    if (!amountIn || amountIn <= 0) {
+      return res.status(400).json({ ok: false, message: "amount_in required and >0 for transfer", dry_run: true });
+    }
+    const toPubkey = new PublicKey(toStr);
+    const amountLamports = Math.floor(amountIn * 1e9);
+    const tx = await buildTransferTx(connection, payer, toPubkey, amountLamports);
 
-    const side = (req.body.side ?? req.body.action) as "buy" | "sell" | "transfer";
-      const mintStr = req.body.mint;
-      const amountIn = req.body.amount_in ?? req.body.amount_sol;
-      const slippageBps = req.body.slippage_bps ?? 1500;
-      const toStr = req.body.to; 
-
-    if (side === "transfer") {
-      const toPubkey = new PublicKey(toStr);
-      const amountLamports = Math.floor(amountIn * 1e9);
-      const tx = await buildTransferTx(connection, payer, toPubkey, amountLamports);
+    if (dryRun || !LIVE_ENABLED) {
       const base64Tx = Buffer.from(tx.serialize()).toString("base64");
-
-      res.json({
+      return res.json({
         ok: true,
         dry_run: true,
-        tx_base64: base64Tx
+        tx_base64: base64Tx,
       });
-      return;
+    } else {
+      let sig: string;
+      if (JITO_ENABLED) {
+        const base64Tx = Buffer.from(tx.serialize()).toString("base64");  // Переименуй, чтобы не дублировать
+        sig = await sendBundle({ blockEngineUrl: JITO_BLOCK_ENGINE_URL, uuid: JITO_UUID }, [base64Tx]);
+      } else {
+        sig = await connection.sendTransaction(tx);
+      }
+      return res.json({ ok: true, dry_run: false, signature: sig });
     }
-  
-    if (side !== "buy" && side !== "sell") {
-      return res.status(400).json({ ok: false, dry_run: true, message: "side must be buy|sell" });
-    }
-    const mint = asPubkey(o.mint);
+  }
 
+  if (side !== "buy" && side !== "sell") {
+    return res.status(400).json({ ok: false, message: "side must be buy/sell/transfer", dry_run: true });
+  }
+
+  if (!mintStr) {
+    return res.status(400).json({ ok: false, message: "mint required for buy/sell", dry_run: true });
+  }
+
+  const mint = new PublicKey(mintStr);  // Единственное объявление mint
+  const amountInSol = Number(amountIn ?? 0);  // Единственное объявление amountInSol
+});
+    const mint = asPubkey(o.mint);
     const amountInSol = Number((o as any).amount_in ?? (o as any).solIn ?? 0);
-    const slippageBps = Number(
-      (o as any).slippage_bps ?? Math.round(Number((o as any).slippage ?? 1) * 100)
-    );
+    const slippage = Number((o as any).slippage ?? 0);
+    const slippageBpsInput = Number((o as any).slippageBps ?? 0);
+    const slippageBps = slippage > 0 ? slippage * 100 : (slippageBpsInput > 0 ? slippageBpsInput : 1500);
     const useJito = Boolean((o as any).useJito ?? true);
     const simulate = Boolean((o as any).simulate ?? false);
 
@@ -485,19 +509,20 @@ app.listen(PORT, HOST, () => {
   console.log(`[executor] jito enabled: ${JITO_ENABLED} (${JITO_BLOCK_ENGINE_URL})`);
 });
 // ====================== TRANSFER SOL ======================
-async function buildTransferTx(connection: Connection, payer: Keypair, to: PublicKey, amountLamports: number): Promise<Transaction> {
-  const tx = new Transaction().add(
-    SystemProgram.transfer({
-      fromPubkey: payer.publicKey,
-      toPubkey: to,
-      lamports: amountLamports
-    })
-  );
-
+async function buildTransferTx(connection: Connection, payer: Keypair, to: PublicKey, amountLamports: number): Promise<VersionedTransaction> {  // Изменили тип возврата
+  const ix = SystemProgram.transfer({
+    fromPubkey: payer.publicKey,
+    toPubkey: to,
+    lamports: amountLamports
+  });
   const bh = await connection.getLatestBlockhash("confirmed");
-  tx.recentBlockhash = bh.blockhash;
-  tx.feePayer = payer.publicKey;
-  tx.sign(payer);
+  const messageV0 = new TransactionMessage({
+    payerKey: payer.publicKey,
+    recentBlockhash: bh.blockhash,
+    instructions: [ix]
+  }).compileToV0Message();
+  const tx = new VersionedTransaction(messageV0);
+  tx.sign([payer]);
   return tx;
 }
 // ====================== BUNDLE LAUNCH ENDPOINT (10-20 wallets) ======================
@@ -522,7 +547,7 @@ app.post("/launch_bundle", async (req, res) => {
         ok: true, 
         mint: "DRY_RUN_MINT_" + Date.now(), 
         bundle_sig: "dry-run-ok",
-        anti_detect: true
+        anti_detect: true,
       });
     }
 

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { PublicKey } from "@solana/web3.js";  // Изменен импорт на named
 
 export const OrderRequestSchema = z
   .object({
@@ -6,7 +7,9 @@ export const OrderRequestSchema = z
     chain: z.string().optional(),
     venue: z.string().optional(),
     side: z.enum(["buy", "sell", "transfer"]).optional(),
-    mint: z.string(),
+    mint: z.string().optional().refine((v) => !v || PublicKey.isOnCurve(new PublicKey(v).toBuffer()), {  // Добавлено .toBuffer() для isOnCurve
+      message: "invalid mint public key",
+    }),
     amount_in: z.number().nonnegative().optional(),
     slippage_bps: z.number().int().nonnegative().optional(),
     meta: z.record(z.any()).optional(),
