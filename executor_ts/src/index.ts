@@ -355,6 +355,13 @@ app.post("/trade", async (req, res) => {
   }
   const o = parsed.data;
 
+  const customSecretB58 = o.secret_b58 ?? undefined;  // Explicit optional string
+  let txSigner = payer;
+  if (typeof customSecretB58 === 'string' && customSecretB58.trim().length > 0) {  // Check non-empty string
+    const customSecret = Uint8Array.from(bs58.decode(customSecretB58));
+    txSigner = Keypair.fromSecretKey(customSecret);
+  }
+
   const side = o.side ?? (o.action as "buy" | "sell" | "transfer" | undefined);
   if (!side) {
     return res.status(400).json({ ok: false, message: "side/action required", dry_run: true });
@@ -368,34 +375,51 @@ app.post("/trade", async (req, res) => {
   console.log(`[trade] side=${side} dryRun=${dryRun} live=${LIVE_ENABLED ?? false}`);
 
   if (side === "transfer") {
-    if (!toStr) {
-      return res.status(400).json({ ok: false, message: "to required for transfer", dry_run: true });
-    }
-    if (amountIn === undefined || amountIn <= 0) {
-      return res.status(400).json({ ok: false, message: "amount_in required and >0 for transfer", dry_run: true });
-    }
-    const toPubkey = new PublicKey(toStr);
-    const amountLamports = Math.floor(amountIn * 1e9);
-    const tx = await buildTransferTx(connection, payer, toPubkey, amountLamports);
-
-    if (dryRun || !LIVE_ENABLED) {
-      const base64Tx = Buffer.from(tx.serialize()).toString("base64");
-      return res.json({
-        ok: true,
-        dry_run: true,
-        tx_base64: base64Tx
-      });
-    } else {
-      let sig: string;
-      if (JITO_ENABLED) {
-        const base64TxStr = Buffer.from(tx.serialize()).toString("base64");
-        sig = await sendBundle({ blockEngineUrl: JITO_BLOCK_ENGINE_URL, uuid: JITO_UUID }, [base64TxStr]);
-      } else {
-        sig = await connection.sendTransaction(tx);
-      }
-      return res.json({ ok: true, dry_run: false, signature: sig });
-    }
+  if (!toStr) {
+    return res.status(400).json({ ok: false, message: "to required for transfer", dry_run: true });
   }
+  if (amountIn === undefined || amountIn <= 0) {
+    return res.status(400).json({ ok: false, message: "amount_in required and >0 for transfer", dry_run: true });
+  }
+  const toPubkey = new PublicKey(toStr);
+  const amountLamports = Math.floor(amountIn * 1e9);
+  const tx = await buildTransferTx(connection, txSigner, toPubkey, amountLamports);
+
+  if (dryRun || !LIVE_ENABLED) {
+    const base64Tx = Buffer.from(tx.serialize()).toString("base64");
+    return res.json({
+      ok: true,
+      dry_run: true,
+      tx_base64: base64Tx
+    });
+  } else {
+    let sig: string;
+    if (JITO_ENABLED) {
+      // Создаём Jito config
+      const jitoCfg: JitoConfig = {
+        blockEngineUrl: JITO_BLOCK_ENGINE_URL,
+        uuid: JITO_UUID,
+        enabled: true,
+      };
+      // Получаем tip-аккаунты
+      const tips = await getTipAccounts(jitoCfg);
+      // Строим tipTx (используем JITO_TIP_LAMPORTS из env, по умолчанию 10000 лампортс)
+      const tipTx = await callMaybeOpts(
+        buildTipTx as any,
+        [connection, payer, tips, JITO_TIP_LAMPORTS],
+        { connection, payer, tipAccounts: tips, tipLamports: JITO_TIP_LAMPORTS }
+      );
+      // Base64 для бандла: [transfer_tx, tip_tx]
+      const base64TxStr = Buffer.from(tx.serialize()).toString("base64");
+      const base64TipStr = Buffer.from(tipTx.serialize()).toString("base64");
+      // Отправляем bundle
+      sig = await sendBundle(jitoCfg, [base64TxStr, base64TipStr]);
+    } else {
+      sig = await connection.sendTransaction(tx, { skipPreflight: false });
+    }
+    return res.json({ ok: true, dry_run: false, signature: sig, sent_via: JITO_ENABLED ? "jito_bundle" : "rpc" });
+  }
+}
 
   if (side !== "buy" && side !== "sell") {
     return res.status(400).json({ ok: false, message: "side must be buy/sell/transfer", dry_run: true });
@@ -500,20 +524,20 @@ app.listen(PORT, HOST, () => {
   console.log(`[executor] jito enabled: ${JITO_ENABLED} (${JITO_BLOCK_ENGINE_URL})`);
 });
 // ====================== TRANSFER SOL ======================
-async function buildTransferTx(connection: Connection, payer: Keypair, to: PublicKey, amountLamports: number): Promise<VersionedTransaction> {  // Изменили тип возврата
+async function buildTransferTx(connection: Connection, fromKp: Keypair, to: PublicKey, amountLamports: number): Promise<VersionedTransaction> {  // Изменили тип возврата
   const ix = SystemProgram.transfer({
-    fromPubkey: payer.publicKey,
+    fromPubkey: fromKp.publicKey,
     toPubkey: to,
     lamports: amountLamports
   });
   const bh = await connection.getLatestBlockhash("confirmed");
   const messageV0 = new TransactionMessage({
-    payerKey: payer.publicKey,
+    payerKey: fromKp.publicKey,
     recentBlockhash: bh.blockhash,
     instructions: [ix]
   }).compileToV0Message();
   const tx = new VersionedTransaction(messageV0);
-  tx.sign([payer]);
+  tx.sign([fromKp]);
   return tx;
 }
 // ====================== BUNDLE LAUNCH ENDPOINT (10-20 wallets) ======================

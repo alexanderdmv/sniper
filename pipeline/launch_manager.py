@@ -126,7 +126,7 @@ class LaunchManager:
                 payload = {
                     "side": "transfer",
                     "to": w["pubkey"],
-                    "amount": sol_amount,
+                    "amount_in": sol_amount,
                     "dry_run": False
                 }
                 r = requests.post(f"{EXECUTOR_URL}/trade", json=payload, timeout=30)
@@ -135,7 +135,7 @@ class LaunchManager:
                     console.print(f"  → {w['pubkey'][:8]}... [green]OK[/green]")
                 else:
                     console.print(f"  → {w['pubkey'][:8]}... [red]ошибка[/red]")
-                    console.print(f"     Ответ сервера: {r.text}")   # ←←← ЭТО НОВОЕ
+                    console.print(f"     Ответ сервера: {r.text}")
             except Exception as e:
                 console.print(f"  → {w['pubkey'][:8]}... [red]ошибка соединения[/red]")
                 console.print(f"     {e}")
@@ -162,14 +162,24 @@ class LaunchManager:
         console.print("[bold]Выводим ВСЕ SOL со всех кошельков на главный...[/bold]")
         for w in self.wallets:
             try:
-                payload = {"side": "transfer", "to": str(self.main_kp.pubkey()), "amount": "all", "dry_run": False}
+                payload_rpc = {"jsonrpc": "2.0", "id": 1, "method": "getBalance", "params": [w["pubkey"]]}
+                r_balance = requests.post(RPC_URL, json=payload_rpc, timeout=10)
+                balance_lamports = r_balance.json()["result"]["value"]
+                if balance_lamports <= 5000:  # Minimum rent-exempt or fee
+                    console.print(f"  → {w['pubkey'][:8]}... [yellow]баланс слишком мал[/yellow]")
+                continue
+                sol_to_transfer = (balance_lamports - 5000) / 1_000_000_000  # Leave 0.000005 SOL for fee
+                payload = { "side": "transfer", "to": str(self.main_kp.pubkey()), "amount_in": sol_to_transfer, "dry_run": False, "secret_b58": w["secret_b58"] }
                 r = requests.post(f"{EXECUTOR_URL}/trade", json=payload, timeout=30)
                 if r.status_code == 200:
-                    console.print(f"  → {w['pubkey'][:8]}... [green]вывод OK[/green]")
+                    resp = r.json()
+                    console.print(f"  → {w['pubkey'][:8]}... [green]вывод OK ({sol_to_transfer:.6f} SOL) | Sig: {resp.get('signature', 'N/A')}[/green]")
                 else:
-                    console.print(f"  → {w['pubkey'][:8]}... [red]ошибка[/red]")
-            except:
-                console.print(f"  → {w['pubkey'][:8]}... [red]таймаут[/red]")
+                    console.print(f"  → {w['pubkey'][:8]}... [red]ошибка {r.status_code}[/red]")
+                    console.print(f"     Ответ: {r.text}")
+            except Exception as e:
+                console.print(f"  → {w['pubkey'][:8]}... [red]ошибка[/red]")
+                console.print(f"     Детали: {e}")
         console.print("[green]Withdraw All завершён[/green]")
 
     # ====================== WALLET WARMUP 2.0 ======================
