@@ -355,11 +355,26 @@ app.post("/trade", async (req, res) => {
   }
   const o = parsed.data;
 
-  const customSecretB58 = o.secret_b58 ?? undefined;  // Explicit optional string
+  const customSecretB58 = o.secret_b58 ?? undefined;
   let txSigner = payer;
-  if (typeof customSecretB58 === 'string' && customSecretB58.trim().length > 0) {  // Check non-empty string
-    const customSecret = Uint8Array.from(bs58.decode(customSecretB58));
-    txSigner = Keypair.fromSecretKey(customSecret);
+  if (typeof customSecretB58 === 'string' && customSecretB58.trim().length > 0) {
+    console.log(`[debug] customSecretB58 length: ${customSecretB58.length}`);
+    try {
+      const decoded = bs58.decode(customSecretB58);
+      console.log(`[debug] decoded secret length: ${decoded.length}`);
+      if (decoded.length === 64) {
+        const customSecret = Uint8Array.from(decoded);
+        txSigner = Keypair.fromSecretKey(customSecret);
+      } else if (decoded.length === 32) {
+        const customSeed = Uint8Array.from(decoded);
+        txSigner = Keypair.fromSeed(customSeed);
+      } else {
+        throw new Error(`Invalid secret key size: ${decoded.length} bytes, expected 32 or 64`);
+      }
+    } catch (e: any) {
+      console.error(`[error] Custom key load failed: ${e.message}`);
+      return res.status(400).json({ ok: false, message: `Invalid secret_b58: ${e.message}`, dry_run: true });
+    }
   }
 
   const side = o.side ?? (o.action as "buy" | "sell" | "transfer" | undefined);

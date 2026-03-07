@@ -651,13 +651,18 @@ export async function createToken(
   const OnlinePumpSdk = base.OnlinePumpSdk;
   const sdk = new OnlinePumpSdk(connection);
 
+  const mint = Keypair.generate();
+  const uri = "https://arweave.net/metadata.json";
+
   const tx = await sdk.create({
-    payer,
+    mint: mint.publicKey,
     name: opts.name,
     symbol: opts.symbol,
+    uri: uri,
     description: opts.description,
     file: opts.file,        // SDK сам загрузит на IPFS pump.fun
   });
 
+  tx.sign([payer, mint]);
   return tx; // VersionedTransaction
 }

@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@coral-xyz/anchor": "^0.30.1",
+    "@irys/upload": "^0.2.15",
+    "@irys/upload-solana": "^0.2.15",
     "@pump-fun/pump-sdk": "1.27.0",
     "@solana/spl-token": "^0.4.12",
     "@solana/web3.js": "^1.98.0",
@@ -27,6 +29,10 @@
   },
   "overrides": {
     "bigint-buffer": "npm:bigint-buffer-fixed@1.1.6",
-    "tar": "^7.5.7"
+    "tar": "^7.5.7",
+    "@aptos-labs/ts-sdk": "^5.2.1",
+    "bn.js": "^5.2.2",
+    "elliptic": "^6.5.5",
+    "minimatch": "^3.1.4"
   }
 }

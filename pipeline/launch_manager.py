@@ -159,18 +159,47 @@ class LaunchManager:
         if not self.main_kp:
             console.print("[red]Главный ключ не найден![/red]")
             return
-        console.print("[bold]Выводим ВСЕ SOL со всех кошельков на главный...[/bold]")
+        console.print(Panel.fit(
+        "[bold]Выводим ВСЕ SOL со всех кошельков на главный...[/bold]",
+        title="Withdraw All",
+        border_style="green"
+        ))
+        console.print("[yellow]DEBUG: Starting loop for {} wallets[/yellow]".format(len(self.wallets)))
         for w in self.wallets:
+            console.print(f"[yellow]DEBUG: Processing wallet {w['pubkey'][:8]}...[/yellow]")
             try:
+                # Get rent-exempt minimum
+                payload_rent = {"jsonrpc": "2.0", "id": 1, "method": "getMinimumBalanceForRentExemption", "params": [0]}  # 0 bytes for system account
+                r_rent = requests.post(RPC_URL, json=payload_rent, timeout=10)
+                rent_exempt_lamports = r_rent.json()["result"]
+                console.print(f"[yellow]DEBUG: Rent-exempt: {rent_exempt_lamports / 1e9:.6f} SOL[/yellow]")
+                
+                # Get balance
                 payload_rpc = {"jsonrpc": "2.0", "id": 1, "method": "getBalance", "params": [w["pubkey"]]}
                 r_balance = requests.post(RPC_URL, json=payload_rpc, timeout=10)
                 balance_lamports = r_balance.json()["result"]["value"]
-                if balance_lamports <= 5000:  # Minimum rent-exempt or fee
-                    console.print(f"  → {w['pubkey'][:8]}... [yellow]баланс слишком мал[/yellow]")
-                continue
-                sol_to_transfer = (balance_lamports - 5000) / 1_000_000_000  # Leave 0.000005 SOL for fee
-                payload = { "side": "transfer", "to": str(self.main_kp.pubkey()), "amount_in": sol_to_transfer, "dry_run": False, "secret_b58": w["secret_b58"] }
+                console.print(f"[yellow]DEBUG: Balance: {balance_lamports / 1e9:.6f} SOL[/yellow]")
+                fee_buffer = 10000
+                
+                if balance_lamports <= rent_exempt_lamports + fee_buffer:
+                    console.print(f"  → {w['pubkey'][:8]}... [yellow]баланс слишком мал ({balance_lamports / 1e9:.6f} SOL < rent-exempt {rent_exempt_lamports / 1e9:.6f})[/yellow]")
+                    continue
+                
+                lamports_to_transfer = balance_lamports - rent_exempt_lamports - fee_buffer
+                sol_to_transfer = lamports_to_transfer / 1_000_000_000
+                console.print(f"[yellow]DEBUG: Transfer amount: {sol_to_transfer:.6f} SOL[/yellow]")
+                
+                payload = { 
+                    "side": "transfer", 
+                    "to": str(self.main_kp.pubkey()), 
+                    "amount_in": sol_to_transfer, 
+                    "dry_run": False, 
+                    "secret_b58": w["secret_b58"] 
+                }
+                console.print("[yellow]DEBUG: Sending request to executor...[/yellow]")
                 r = requests.post(f"{EXECUTOR_URL}/trade", json=payload, timeout=30)
+                console.print(f"[yellow]DEBUG: Response status: {r.status_code}[/yellow]")
+                
                 if r.status_code == 200:
                     resp = r.json()
                     console.print(f"  → {w['pubkey'][:8]}... [green]вывод OK ({sol_to_transfer:.6f} SOL) | Sig: {resp.get('signature', 'N/A')}[/green]")
@@ -323,7 +352,7 @@ class LaunchManager:
         }
 
         try:
-            r = requests.post(f"{EXECUTOR_URL}/launch_bundle", json=payload, timeout=120)
+            r = requests.post(f"{EXECUTOR_URL}/launch", json=payload, timeout=120)
             if r.status_code == 200:
                 data = r.json()
                 mint = data.get('mint')
