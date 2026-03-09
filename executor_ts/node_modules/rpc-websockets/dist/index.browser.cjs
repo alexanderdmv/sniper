@@ -338,7 +338,7 @@ var CommonClient = class extends eventemitter3.EventEmitter {
         message = buffer.Buffer.from(message).toString();
       try {
         message = this.dataPack.decode(message);
-      } catch (error) {
+      } catch (_error) {
         return;
       }
       if (message.notification && this.listeners(message.notification).length) {

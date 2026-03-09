@@ -4,6 +4,8 @@ import {
   Keypair,
   PublicKey,
   Transaction,
+  VersionedTransaction,
+  TransactionMessage
 } from "@solana/web3.js";
 import {
   TOKEN_2022_PROGRAM_ID,
@@ -19,6 +21,11 @@ import {
  * So we normalize everything through `getPumpBase()`.
  */
 import * as PumpNS from "@pump-fun/pump-sdk";
+
+import FormData from "form-data";
+import fetch from "node-fetch";
+import path from "node:path";
+import fs from "node:fs";
 
 type PumpBase = Record<string, any>;
 
@@ -423,7 +430,8 @@ export async function buildBuyTx(
   payer: Keypair,
   mint: PublicKey,
   solInLamports: bigint,
-  slippageBps: number
+  slippageBps: number,
+  isNewToken: boolean = false
 ): Promise<Transaction> {
   const base = getPumpBase();
   const quoteFn = base.getBuyTokenAmountFromSolAmount;
@@ -434,32 +442,55 @@ export async function buildBuyTx(
   }
 
   const { offline, fetchGlobal, fetchFeeConfig, fetchBuyState } = getSdk(connection);
-  const tokenProgram = await detectTokenProgram(connection, mint);
+  let tokenProgram = isNewToken ? TOKEN_2022_PROGRAM_ID : await detectTokenProgram(connection, mint);
 
-  const [global, feeConfig, st] = await Promise.all([
-    fetchGlobal(),
-    fetchFeeConfig(),
-    fetchBuyState(mint, payer.publicKey, tokenProgram),
-  ]);
+  let global, feeConfig, st;
+  if (isNewToken) {
+    // Для новых токенов пропускаем fetch состояния и используем начальные значения Pump.fun
+    global = await fetchGlobal();
+    feeConfig = await fetchFeeConfig();
+    st = null;
+  } else {
+    [global, feeConfig, st] = await Promise.all([
+      fetchGlobal(),
+      fetchFeeConfig(),
+      fetchBuyState(mint, payer.publicKey, tokenProgram),
+    ]);
+  }
 
-  const solAmount = asBN(solInLamports);
-  const bondingCurve = st?.bondingCurve ?? null;
-  const mintSupply = bondingCurve?.tokenTotalSupply ?? global?.tokenTotalSupply ?? null;
+  let bondingCurve = st?.bondingCurve;
+  if (isNewToken) {
+    // Hardcoded начальное состояние (из docs Pump.fun: 6 decimals, значения в базовых единицах u64)
+    bondingCurve = {
+      virtualSolReserves: asBN("30000000000"),          // 30 SOL лампортов (3e10)
+      virtualTokenReserves: asBN("1073000000000000"),  // 1.073e9 токенов * 1e6 = 1.073e15 u64
+      realSolReserves: asBN("0"),
+      realTokenReserves: asBN("793100000000000"),      // 793.1e6 токенов * 1e6 = 7.931e14 u64
+      tokenTotalSupply: asBN("1000000000000000"),      // 1e9 токенов * 1e6 = 1e15 u64
+      complete: false,
+      isMayhemMode: false,
+    };
+  }
 
-  const tokenOut: BN = quoteFn({
+  const expectedTokens: BN = quoteFn({
     global,
     feeConfig,
-    mintSupply,
     bondingCurve,
-    amount: solAmount,
+    amount: asBN(solInLamports),  // Исправлено: amount = solInLamports
   });
 
   const base2 = getPumpBase();
   const curvePda = deriveBondingCurvePda(base2, mint, tokenProgram);
-  const bondingCurveAccountInfo = await getAccountInfoSafe(connection, curvePda) ?? st?.bondingCurveAccountInfo ?? null;
-
-  const userAta = getAssociatedTokenAddressSync(mint, payer.publicKey, true, tokenProgram);
-  const associatedUserAccountInfo = await getAccountInfoSafe(connection, userAta) ?? st?.associatedUserAccountInfo ?? null;
+  let bondingCurveAccountInfo = await getAccountInfoSafe(connection, curvePda) ?? st?.bondingCurveAccountInfo ?? null;
+  if (isNewToken) {
+    bondingCurveAccountInfo = {
+      owner: new PublicKey("6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P"),
+      data: Buffer.alloc(0),
+      executable: false,
+      lamports: 0,
+      rentEpoch: 0,
+    }
+  }
 
   const slippagePct = Math.max(0.1, slippageBps / 100);
 
@@ -469,21 +500,19 @@ export async function buildBuyTx(
     );
   }
 
-  // Build args carefully: some SDK builds validate types and reject explicit nulls.
   const args: any = {
     global,
     mint,
     user: payer.publicKey,
-    amount: tokenOut,
-    solAmount,
+    amount: expectedTokens,
+    solAmount: asBN(solInLamports),
     slippage: slippagePct,
     tokenProgram,
+    mayhemMode: isNewToken ? false : Boolean(st?.bondingCurve?.isMayhemMode),
   };
-  if (st?.bondingCurve) args.bondingCurve = st.bondingCurve;
+  if (bondingCurve) args.bondingCurve = bondingCurve;
   if (bondingCurveAccountInfo) args.bondingCurveAccountInfo = bondingCurveAccountInfo;
-  if (associatedUserAccountInfo) args.associatedUserAccountInfo = associatedUserAccountInfo;
 
-  // Some SDK versions require fee config during instruction build.
   if (feeConfig) {
     if (feeConfig.feeConfig) args.feeConfig = feeConfig.feeConfig;
     else args.feeConfig = feeConfig;
@@ -491,8 +520,7 @@ export async function buildBuyTx(
     if (feeConfig.accountInfo && !args.feeConfigAccountInfo) args.feeConfigAccountInfo = feeConfig.accountInfo;
   }
 
-  // Extra context if state didn't include needed infos
-  if (!args.bondingCurveAccountInfo) {
+  if (!isNewToken && !args.bondingCurveAccountInfo) {
     throw new Error("Buy state missing bondingCurveAccountInfo (cannot build tx)");
   }
 
@@ -507,11 +535,9 @@ export async function buildBuyTx(
   const tx = new Transaction();
   for (const ix of ixs) tx.add(ix);
 
-  // Attach quote-like metadata so callers (executor) can return it without another RPC-heavy /quote call.
-  // NOTE: token_out is in raw token units (base units), consistent with /quote.
   (tx as any).__quote = {
-    sol_in_lamports: solAmount.toString(10),
-    token_out: tokenOut.toString(10),
+    sol_in_lamports: solInLamports.toString(10),
+    token_out: expectedTokens.toString(10),
     slippage_bps: slippageBps,
   };
 
@@ -648,21 +674,73 @@ export async function createToken(
   }
 ) {
   const base = getPumpBase();
-  const OnlinePumpSdk = base.OnlinePumpSdk;
-  const sdk = new OnlinePumpSdk(connection);
+  const PumpSdk = base.PumpSdk;
+  const PUMP_SDK = base.PUMP_SDK;
+  const offline = (PUMP_SDK && typeof PUMP_SDK === "object") ? PUMP_SDK : (typeof PumpSdk === "function" ? new PumpSdk() : null);
+  if (!offline || typeof offline.createV2Instruction !== 'function') {
+    throw new Error('Offline Pump SDK or createV2Instruction not available. Check SDK version.');
+  }
+
+  // 1. Upload metadata to Pump.fun IPFS API
+  const form = new FormData();
+  const fileExt = path.extname(opts.file).toLowerCase();
+  let mimeType = 'image/png';
+  if (fileExt === '.jpeg' || fileExt === '.jpg') mimeType = 'image/jpeg';
+  else if (fileExt === '.gif') mimeType = 'image/gif';
+
+  form.append('file', fs.createReadStream(opts.file), {
+    filename: path.basename(opts.file),
+    contentType: mimeType
+  });
+  form.append('name', opts.name);
+  form.append('symbol', opts.symbol);
+  form.append('description', opts.description);
+  form.append('twitter', '');  // Опционально
+  form.append('telegram', '');
+  form.append('website', '');
+  form.append('showName', 'true');
+
+  let uploadResponse;
+  try {
+    uploadResponse = await fetch('https://pump.fun/api/ipfs', {
+      method: 'POST',
+      body: form,
+    });
+  } catch (err: any) {
+    throw new Error(`IPFS upload request failed: ${err.message || String(err)}`);
+  }
+
+  if (!uploadResponse.ok) {
+    const errText = await uploadResponse.text();
+    throw new Error(`IPFS upload failed: ${uploadResponse.status} - ${errText}`);
+  }
+
+  const uploadJson = await uploadResponse.json();
+  const uri = uploadJson.metadataUri;
+
+  if (!uri) {
+    throw new Error('Metadata URI not found in upload response');
+  }
 
   const mint = Keypair.generate();
-  const uri = "https://arweave.net/metadata.json";
 
-  const tx = await sdk.create({
+  const ix = await offline.createV2Instruction({
     mint: mint.publicKey,
     name: opts.name,
     symbol: opts.symbol,
     uri: uri,
-    description: opts.description,
-    file: opts.file,        // SDK сам загрузит на IPFS pump.fun
+    creator: payer.publicKey,
+    user: payer.publicKey,       
+    mayhemMode: false,  // Or true for mayhem
   });
+  
+  const tx = new VersionedTransaction(new TransactionMessage({
+    payerKey: payer.publicKey,
+    recentBlockhash: (await connection.getLatestBlockhash()).blockhash,
+    instructions: [ix]
+  }).compileToV0Message());
 
   tx.sign([payer, mint]);
+  (tx as any).mint = mint.publicKey;
   return tx; // VersionedTransaction
 }

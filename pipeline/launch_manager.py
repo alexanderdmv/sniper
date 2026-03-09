@@ -100,7 +100,7 @@ class LaunchManager:
         self.wallets.clear()
         for i in range(num):
             kp = Keypair()
-            secret_b58 = base58.b58encode(bytes(kp.secret())).decode("utf-8")
+            secret_b58 = base58.b58encode(bytes(kp)).decode("utf-8")
             self.wallets.append({
                 "index": i,
                 "pubkey": str(kp.pubkey()),
@@ -350,7 +350,7 @@ class LaunchManager:
             "jito_tips": jito_tips,            # новое поле
             "dry_run": self.control.get("trading", {}).get("dry_run", True)
         }
-
+        console.print("[yellow]DEBUG: Sending to {0}/launch[/yellow]".format(EXECUTOR_URL))
         try:
             r = requests.post(f"{EXECUTOR_URL}/launch", json=payload, timeout=120)
             if r.status_code == 200:

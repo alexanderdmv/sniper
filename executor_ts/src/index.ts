@@ -601,9 +601,10 @@ app.post("/launch", async (req, res) => {
       const buyTx = await buildBuyTx(
         connection,
         buyerKp,
-        createTx.mint || new PublicKey("11111111111111111111111111111111"),
+        (createTx as any).mint || new PublicKey("11111111111111111111111111111111"),
         BigInt(Math.floor(buyAmountSol * 1e9)),
-        1500
+        1500,
+        true
       );
       bundleTxs.push(buyTx);
       if (i < wallets.length - 1) {

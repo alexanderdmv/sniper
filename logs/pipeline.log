@@ -1380,3 +1380,16 @@
 
 2026-03-07T18:50:44.094869+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
 2026-03-07T18:51:06.284055+0100 | ERROR | Ошибка: {"ok":false,"error":"sdk.create is not a function"}
+2026-03-08T13:19:08.545630+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-08T13:19:33.497401+0100 | ERROR | Ошибка: {"ok":false,"error":"sdk.createV2Instruction is not a function"}
+2026-03-08T14:23:10.341053+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-08T14:23:41.137819+0100 | ERROR | Ошибка: {"ok":false,"error":"bad secret key size"}
+2026-03-08T15:38:08.852151+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-08T15:46:06.142438+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-08T15:46:14.319595+0100 | INFO | Генерирую 5 кошельков...
+2026-03-08T15:46:14.322108+0100 | SUCCESS | ✅ 5 кошельков сохранены
+2026-03-08T15:47:35.379598+0100 | ERROR | Ошибка: {"ok":false,"error":"Bonding curve account not found for mint: BDcCJ3brUjKviCgMiH2ubsDAzPkh94BGiRqWuDEi47qx"}
+2026-03-09T15:40:45.241191+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-09T15:41:13.978355+0100 | ERROR | Ошибка: {"ok":false,"error":"amount.eq is not a function"}
+2026-03-09T15:54:48.460701+0100 | SUCCESS | ✅ Главный ключ загружен: 57bvH9NrMPpZBwfa1NoaZUAinMhtKvxWBDKJxwrNVsAH
+2026-03-09T15:55:16.314597+0100 | ERROR | Ошибка: {"ok":false,"error":"Cannot read properties of undefined (reading 'length')"}

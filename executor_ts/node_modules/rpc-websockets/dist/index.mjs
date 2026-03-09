@@ -1,6 +1,6 @@
 import WebSocketImpl, { WebSocketServer } from 'ws';
 import { EventEmitter } from 'eventemitter3';
-import url from 'node:url';
+import url from 'url';
 import { v1 } from 'uuid';
 
 // src/lib/client/websocket.ts
@@ -288,7 +288,7 @@ var CommonClient = class extends EventEmitter {
         message = Buffer.from(message).toString();
       try {
         message = this.dataPack.decode(message);
-      } catch (error) {
+      } catch (_error) {
         return;
       }
       if (message.notification && this.listeners(message.notification).length) {
